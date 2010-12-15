@@ -1,0 +1,8 @@
+*.dvi
+*.ps
+*.pdf
+*.aux
+*.log
+*.ilg
+*.ind
+images.src

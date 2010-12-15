@@ -1,45 +1,76 @@
-\section*{Измерение леггеттовской частоты 3He-B в аэрогеле с помощью
+\documentclass[12pt]{book}
+
+\usepackage{amssymb}
+\usepackage{euscript}
+
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{color}
+\usepackage{epsfig}
+
+%\usepackage[T1,T2A]{fontenc}
+\usepackage[koi8-ru]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{lscape}
+
+\bibliographystyle{unsrt}
+
+\textheight=26cm \textwidth=17cm
+\oddsidemargin=-.6cm
+\evensidemargin=-.6cm
+\topmargin=-1.5cm
+\tolerance=600
+\pagestyle{empty}
+
+\newcommand{\image}[2]{
+\begin{figure}[ht]
+\begin{center}
+\input{images/#1.tex}
+\caption{\small#2}
+\label{image:#1}
+\end{center}
+\end{figure}
+}
+\newcommand{\het}{$^3$He}
+\newcommand{\hef}{$^4$He}
+
+\begin{document}
+
+\section*{Измерение леггеттовской частоты \het-B в аэрогеле с помощью
 пространственно-однородных колебаний однородно-прецессирующего домена.}
 
-\section*{Введение}
+\input{01_intro.tex}
 
-\include{01_he3.tex}
-\include{02_he3b.tex}
-\include{03_he3b_nmr.tex}
-\include{04_hpd.tex}
-\include{05_aerogel.tex}
-\include{06_hpd_osc.tex}
-\include{06_prog.tex}
-\include{07_exp.tex}
-\include{08_res.tex}
+\input{06_hpd_osc.tex}
+
+\input{07_num.tex}
+
+\input{08_exp.tex}
+
+\input{09_res.tex}
 
 \section*{Выводы, благодарности и т.п.}
 
-\section*{Рисунки}
+%\section*{Не вошедшее в}
 
-1. Фазовая диаграмма $^3$He
-2. Текстура $^3$He-B в цилиндрическом сосуде в магнитном поле
-3. Рост ОПД
-4. Сигнал непрерывного ЯМР в случае образования ОПД
-5. Фазовая диаграмма $^3$He в аэрогеле
-6. Сигнал непрерывного ЯМР в разных образцах аэрогеля
+%Дипольная энергия:
 
+%$$
+%F_D = \mbox{const} + \frac25g_D(T)\left(\frac12+2\cos\theta\right)^2,
+%$$
 
-\section*{Не вошедшее в}
+%Константа диполь-дипольного взаимодействия:
+%$$
+%g_D(T) = \frac{\pi}2 \left(\frac{\gamma\hbar}2 N_0 
+%\Delta \ln\frac{\epsilon_F}{\Delta}\right)^2 =  
+%\frac{\chi \omega_L^2}{3\gamma^2\Delta^2}
+%$$
 
-Дипольная энергия:
+%Диапазон температур $A_1$-фазы: $6\cdot10^{-9}$ К/Гс $\cdot H$. У нас - ~1мкК
 
-$$
-F_D = \mbox{const} + \frac25g_D(T)\left(\frac12+2\cos\theta\right)^2,
-$$
+%\bibliographystyle{plain}
+\bibliography{index}
 
-Константа диполь-дипольного взаимодействия:
-$$
-g_D(T) = \frac{\pi}2 \left(\frac{\gamma\hbar}2 N_0 
-\Delta \ln\frac{\epsilon_F}{\Delta}\right)^2 =  
-\frac{\chi \omega_L^2}{3\gamma^2\Delta^2}
-$$
-
-Диапазон температур $A_1$-фазы: $6\cdot10^{-9}$ К/Гс $\cdot H$. У нас - ~1мкК
-
+\end{document}
 
