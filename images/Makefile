@@ -1,4 +1,5 @@
-pics=he3phd he3aphd flare_out hpd cells coils spectr
+pics=he3phd he3aphd flare_out cw_nmr cw_nmr_a hpd\
+     cells coils spectr
 
 #all: ${pics:=.png} ${pics:=.tex} ${pics:=.eps}
 all: ${pics:=.tex} ${pics:=.eps}

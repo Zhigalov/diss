@@ -46,14 +46,111 @@ V.~V. Dmitriev, D.~A. Krasnikhin, N.~Mulders, A.~A. Senin, G.~E. Volovik, and
   aerogel.
 \newblock {\em JETP Letters}, 91(11):599--606, 2010.
 
-\bibitem{1983_he3_mineev}
-В.П. Минеев.
-\newblock Сверхтекучий 3Не: введение в предмет.
-\newblock {\em Успехи физических наук}, 139(2):303--332, 1983.
+\bibitem{1989_he3b_nmr}
+P.~J. Hakonen, M.~Krusius, M.~M. Salomaa, R.~H. Salmelin, J.~T. Simola, A.~D.
+  Gongadze, G.~E. Vachnadze, and G.~A. Kharadze.
+\newblock Nmr and axial magnetic field textures in stationary and rotating
+  superfluid 3Не-b.
+\newblock {\em Journal of Low Temperature Physics}, 76:225--283, 1989.
+\newblock 10.1007/BF00681586.
+
+\bibitem{vw}
+D~Vollhardt and P~Wolfle.
+\newblock {\em The Superfluid Phases of Helium 3}.
+\newblock Taylor\&Francis, 1990.
 
 \bibitem{1975_he3_teor_leggett}
 Anthony~J. Leggett.
 \newblock A theoretical description of the new phases of liquid 3he.
 \newblock {\em Rev. Mod. Phys.}, 47(2):331--414, Apr 1975.
+
+\bibitem{1985_hpd}
+А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, and
+  К.~Флахбарт.
+\newblock Разбиение прецессии намагиченности в $^3$he-b на два домена.
+  Эксперимент.
+\newblock {\em ЖЭТФ}, 88:2025--2038, 1985.
+
+\bibitem{1985_hpd_f}
+И.~А. Фомин.
+\newblock Разбиение прецессии намагиченности в $^3$he-b на два домена. Теория.
+\newblock {\em ЖЭТФ}, 88:2039--2051, 1985.
+
+\bibitem{1989_cwhpd}
+А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, Е.~В.
+  Поддьякова, and О.~Д. Тимофеевская.
+\newblock Особенности непрерывного ЯМР в $^3$he-b, обусловленные спиновым
+  сверхтоком.
+\newblock {\em ЖЭТФ}, 96:956--972, 1989.
+
+\bibitem{1975_he3_relax_legg_tak}
+A.~J. Leggett and S.~Takagi.
+\newblock Nmr in a-3he and b-3he: The intrinsic relaxation mechanism.
+\newblock {\em Phys. Rev. Lett.}, 34(23):1424--1427, Jun 1975.
+
+\bibitem{2002_aero_hpd}
+V.~V. Dmitriev, I.~V. Kosarev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
+\newblock Homogeneous spin precession in superfluid $^3$he confined to aerogel.
+\newblock In {\em Proceedings of the 23rd International Conference on Low
+  Temperature Physics, LT23, held in Hiroshima, Japan, 20-27 August 2002},
+  Amsterdam, 2003. Elsevier.
+
+\bibitem{1974_he3_longres}
+D.~D. Osheroff and W.~F. Brinkman.
+\newblock Longitudinal resonance and domain effects in the a and b phases of
+  liquid helium three.
+\newblock {\em Phys. Rev. Lett.}, 32(11):584--587, Mar 1974.
+
+\bibitem{1978_he3_pulsed}
+L.~R. Corruccini and D.~D. Osheroff.
+\newblock Pulsed nmr experiments in superfluid 3he.
+\newblock {\em Phys. Rev. B}, 17(1):126--140, Jan 1978.
+
+\bibitem{2005_he3b_hpd_osc}
+V.V. Dmitriev, V.V. Zavjalov, and D.Ye. Zmeev.
+\newblock Spatially homogeneous oscillations of homogeneously precessing domain
+  in 3he-b.
+\newblock {\em Journal of Low Temperature Physics}, 138:765--770, 2005.
+\newblock 10.1007/s10909-005-2300-5.
+
+\bibitem{2004_aero_btext}
+V.~V. Dmitriev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
+\newblock Nmr studies of texture in the b-like phase of $^3$he in aerogel.
+\newblock In {\em Proceedings of the 24rd International Conference on Low
+  Temperature Physics, LT24, held in Orlando, Florida (USA), 10-17 August
+  2005}, pages 225--228. AIP-Press, 2006.
+
+\bibitem{1985_cryo}
+А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, and
+  Г.~К. Твалашвили.
+\newblock Криостат ядерного размагничивания и криостат растворения $^3$he в
+  $^4$he большой хладопроизводительности.
+\newblock {\em ПТЭ}, 3:185--192, 1985.
+
+\bibitem{1987_cryo}
+A.~S. Borovik-Romanov, Yu.~M. Bunkov, V.~V. Dmitriev, and Yu.~M. Mukharsky.
+\newblock A nuclear demagnetization cryostat and $^3$he-$^4$he dilution
+  refrigerator.
+\newblock In {\em proceedings of 18th International Conference on Low
+  Temperature Physics, Kyoto}, volume 26, suppl 26-3, pages 1719--1720, 1987.
+
+\bibitem{1998_nucl}
+V.~V. Dmitriev, I.~V. Kosarev, D.~V. Ponarin, and R.~Scheibel.
+\newblock Simple nuclear demagnetization stage.
+\newblock {\em Journal of Low Temperature Physics}, 113:945--949, 1998.
+\newblock 10.1023/A:1022579628345.
+
+\bibitem{1996_aero_halperin}
+D.~T. Sprague, T.~M. Haard, J.~B. Kycia, M.~R. Rand, Y.~Lee, P.~J. Hamot, and
+  W.~P. Halperin.
+\newblock Effect of magnetic scattering on the 3he superfluid state in aerogel.
+\newblock {\em Phys. Rev. Lett.}, 77(22):4568--4571, Nov 1996.
+
+\bibitem{1983_wire_he3b}
+D.~C. Carless, H.~E. Hall, and J.~R. Hook.
+\newblock Vibrating wire measurements in liquid $^3$he ii. the superfluid b
+  phase.
+\newblock {\em Journal of Low Temperature Physics}, 50:605--633, 1983.
+\newblock 10.1007/BF00683498.
 
 \end{thebibliography}
