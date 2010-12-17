@@ -64,6 +64,38 @@ Anthony~J. Leggett.
 \newblock A theoretical description of the new phases of liquid 3he.
 \newblock {\em Rev. Mod. Phys.}, 47(2):331--414, Apr 1975.
 
+\bibitem{2004_aero_blegg}
+В.~В. Дмитриев, В.~В. Завьялов, Д.~Е. Змеев, and Н.~Малдерс.
+\newblock Измерения леггеттовской частоты в $^3$he-b в аэрогеле.
+\newblock {\em Письма в ЖЭТФ}, 79:612--617, 2004.
+
+\bibitem{1983_thresh_r}
+А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, and Ю.~М. Мухарский.
+\newblock Пороговые эффекты в импульсном ЯМР в сверхтекучем $^3$he-b.
+\newblock {\em Письма в ЖЭТФ}, 37:600--602, 1983.
+
+\bibitem{1983_thresh_f_r}
+В.~Л. Голо, А.~А. Леман, and И.~А. Фомин.
+\newblock Импульсный ЯМР в $^3$Не-В для нелеггеттовской конфигурации.
+\newblock {\em Письма в ЖЭТФ}, 38:123--125, 1983.
+
+\bibitem{1975_bs_b}
+W.F. Brinkman and H.~Smith.
+\newblock Large angle tipping frequency shifts in pulsed nmr for $^3$he (b).
+\newblock {\em Physics Letters A}, 53(1):43--44, 1975.
+
+\bibitem{1978_he3_pulsed}
+L.~R. Corruccini and D.~D. Osheroff.
+\newblock Pulsed nmr experiments in superfluid 3he.
+\newblock {\em Phys. Rev. B}, 17(1):126--140, Jan 1978.
+
+\bibitem{2002_aero_pulse}
+V.~V. Dmitriev, I.~V. Kosarev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
+\newblock Pulsed nmr experiments in superfluid $^3$he confined to aerogel.
+\newblock In {\em Proceedings of the 23rd International Conference on Low
+  Temperature Physics, LT23, held in Hiroshima, Japan, 20-27 August 2002},
+  Amsterdam, 2003. Elsevier.
+
 \bibitem{1985_hpd}
 А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, and
   К.~Флахбарт.
@@ -95,17 +127,6 @@ V.~V. Dmitriev, I.~V. Kosarev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
   Temperature Physics, LT23, held in Hiroshima, Japan, 20-27 August 2002},
   Amsterdam, 2003. Elsevier.
 
-\bibitem{1974_he3_longres}
-D.~D. Osheroff and W.~F. Brinkman.
-\newblock Longitudinal resonance and domain effects in the a and b phases of
-  liquid helium three.
-\newblock {\em Phys. Rev. Lett.}, 32(11):584--587, Mar 1974.
-
-\bibitem{1978_he3_pulsed}
-L.~R. Corruccini and D.~D. Osheroff.
-\newblock Pulsed nmr experiments in superfluid 3he.
-\newblock {\em Phys. Rev. B}, 17(1):126--140, Jan 1978.
-
 \bibitem{2005_he3b_hpd_osc}
 V.V. Dmitriev, V.V. Zavjalov, and D.Ye. Zmeev.
 \newblock Spatially homogeneous oscillations of homogeneously precessing domain
@@ -119,6 +140,35 @@ V.~V. Dmitriev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
 \newblock In {\em Proceedings of the 24rd International Conference on Low
   Temperature Physics, LT24, held in Orlando, Florida (USA), 10-17 August
   2005}, pages 225--228. AIP-Press, 2006.
+
+\bibitem{1986_hpd_tosc_f_r}
+И.~А. Фомин.
+\newblock Низкочастотные колебания прецессирующего магнитного домена в
+  $^3$he-b.
+\newblock {\em Письма в ЖЭТФ}, 43:134--136, 1986.
+
+\bibitem{1986_hpd_tosc_r}
+Ю.~М. Буньков, В.~В. Дмитриев, and Ю.~М. Мухарский.
+\newblock Крутильные колебания домена с однородной прецессией намагниченности в
+  $^3$he-b.
+\newblock {\em Письма в ЖЭТФ}, 43:131--134, 1986.
+
+\bibitem{1992_hpd_osc}
+Yu.M. Bunkov, V.V. Dmitriev, and Yu.M. Mukharskii.
+\newblock Low frequency oscillations of the homogeneously precessing domain in
+  3he-b.
+\newblock {\em Physica B: Condensed Matter}, 178(1-4):196 -- 201, 1992.
+\newblock Proceedings of the KЖrber Symposium on Superfluid 3He in Rotation.
+
+\bibitem{2003_he3b_hpd_osc}
+E.~Ga\v~zo, M.~Kupka, M.~Medeov\'a, and P.~Skyba.
+\newblock Spin precession waves in superfluid $^3$he-b.
+\newblock {\em Phys. Rev. Lett.}, 91(5):055301, Jul 2003.
+
+\bibitem{1987_hpd_f}
+И.~А. Фомин.
+\newblock Низкочастотная спиновая динамика 3he-b в магнитном поле.
+\newblock {\em ЖЭТФ}, 93:2002--2014, 1987.
 
 \bibitem{1985_cryo}
 А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, and
