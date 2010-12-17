@@ -1,0 +1,57 @@
+\section*{5. Низкочастотная мода колебаний ОПД с поглощением}
+
+\hrule\vspace{5mm}
+
+Уравнение для частоты имеет вид:
+
+\begin{equation}
+-x^6 + ikx^5 + Ax^4 - ikBx^3 - Cx^2 + ikDx + E = 0,
+\end{equation}
+
+где
+
+
+\begin{eqnarray*}
+A &=& 1+b\\
+B &=& \Theta_0 \frac{\sqrt{15}}{10}(4b+1)\\
+C &=& \frac{b}{\sqrt{15}}(\sqrt{15}d+3h) + \frac{3}{8\sqrt{15}}(\sqrt{15}d-h)\\
+D &=& \frac15 \Theta_0b (\sqrt{15}d + h)\\
+E &=& \frac{1}{10}b(\sqrt{15}d-h)h\\
+\end{eqnarray*}
+
+
+Пусть искомый низкочастотный корень $x = y+iz,\quad y,z \sim h \sim d \ll 1, b$.
+Тогда слагаемые в уравнении имеют порядок:
+
+$$
+ h^6,\quad
+ kh^5,\quad
+ h^4,\quad
+ kh^4,\quad
+ h^3,\quad
+ kh^3,\quad
+ h^2
+$$
+
+Разделим уравнение на действительную и мнимую части:
+
+\begin{eqnarray*}
+\Re(-x^6 + ikx^5 + Ax^4 - ikBx^3 - Cx^2 + ikDx) + E &=& 0\\
+\Im(-x^6 + ikx^5 + Ax^4 - ikBx^3 - Cx^2 + ikDx) &=& 0\\
+\end{eqnarray*}
+
+
+\begin{eqnarray*}
+- ikB(y^3 + 3y^2zi - 3yz^2 - z^3i) &-&\\
+ C(y^2 - z^2 +2iyz) + ikDy - kDz + E &=& 0,
+\end{eqnarray*}
+
+\begin{eqnarray*}
+-ikBy^3 + kB3y^2z + ikB 3yz^2 - kBz^3 &-&\\
+ Cy^2 + Cz^2 - 2Ciyz + ikDy - kDz + E &=& 0,
+\end{eqnarray*}
+
+\begin{eqnarray*}
+kB3y^2z - kBz^3 - Cy^2 + Cz^2 - kDz + E &=& 0\\
+-kBy^3 + kB 3yz^2 - 2Cyz + kDy &=& 0,
+\end{eqnarray*}

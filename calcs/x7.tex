@@ -1,0 +1,39 @@
+\section*{6. Низкочастотная мода колебаний с учетом поглощения}
+
+\hrule\vspace{5mm}
+Пренебрежем всеми членами со степенями $x$ больше 2:
+
+\begin{equation}
+ - \frac{x^2}{\sqrt{15}}\left[ \frac32(\sqrt{15}d-h)+4b(\sqrt{15}d+3h) \right]
+ + 4ik \frac25b^2\Theta_0^2 x
+ + bh \frac25 (\sqrt{15}d-h) = 0
+\end{equation}
+
+Если искать решение уравнения $Ax^2+iBx+C=0$ в виде
+$x=y+iz$, имеем:
+
+$$
+Ay^2 - Az^2 + i2Azy + iBy - Bz + C = 0;
+$$
+
+отсюда
+$$
+z = -\frac{B}{2A},\qquad
+y^2 = - \frac{C}{A} + \frac{3B^2}{4A^2}.
+$$
+
+То есть поправка к частоте, связанная с поглощением пропорциональна $k^2$,
+а коэффициент затухания равен
+
+$$
+\beta/\omega_0 =
+\frac{\frac45 \sqrt{15} b^2\Theta_0^2}
+{\frac32(\sqrt{15}d-h)+4b(\sqrt{15}d+3h)}k.
+$$
+
+В линейном режиме
+
+$$
+\beta/\omega_0 =
+\frac{\sqrt{15} d - h}{2\sqrt{15}(1+8/3b)}k
+$$

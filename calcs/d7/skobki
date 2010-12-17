@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+foreach(<STDIN>){
+  if (/^\s*([+-])(.*)\(([^\(\)+-]+)([+-])([^\(\)+-]+)\)(.*)$/){
+    print "$1$2$3$6\n";
+    print "$1$4$2$5$6\n";
+  }
+  else {print;}
+}

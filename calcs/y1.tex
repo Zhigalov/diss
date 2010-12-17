@@ -1,0 +1,152 @@
+\section*{1. Уравнения Леггетта-Такаги - непрерывный ЯМР}
+\hrule\vspace{5mm}
+
+Уравнения Леггетта-Такаги
+
+\begin{equation}
+\left\{
+\begin{array}{rcl}
+\dot{\bf M} &=& \gamma{\bf M} \times {\bf H} +
+  \frac{4}{15} \frac{\chi\Omega_B^2}{\gamma} \sin\theta (1+4\cos\theta){\bf n},\\
+\dot\theta  &=& \gamma{\bf n}\left(\frac{\bf M}{\chi}-{\bf H}\right) +
+  \frac{4}{15\tau}\sin\theta (1+4\cos\theta),\\
+\dot{\bf n} &=& -\frac{\gamma}{2} \left[
+  {\bf n} \times \left(\frac{\bf M}{\chi}-{\bf H}\right)+
+  \ctg\frac{\theta}{2}\left[
+    {\bf n}\left({\bf n}\left(
+      \frac{\bf M}{\chi}-{\bf H}
+    \right)\right)-\left(
+      \frac{\bf M}{\chi}-{\bf H}
+    \right)
+  \right]
+\right]
+\end{array}\right.
+\end{equation}
+
+\hrule\vspace{5mm}
+
+Найдем решение для постоянного магнитного поля ${\bf H} = (0,0,H_0)$.
+
+Введем обозначения
+
+$$
+{\bf m} = \frac{\bf M}{\chi H_0},\quad
+{\bf h} = \frac{\bf H}{H_0},\quad
+\gamma H_0 = \omega_0,\qquad
+F = \frac{4}{15} \sin\theta (1+4\cos\theta),\qquad
+C = \ctg\frac{\theta}{2},\qquad
+b = \frac{\Omega_B^2}{\omega_0^2}
+$$
+
+\begin{equation}
+\left\{
+\begin{array}{rcl}
+\dot{\bf m}/\omega_0 &=& {\bf m} \times {\bf h} + b F {\bf n},\\
+\dot\theta/\omega_0  &=& {\bf n}\left({\bf m}-{\bf h}\right) + \frac{F}{\tau\omega_0},\\
+\dot{\bf n}/\omega_0 &=& -\frac12 \left[
+  {\bf n} \times ({\bf m}-{\bf h})+
+  C\left[
+    {\bf n}\left({\bf n}({\bf m}-{\bf h})\right) - {\bf m} + {\bf h}
+  \right]
+\right]
+\end{array}\right.
+\end{equation}
+
+В координатах, с заменой $B = {\bf n}({\bf m}-{\bf h}) = n_x m_x + n_y m_x + n_z(m_z-1)$:
+
+\begin{equation}
+\left\{
+\begin{array}{rcl}
+\dot{m}_x/\omega_0 &=&  m_y + b F n_x,\\
+\dot{m}_y/\omega_0 &=& -m_x + b F n_y,\\
+\dot{m}_z/\omega_0 &=&        b F n_z,\\
+\dot\theta/\omega_0  &=& B + \frac{F}{\tau\omega_0},\\
+2\dot{n}_x/\omega_0 &=& - n_y(m_z-1) + n_z m_y - CB n_x + C m_x,\\
+2\dot{n}_y/\omega_0 &=& - n_z m_x + n_x(m_z-1) - CB n_y + C m_y,\\
+2\dot{n}_z/\omega_0 &=& - n_x m_y + n_ym_x - CB n_z  + C (m_z - 1),\\
+B &=& n_x m_x + n_y m_y + n_z(m_z-1)
+\end{array}\right.
+\end{equation}
+
+У этих уравнений существует стационарное решение
+$\theta=\pm\cos^{-1}(-1/4)$, $m_x=m_y=0$, $m_z=1$. Уравнения для малых
+отклонений от положения равновесия (отклонения ${\bf n}$ от равновесия
+имеют следующий порядок малости):
+
+\begin{equation}
+\left\{
+\begin{array}{rcl}
+\Delta\dot{m}_x/\omega_0 &=&  \Delta m_y + b \Delta F n_x,\\
+\Delta\dot{m}_y/\omega_0 &=& -\Delta m_x + b \Delta F n_y,\\
+\Delta\dot{m}_z/\omega_0 &=&  b \Delta F n_z,\\
+\Delta\dot\theta/\omega_0  &=& n_x \Delta m_x + n_y \Delta m_y + n_z \Delta m_z
+ + \frac{\Delta F}{\tau\omega_0},\\
+\end{array}\right.
+\end{equation}
+
+Пусть $\theta=s[cos^{-1}(-1/4) + \Theta]$, где $s=\pm1$. Тогда для
+малого отклонения $\Theta$ от равновесного значения $\Delta F=-s\Theta$
+
+\begin{equation}
+\left\{
+\begin{array}{rcl}
+\Delta\dot{m}_x/\omega_0 &=&  \Delta m_y - sb \Theta n_x,\\
+\Delta\dot{m}_y/\omega_0 &=& -\Delta m_x - sb \Theta n_y,\\
+\Delta\dot{m}_z/\omega_0 &=&  -sb \Theta n_z,\\
+\dot\Theta/\omega_0  &=& n_x \Delta m_x + n_y \Delta m_y + n_z \Delta m_z
+  - s\frac{\Theta}{\tau\omega_0},\\
+\end{array}\right.
+\end{equation}
+
+Ищем решение вида $\Delta m_x(t) = e^{i\omega t} \Delta m_x$. Замена $x=\omega/\omega_0$:
+
+\begin{equation}
+\left\{
+\begin{array}{rcl}
+\Delta m_x ix &=&  \Delta m_y - sb \Theta n_x,\\
+\Delta m_y ix &=& -\Delta m_x - sb \Theta n_y,\\
+\Delta m_z ix &=&  -sb \Theta n_z,\\
+\Theta ix  &=& n_x \Delta m_x + n_y \Delta m_y + n_z \Delta m_z - s\Theta \frac{1}{\tau\omega_0},\\
+\end{array}\right.
+\end{equation}
+
+Уравнение для частоты:
+
+\begin{equation}
+\left|
+\begin{array}{llll}
+    -ix &
+    1   &
+    0   &
+    -sbn_x
+\\
+    -1 &
+    -ix &
+    0 &
+    -sbn_y
+\\
+    0 &
+    0 &
+    -ix &
+    -sbn_z
+\\
+    n_x &
+    n_y &
+    n_z &
+    - ix - s\frac{1}{\tau\omega_0}
+\end{array}\right|=0
+\end{equation}
+
+\begin{equation}
+x^4 - sk ix^3 - (bs+1) x^2 +sk ix +b n^2_z s = 0
+\end{equation}
+
+Без поглощения:
+
+\begin{equation}
+x^4 - (1+sb) x^2 + sb n^2_z = 0\\
+\end{equation}
+
+\begin{equation}
+\omega^4 - (\omega_0^2 + s\Omega_B^2b) \omega^2 + s\Omega_B^2\omega_0^2 \cos^2\varphi = 0\\
+\end{equation}

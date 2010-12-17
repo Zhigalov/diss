@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+foreach(<STDIN>){
+  my $n1=(s/x/x/g);
+  my $n2=(s/([TDH])/$1/g);
+  $n1 = 0 if $n1 eq '';
+  $n2 = 0 if $n2 eq '';
+  print "$n1 $n2 $_";
+}
