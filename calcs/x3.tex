@@ -23,36 +23,173 @@ B &=& n_x(m_x-h) + n_ym_y + n_z(m_z-1)
 \begin{equation}
 \left\{
 \begin{array}{ccl}
-0  &=& - d \Delta m_y - b\Theta_0 \Delta n_x\\
-0  &=&   d \Delta m_x + h\Delta m_z -
-  b\Theta_0 \Delta n_y - b\Delta\Theta\\
-0  &=& - h \Delta m_y - b\Theta_0 \Delta n_z\\
-0&=& \Delta m_y + \frac{\sqrt{15}}{4}\Delta n_x -
-  \frac54\Delta n_z - k\Theta_0\\
-0 &=& \sqrt{\frac35}\Delta m_x - \Delta m_z -
-  \frac34 \Delta n_y - \sqrt{\frac35}\Delta\Theta\\
-0 &=& \Delta m_x + \sqrt{\frac35}\Delta m_z +
-  \frac{\sqrt{15}}{4} \Delta n_y + \Delta \Theta\\
+0 &=& - d \Delta m_y + b F_0 \Delta n_x\\
+0 &=&   h \Delta m_z + d \Delta m_x + b F_0 \Delta n_y + b n_{y0} \Delta F \\
+0 &=& - h \Delta m_y + b F_0 \Delta n_z\\
+0 &=&   (m_{x0}-h)\Delta n_x + n_{y0} \Delta m_y + (m_{z0}-1)\Delta n_z + k F_0\\
+0 &=& - 2(1+d)\Delta n_y - n_{y0} \Delta m_z - (m_{z0}-1)\Delta n_y + C_0 \Delta m_x + (m_{x0}-h)\Delta C\\
+0 &=&   2(1+d)\Delta n_x - (m_{x0}-h)\Delta n_z + (m_{z0}-1)\Delta n_x - C_0 n_{y0}\Delta B + C_0 \Delta m_y\\
+0 &=&   (m_{x0}-h)\Delta n_y + n_{y0} \Delta m_x + C_0\Delta m_z + (m_{z0}-1)\Delta C\\
+\Delta B &=&  (m_{x0}-h)\Delta n_x + n_{y0} \Delta m_y + (m_{z0}-1)\Delta n_z\\
 \end{array}\right.
 \end{equation}
 
-Из первого и третьего уравнения:
+--- ответвление: кажется, что нельзя выкидывать члены младших порядков, проверяю 
+
+Из первого и третьего уравнений:
 
 \begin{equation}
-\Delta n_x=-\frac{d \Delta m_y}{b\Theta_0},\qquad
-\Delta n_z=-\frac{h \Delta m_y}{b\Theta_0}.
-\end{equation}
-
-Подставим в четвертое уравнение:
-
-\begin{equation}
-0 = \Delta m_y - \frac{\sqrt{15}}{4}\frac{d \Delta m_y}{b\Theta_0}
-	+ \frac54\frac{h \Delta m_y}{b\Theta_0} - k\Theta_0
+\Delta n_x=\frac{d}{bF_0} \Delta m_y,\qquad
+\Delta n_z=\frac{h}{bF_0} \Delta m_y,\qquad
 \end{equation}
 
 \begin{equation}
-\Delta m_y = k\frac{(\sqrt{15}d-h)^2}{16hb} =
- \frac{kb\Theta_0^2}{h}
+\left\{
+\begin{array}{ccl}
+0 &=&
+   h \Delta m_z
+ + d \Delta m_x
+ + b F_0 \Delta n_y
+ + b s_1 \Delta F
+\\
+0 &=&
+ \left[
+   (m_{x0}-h)\frac{d}{bF_0} + (m_{z0}-1) \frac{h}{bF_0} + s_1
+ \right] \Delta m_y
+ + k F_0
+\\
+0 &=&
+ - 2(1+d)\Delta n_y
+ - s_1\Delta m_z
+ - (m_{z0}-1)\Delta n_y
+ + C_0 \Delta m_x
+ + (m_{x0}-h)\Delta C
+\\
+0 &=&
+ \left[
+   2(1+d)\frac{d}{bF_0} - (m_{x0}-h)\frac{h}{bF_0} + (m_{z0}-1)\frac{d}{bF_0}
+  - C_0 s_1 (m_{x0}-h)\frac{d}{bF_0} - C_0 s_1 (m_{z0}-1)\frac{h}{bF_0}
+ \right] \Delta m_y
+\\
+0 &=&
+   (m_{x0}-h)\Delta n_y
+ + s_1 \Delta m_x
+ + C_0\Delta m_z
+ + (m_{z0}-1)\Delta C
+\\
+\end{array}\right.
+\end{equation}
+
+В предпоследнем уравнении перед $\Delta m_y$ стоит 0 (?)
+
+\begin{equation}
+\left\{
+\begin{array}{ccl}
+0 &=&
+   h \Delta m_z
+ + d \Delta m_x
+ + b F_0 \Delta n_y
+ + b s_1 \Delta F
+\\
+\Delta m_y &=& k \Theta_0
+  s\left[ 1 + s_2\frac{5\sqrt{15}}{16} \frac{hd}{b^2F^2_0} \right]^{-1}
+\\
+0 &=&
+ - \frac34 \Delta n_y
+ - s_1\Delta m_z
+ + s_2\sqrt\frac35 \Delta m_x
+ + s\sqrt\frac{15}{16}\Delta C
+\\
+0 &=&
+   s\sqrt\frac{15}{16}\Delta n_y
+ + s_1 \Delta m_x
+ + s_2 \sqrt\frac35 \Delta m_z
+ - \frac54\Delta C
+\\
+\end{array}\right.
+\end{equation}
+
+считаю что $\Delta n_y = 0$ (из того, что $|{\bf n}|=1$).
+
+\begin{equation}
+\left\{
+\begin{array}{ccl}
+\Delta m_y &=& k \Theta_0
+  s\left[ 1 + s_2\frac{5\sqrt{15} hd}{(\sqrt{15}d - sh)^2} \right]^{-1}
+\\
+0 &=&
+   d \Delta m_x
+ + h \Delta m_z
+ - b s \Delta\Theta
+\\
+0 &=&
+   s\sqrt\frac35 \Delta m_x
+ - \Delta m_z
+ - \sqrt\frac35 \Delta\Theta
+\\
+0 &=&
+ + s\Delta m_x
+ + \sqrt\frac35 \Delta m_z
+ + \Delta\Theta
+\\
+\end{array}\right.
+\end{equation}
+
+
+
+--- конец ответвления
+
+Оставляем в каждом уравнении только члены старшего порядка по $d$ и $h$:
+
+\begin{equation}
+\left\{
+\begin{array}{ccl}
+0 &=& - d \Delta m_y + b F_0 \Delta n_x\\
+0 &=&   b n_{y0} \Delta F \\
+0 &=& - h \Delta m_y + b F_0 \Delta n_z\\
+0 &=&   m_{x0}\Delta n_x + n_{y0} \Delta m_y + (m_{z0}-1)\Delta n_z + k F_0\\
+0 &=& - n_{y0}\Delta m_z - (m_{z0}+1)\Delta n_y + C_0 \Delta m_x + m_{x0}\Delta C\\
+0 &=& - m_{x0}\Delta n_z + (m_{z0}+1)\Delta n_x - C_0 n_{y0}\Delta B + C_0 \Delta m_y\\
+0 &=&   m_{x0}\Delta n_y + n_{y0} \Delta m_x + C_0\Delta m_z + (m_{z0}-1)\Delta C\\
+\Delta B &=&  m_{x0}\Delta n_x + n_{y0} \Delta m_y + (m_{z0}-1)\Delta n_z\\
+\end{array}\right.
+\end{equation}
+
+Из первых трех уравнений:
+
+\begin{equation}
+\Delta n_x=\frac{d \Delta m_y}{bF_0},\qquad
+\Delta n_z=\frac{h \Delta m_y}{bF_0},\qquad
+\Delta F = 0, \quad \Delta \Theta=0,\quad \Delta C = 0.
+\end{equation}
+
+\begin{equation}
+\left\{
+\begin{array}{ccl}
+0 &=&  \Delta m_y\left[ m_{x0}\frac{d}{bF_0} + n_{y0} -\frac54 \frac{h}{bF_0}\right] + k F_0\\
+0 &=& - n_{y0}\Delta m_z - \frac34\Delta n_y + C_0 \Delta m_x\\
+0 &=& \frac{\Delta m_y}{bF_0}\left[ - m_{x0}h + \frac34 d - C_0 n_{y0} m_{x0}d - C_0 n_{y0}\frac34 h \right]\\
+0 &=&   m_{x0}\Delta n_y + n_{y0} \Delta m_x + C_0\Delta m_z
+\end{array}\right.
+\end{equation}
+
+Подставляем равновесные значения без поглощения:
+
+\begin{equation}
+\left\{
+\begin{array}{ccl}
+0 &=&  \Delta m_y\left[ s\frac{\sqrt{15}}4 \frac{d}{-bs_2\Theta} + s_1 - \frac54 \frac{h}{-bs_2\Theta}\right] - k s_2\Theta\\
+0 &=& - s_1 \Delta m_z - \frac34\Delta n_y + s_2\sqrt{\frac35} \Delta m_x\\
+0 &=& \frac{\Delta m_y}{-bs_2\Theta}\left[ - s\frac{\sqrt{15}}4 h + \frac34 d - s_2\sqrt{\frac35} s_1 s\frac{\sqrt{15}}4 d - s_2\sqrt{\frac35} s_1 \frac34 h \right]\\
+0 &=&   s\frac{\sqrt{15}}4\Delta n_y + s_1 \Delta m_x + s_2\sqrt{\frac35} \Delta m_z
+\end{array}\right.
+\end{equation}
+
+Выражение в квадратных скобках в третьем уравнении
+обращается 0, а из первого уравнения получается
+
+\begin{equation}
+\Delta m_y =  \frac{kb \Theta_0^2}{h}
 \end{equation}
 
 Отсюда
@@ -68,7 +205,7 @@ B &=& n_x(m_x-h) + n_ym_y + n_z(m_z-1)
 \Delta n_y = -k^2\Theta_0^2 \frac{1+(d/h)^2}{2}.
 \end{equation}
 
-Из оставшиеся трех уравнений видно, что и
+Из оставшиеся уравнений видно, что и
 $\Delta m_x, \Delta m_z, \Delta \Theta \sim k^2\Theta_0^2$
 
 \vspace{5mm}
@@ -85,3 +222,28 @@ $$
 \Delta \Theta = 0.
 $$
 }}
+
+\vspace{5mm}
+\noindent\fbox{\parbox{\textwidth}{
+Стационарное решение уравнения Леггетта-Такаги во вращающейся системе
+координат для малых $h$ и $d$:
+$$
+n_x=-\frac{d}{h}k\Theta, \qquad
+n_y=s_1, \qquad
+n_z=-k\Theta,
+$$
+
+$$
+\Theta = \frac1{4b}\left(\sqrt{15}d - s h\right),\qquad
+\theta=s_2 [\arccos(-1/4) + \Theta],
+$$
+
+$$
+m_x  = h + s\frac{\sqrt{15}}4 (1+d) - s\Theta, \qquad
+m_y = \frac{kb\Theta^2}{h}, \qquad
+m_z  = - \frac14 - \frac54 d - 2\sqrt{\frac35} \Theta
+$$
+
+Здесь $s_1=\pm1, s_2=\pm1, s=s_1s_2$
+}}
+

@@ -1,4 +1,5 @@
-\section*{Пространственно-однородные моды колебаний HPD}
+\section*{Пространственно-однородные колебания ОПД (теория)}
+
 
 Однородно прецессирующий домен (ОПД)~--- очень удобная для различных
 исследований система. Пространственное распределение параметра порядка
@@ -15,18 +16,508 @@ $^3$He в аэрогеле.
 
 В работе \cite{1987_hpd_f} И.А.Фомин теоретически нашел две моды
 однородных колебаний ОПД существующих при отсутствии радиочастотной
-накачки. Рассмотрим теперь более общий случай.
+накачки. Рассмотрим теперь чуть более общий случай.
+
+\subsection*{Уравнения Леггетта-Такаги во вращающейся системе координат}
 
 Пусть $^3$He помещен в постоянное магнитное поле $H_0$ направленное
 вдоль оси $z$ и радиочастотное поперечное поле $H_R$, вращающееся
 в плоскости $x-y$ с частотой $\omega$.
 
-Запишем систему уравнений Леггетта~\ref{eq:leggett} .
+Запишем систему уравнений Леггетта-Такаги~\cite{1977_he3_legget_takagi} в
+пространственно-однородном случае (без учета спиновых токов). От
+системы уравнений Леггетта~(\ref{eq:leggett}) она отличается членом,
+связанным c механизмом релаксации
+Леггетта-Такаги~\cite{1975_he3_relax_legg_tak} с параметром $\tau$.
 
-...
+\begin{equation}
+\left\{
+\begin{array}{rcl}
+\dot{\bf M} &=& \gamma{\bf M} \times {\bf H} +
+  \frac{4}{15} \frac{\chi\Omega_B^2}{\gamma} \sin\theta (1+4\cos\theta){\bf n}\\
+\dot\theta  &=& \gamma{\bf n}\left(\frac{\bf M}{\chi}-{\bf H}\right)
+  + \frac{4}{15\tau} \sin\theta (1+4\cos\theta)\\
+\dot{\bf n} &=& -\frac{\gamma}{2} \left[
+  {\bf n} \times \left(\frac{\bf M}{\chi}-{\bf H}\right)+
+  \ctg\frac{\theta}{2}\left[
+    {\bf n}\left({\bf n}\left(
+      \frac{\bf M}{\chi}-{\bf H}
+    \right)\right)-\left(
+      \frac{\bf M}{\chi}-{\bf H}
+    \right)
+  \right]
+\right].
+\end{array}\right. \label{eq:legg_tak}
+\end{equation}
 
-\begin{itemize}
-\item Без поглощения
-\item С поглощением (?)
-\item использование для измерения Леггетовской частоты
-\end{itemize}
+Введем безразмерные обозначения:
+
+$$
+{\bf m} = \frac{\bf M}{\chi H_0},\qquad
+\gamma H_0 = \omega_0,\qquad
+b = \frac{\Omega_B^2}{\omega_0^2}.
+$$
+$$
+F(\theta) = \frac{4}{15} \sin\theta (1+4\cos\theta),\qquad
+C(\theta) = \ctg\frac{\theta}{2},\qquad
+$$
+
+Кроме того, введем $B = {\bf n} ({\bf m}-{\bf H}/{H_0})$.
+В этих обозначениях уравнения будут выглядеть следущим образом:
+
+$$
+\left\{
+\begin{array}{rcl}
+\dot{\bf m} &=&
+   \omega_0 {\bf m} \times {\bf H}/{H_0} + \omega_0 b F {\bf n}\\
+\dot\theta &=& \omega_0 B + F/\tau\\
+2\dot{\bf n} &=& - \omega_0
+  {\bf n} \times \left( {\bf m} - {\bf H}/{H_0} \right) -
+  \omega_0 C \left[ B {\bf n} - ( {\bf m} - {\bf H}/{H_0} ) \right]\\
+B &=& {\bf n} ({\bf m}-{\bf H}/{H_0}).
+\end{array}\right.
+$$
+
+По условиям задачи ${\bf H} = \left( H_R\cos(\omega t),
+-H_R\sin(\omega t), H_0\right)$. Перейдем во вращающуюся систему
+координат, в которой поле неподвижно. Такой переход задается матрицей
+поворота $R(t)$:
+
+\begin{equation}
+R = \left(
+\begin{array}{ccc}
+\cos(\omega t) & -\sin(\omega t) & 0\\
+\sin(\omega t) & \cos(\omega t) & 0\\
+0&0&1
+\end{array}\right), \qquad
+{\bf m}_r = R{\bf m}\qquad
+{\bf n}_r = R{\bf n}\qquad
+{\bf H}_r = R{\bf m}, \label{eq:R}
+\end{equation}
+
+Подставляем в уравнения
+${\bf m} = R^{-1}{\bf m}_r$,
+${\bf n} = R^{-1}{\bf n}_r$ и
+${\bf H} = R^{-1}{\bf H}_r$, умножаем первое и
+третье уравнения слева на $R$, учитываем, что
+$R{\bf a}R{\bf b}={\bf ab}$ и
+$R{\bf a} \times R{\bf b} = R ({\bf a}\times {\bf b})$
+и опускаем у векторов индекс $r$:
+
+$$
+\left\{
+\begin{array}{rcl}
+\dot{\bf m} &=& - R\dot R^{-1}{\bf m} +
+  \omega_0 {\bf m} \times {\bf H}/{H_0} + \omega_0 b F {\bf n}\\
+\dot\theta &=& \omega_0 B + F/\tau\\
+2\dot{\bf n} &=& - 2R\dot R^{-1}{\bf n} -
+  \omega_0 {\bf n} \times \left( {\bf m} - {\bf H}/{H_0} \right) -
+  \omega_0 C \left[ B {\bf n} - ( {\bf m} - {\bf H}/{H_0} ) \right]\\
+B &=& {\bf n} ({\bf m}-{\bf H}/{H_0}).
+\end{array}\right.
+$$
+
+Запишем это уравнение в координатах, учитывая, что во вращающей
+системе ${\bf H} = ( H_R, 0, H_0)$, а для матрицы поворота
+$R$ из~(\ref{eq:R}) произведение $R\dot{R}^{-1}$ имеет вид
+
+$$
+R\dot{R}^{-1} = \omega \left(
+\begin{array}{rrr}
+0  & 1 & 0\\
+-1 & 0 & 0\\
+0  & 0 & 0
+\end{array}\right).
+$$
+
+$$
+\left\{
+\begin{array}{ccl}
+\dot m_x    &=& - m_y\omega + m_y\omega_0 + \omega_0 b Fn_x\\
+\dot m_y    &=&   m_x\omega + m_z\omega_0H_R/H_0 - M_x\omega_0 + \omega_0bFn_y\\
+\dot m_z    &=& - m_y\omega_0 H_R/H_0 + \omega_0 b F n_z\\
+\dot\theta  &=& B \omega_0 + F/\tau\\
+2\dot n_x &=& - 2n_y\omega
+  - \omega_0\{ n_y(m_z-1) - n_zm_y \}
+  - \omega_0 C\{ Bn_x -(m_x-H_R/H_0)\}\\
+2\dot n_y &=& 2n_x\omega
+  - \omega_0\{ n_z(m_x - H_R/H_0) - n_x(m_z-1)\}
+  - \omega_0 C\{ Bn_y - m_y \}\\
+2\dot n_z &=&
+  - \omega_0 \{ n_x m_y - n_y(m_x - H_R/H_0) \}
+  - \omega_0 C\{ B n_z - (m_z-1) \}\\
+B &=& n_x(m_x-H_R/H_0) + n_ym_y + n_z(m_z-1)
+\end{array}\right.
+$$
+
+Введя безразмерный сдвиг частоты $d =
+(\omega-\omega_0)/\omega_0$, радиочастотное поле $h=H_R/H_0$ и
+коэффициент поглощения $k=\frac1{\omega_0\tau}$,
+получаем следующий результат:
+
+\medskip
+
+\noindent\fbox{\parbox{\textwidth}{
+Уравнения Леггетта-Такаги в системе координат, вращающейся вокруг оси $z$ с
+частотой $\omega$. К системе приложено поле $H_0$ вдоль оси $z$ и поле
+$H_R$ вдоль оси $x$:
+
+\begin{equation}
+\left\{
+\begin{array}{ccl}
+\dot m_x/\omega_0    &=& - d m_y + bF n_x\\
+\dot m_y/\omega_0    &=& h m_z + d m_x + bF n_y\\
+\dot m_z/\omega_0    &=& - m_y h + bFn_z\\
+\dot\theta/\omega_0  &=& B + kF\\
+2\dot n_x/\omega_0 &=& - 2n_y(1+d) - n_y(m_z-1) + n_zm_y - C Bn_x + C(m_x-h)\\
+2\dot n_y/\omega_0 &=&   2n_x(1+d) - n_z(m_x-h) + n_x(m_z-1) - C Bn_y + Cm_y\\
+2\dot n_z/\omega_0 &=& - n_xm_y + n_y(m_x-h) - C Bn_z + C(m_z-1)\\
+B &=& n_x(m_x-h) + n_ym_y + n_z(m_z-1)
+\end{array}\right. \label{eq:legg_tak_crd}
+\end{equation}
+
+Здесь использованы обозначения:
+
+$$
+\gamma H_0 = \omega_0,\qquad
+F = \frac{4}{15} \sin\theta (1+4\cos\theta),\qquad
+C = \ctg\frac{\theta}{2},
+$$
+$$
+{\bf m} = \frac{\bf M}{\chi H_0},\quad
+d = \frac{\omega-\omega_0}{\omega_0},\quad
+h =\frac{H_R}{H_0},\quad
+b = \frac{\Omega_B^2}{\omega_0^2},\quad
+k = \frac1{\omega_0\tau}.
+$$
+}}
+
+Как и должно быть, полученная система уравнений сохраняет модуль
+единичного вектора $\bf n$. Действительно, если умножить последние три
+уравнения на $n_x$, $n_y$ и $n_z$ соответственно и сложить их, получим
+уравнение на производную модуля $\bf n$, которая оказывается
+тождественно равной нулю. Для вектора $\bf m$ это не всегда так.
+Проделав аналогичную операцию с первыми тремя уравнениями, получим
+
+$$
+\frac{d}{dt}|{\bf m}| = b F {\bf n}{\bf m}
+$$
+
+Видно, что при нахождении системы в минимуме дипольной энергии
+($\cos\theta = -1/4$), модуль $\bf m$ сохраняется.
+
+\subsection*{Стационарное решение при отсутствии поглощения}
+
+Найдем стационарное решение системы уравнений Леггетта-Такаги во
+вращающейся системе координат при отсутствии поглощения. В
+системе~(\ref{eq:legg_tak_crd}) положим все производные по времени и
+коэффициент поглощения $k$ равными нулю:
+
+$$
+\left\{
+\begin{array}{ccl}
+0 &=& - d m_y + bF n_x\\
+0 &=& h m_z + d m_x + bF n_y\\
+0 &=& - m_y h + bFn_z\\
+0 &=& - 2n_y(1+d) - n_y(m_z-1) + n_zm_y - C Bn_x + C(m_x-h)\\
+0 &=&   2n_x(1+d) - n_z(m_x-h) + n_x(m_z-1) - C Bn_y + Cm_y\\
+0 &=& - n_xm_y + n_y(m_x-h) - C Bn_z + C(m_z-1)\\
+0 &=& n_x(m_x-h) + n_ym_y + n_z(m_z-1)
+\end{array}\right.
+$$
+
+Из первого и третьего уравнений $m_y = n_x bF/d, \quad n_z = n_x h/d$.
+Исключим $n_z$ и $m_y$ из остальных уравнений:
+
+$$
+\left\{
+\begin{array}{ccl}
+0 &=&   h m_z  +  d m_x + bFn_y\\
+0 &=&   n_x(m_x-h) + n_yn_x bF/d + n_x h/d (m_z-1)\\
+0 &=& - 2n_y(1+d) - n_y(m_z-1) + n_x^2 bFh/d^2 + C(m_x-h)\\
+0 &=&   2n_x(1+d) - n_x (m_x-h)h/d + n_x(m_z-1) + C n_x bF/d\\
+0 &=& - n_x^2 bF/d + n_y(m_x-h) + C(m_z-1)\\
+\end{array}\right.
+$$
+
+Из второго уравнения
+$$
+0 = \frac{n_x}{d} (hm_z + dm_x + bFn_y - dh  - h).
+$$
+
+Подставив сюда первое уравнение, получим, что в ненулевом
+радиочастотном поле $n_x=0$ (обсудить текстурный переход??). Отсюда
+
+$$
+m_y = n_z = n_x=0,\quad n_y=\pm1
+$$
+
+и уравнения принимают вид:
+
+\begin{equation}
+\left\{
+\begin{array}{ccl}
+0 &=&   h m_z  +  d m_x + bn_yF\\
+0 &=&   2(1+d) + (m_z-1) - n_yC(m_x-h)\\
+0 &=&   m_x - h + n_yC(m_z-1)\\
+\end{array}\right. \label{eq:legg_eq_tmp2}
+\end{equation}
+
+Из первого уравнения видно, что при малых $h$ и $d$ значение
+$F$ мало, то есть угол $\theta$ мало отличается от значения
+$\pm\arccos(-1/4)$.
+
+Введем числа $s_1 = \pm1$~--- знак $n_y$ и
+$s_2 = \pm1$~--- знак $\theta$, а также их произведение $s=s_1 s_2$.
+Будем искать решение в виде  $\theta = s_2\left[\arccos(-1/4) +
+\Theta\right]$, где $\Theta \sim h,d\ll 1$. Пренебрегая членами,
+квадратичными по $\Theta$, получаем:
+
+$$
+\sin(\theta) = s_2 \frac{\sqrt{15}-\Theta}{4}, \qquad
+\cos(\theta) = - \frac{1 + \sqrt{15}\Theta}{4},
+$$
+
+$$
+C = \ctg(\theta/2) = s_2\sqrt{\frac{1+\cos\Theta}{1-\cos\Theta}} =
+s_2\left(\sqrt{\frac35} - \frac45\Theta\right),
+$$
+
+$$
+F = \frac{4}{15}\sin{\theta}(1+4\cos{\theta}) = -s_2\Theta
+$$
+
+Подставляя $C$ и $F$ в уравнения~(\ref{eq:legg_eq_tmp2}), получаем
+следующий результат:
+
+\noindent\fbox{\parbox{\textwidth}{
+Стационарное решение уравнений Леггетта во вращающейся системе
+координат для малых $h$ и $d$:
+$$
+n_x=0, \qquad
+n_y=s_1, \qquad
+n_z=0,
+$$
+
+$$
+m_x  = h + s\frac{\sqrt{15}}4 (1+d) - s\Theta, \qquad
+m_y = 0, \qquad
+m_z  = - \frac14 - \frac54 d - 2\sqrt{\frac35} \Theta
+$$
+
+\begin{equation}
+\Theta = \frac1{4b}\left(\sqrt{15}d - s h\right),\qquad
+\theta=s_2 [\arccos(-1/4) + \Theta]. \label{eq:legg_eq}
+\end{equation}
+
+
+Здесь $s_1=\pm1, s_2=\pm1, s=s_1s_2$, то есть, различных решений всего четыре.
+Соответствующие варианты положения векторов $n$ и $m$ показаны на
+рис.~\ref{image:legg_eq}
+}}
+
+\image{legg_eq}{Четыре стационарных решения уравнений Леггетта во
+вращающейся системе координат для малых $h$ и $d$.}
+
+Найденное решение соответствует однородно-прецессирующему домену.
+
+(Обсуждение про текстурные энергии и решение с $n,M \parallel H$,
+про устойчивость домена и непрецессирующую часть домена...)
+
+(Какие именно из 4х решений реализуются?)
+
+\subsection*{Стационарное решение с учетом поглощения -- убрать?}
+
+Теперь найдем стационарное решение с учетом поглощения. В
+системе~(\ref{eq:legg_tak_crd}) положим все производные по времени
+равными нулю:
+
+\begin{equation}
+\left\{
+\begin{array}{ccl}
+0 &=& - d m_y + bF n_x\\
+0 &=& h m_z + d m_x + bF n_y\\
+0 &=& - m_y h + bFn_z\\
+0 &=& B + kF\\
+0 &=& - 2n_y(1+d) - n_y(m_z-1) + n_zm_y - C Bn_x + C(m_x-h)\\
+0 &=&   2n_x(1+d) - n_z(m_x-h) + n_x(m_z-1) - C Bn_y + Cm_y\\
+0 &=& - n_xm_y + n_y(m_x-h) - C Bn_z + C(m_z-1)\\
+B &=& n_x(m_x-h) + n_ym_y + n_z(m_z-1)
+\end{array}\right. \label{eq:legg_tak_eq_tmp1}
+\end{equation}
+
+Будем искать решение в виде суммы решения~(\ref{eq:legg_eq})
+и связанной с поглощением добавки:
+
+$$
+{\bf m} = {\bf m}_0 + \Delta {\bf m},\qquad
+{\bf n} = {\bf n}_0 + \Delta {\bf n},\qquad
+\Theta = \Theta_0 + \Delta \Theta.
+$$
+
+Подставив эти величины в уравнения~(\ref{eq:legg_tak_eq_tmp1}),
+получим следующую систему уравнений:
+
+(!! ошибка !!) Правильные поправки (?):
+
+$$
+\Delta m_y = k \Theta_0
+  s\left[ 1 + s_2\frac{5\sqrt{15} hd}{(\sqrt{15}d - sh)^2} \right]^{-1},
+\qquad
+\Delta n_x=\frac{d}{bF_0} \Delta m_y,\qquad
+\Delta n_z=\frac{h}{bF_0} \Delta m_y,\qquad
+$$
+
+(!!)
+
+$$
+\left\{
+\begin{array}{ccl}
+0 &=& - d \Delta m_y + b F_0 \Delta n_x\\
+0 &=&   h \Delta m_z + d \Delta m_x + b F_0 \Delta n_y + b n_{y0} \Delta F \\
+0 &=& - h \Delta m_y + b F_0 \Delta n_z\\
+0 &=&   (m_{x0}-h)\Delta n_x + n_{y0} \Delta m_y + (m_{z0}-1)\Delta n_z + k F_0\\
+0 &=& - 2(1+d)\Delta n_y - n_{y0} \Delta m_z - (m_{z0}-1)\Delta n_y + C_0 \Delta m_x + (m_{x0}-h)\Delta C\\
+0 &=&   2(1+d)\Delta n_x - (m_{x0}-h)\Delta n_z + (m_{z0}-1)\Delta n_x - C_0 n_{y0}\Delta B + C_0 \Delta m_y\\
+0 &=&   (m_{x0}-h)\Delta n_y + n_{y0} \Delta m_x + C_0\Delta m_z + (m_{z0}-1)\Delta C\\
+\Delta B &=&  (m_{x0}-h)\Delta n_x + n_{y0} \Delta m_y + (m_{z0}-1)\Delta n_z\\
+\end{array}\right.
+$$
+
+Подставляя сюда значения из~(\ref{eq:legg_eq}) и решая систему
+уравнений, получаем поправки, связанные с поглощенгием. С точностью до
+членов порядка $k^2\Theta_0^2$ они равны:
+
+$$
+\Delta n_x=-\frac{d}{h}k\Theta_0,\qquad
+\Delta n_y =0,\qquad
+\Delta n_z=-k\Theta_0,
+$$
+$$
+\Delta m_y = \frac{kb\Theta_0^2}{h},\qquad
+\Delta m_x=\Delta m_z = 0,\qquad
+\Delta \Theta = 0.
+$$
+
+После учета этих поправок результат выглядит следующим образом:
+
+\vspace{5mm}
+\noindent\fbox{\parbox{\textwidth}{
+Стационарное решение уравнения Леггетта-Такаги во вращающейся системе
+координат для малых $h$ и $d$, с точностью до членов
+порядка $k^2\Theta^2$:
+$$
+n_x=-\frac{d}{h}k\Theta, \qquad
+n_y=s_1, \qquad
+n_z=-k\Theta,
+$$
+
+$$
+m_x  = h + s\frac{\sqrt{15}}4 (1+d) - s\Theta, \qquad
+m_y = \frac{kb\Theta^2}{h}, \qquad
+m_z  = - \frac14 - \frac54 d - 2\sqrt{\frac35} \Theta,
+$$
+
+\begin{equation}
+\Theta = \frac1{4b}\left(\sqrt{15}d - s h\right),\qquad
+\theta=s_2 [\arccos(-1/4) + \Theta]. \label{eq:legg_tak_eq}
+\end{equation}
+
+Здесь $s_1=\pm1, s_2=\pm1, s=s_1s_2$
+}}
+
+\subsection*{Уравнение для частот малых колебаний без учета поглощения}
+
+Будем искать решения уравнений~(\ref{eq:legg_tak_crd}) в виде
+
+$$
+{\bf m} = {\bf m}_0 + e^{ix\omega_0 t} \Delta {\bf m}, \qquad
+{\bf n} = {\bf n}_0 + e^{ix\omega_0 t} \Delta {\bf n}, \qquad
+\Theta = \Theta_0 + e^{ix\omega_0 t} \Delta \Theta,
+$$
+
+где ${\bf m}_0$, ${\bf n}_0$, и $\Theta_0$~--- стационарное
+решение~(\ref{eq:legg_eq}), а $x$~--- безразмерная частота, выраженная
+в единицах $\omega_0$.
+
+Подставим эти величины в~(\ref{eq:legg_tak_crd}) и учтем, что $n_{x0}
+= n_{z0} = m_{y0} = B_0 = 0$. Кроме того, воспользуемся тем фактом,
+что модуль $\bf n$ сохраняется: выкинем 6-е уравнение (как уже было
+показано, 5-е, 6-е и 7-е уравнения линейно-зависимы) и положим $\Delta
+n_y = 0$ (поскольку нам интересны малые отклонения от положения
+равновесия, в котором $\bf n$ направлен вдоль оси $y$):
+
+$$
+\left\{
+\begin{array}{ccl}
+ix \Delta m_x &=&
+    - d \Delta m_y
+    + b F_0 \Delta n_x\\
+ix \Delta m_y &=&
+      h \Delta m_z
+    + d \Delta m_x
+    + b n_{y0} \Delta F\\
+ix \Delta m_z &=&
+    - h \Delta m_y
+    + b F_0 \Delta n_z\\
+ix \Delta \Theta &=&
+      \Delta B\\
+2ix \Delta n_x &=&
+    - n_{y0}\Delta m_z
+    + (m_{x0}-h)\Delta C
+    + C_0\Delta m_x\\
+2ix \Delta n_z &=&
+      n_{y0}\Delta m_x
+    + C_0\Delta m_z
+    + (m_{z0}-1)\Delta C\\
+\Delta B &=&
+      n_{y0}\Delta m_y
+    + (m_{x0}-h)\Delta n_x
+    + (m_{z0}-1)\Delta n_z\\
+\end{array}\right.
+$$
+
+
+Подставим $\Delta B$ из последнего уравнения, а также $\Delta F =
+-s_2\Delta\Theta$ и $\Delta C = -4/5s_2\Delta\Theta$ и приведем
+подобные члены. Полученная однородная система линейных уравнений имеет
+нетривиальное решение только при равенстве нулю определителя:
+
+$$
+\left|
+\begin{array}{rrrrrr}
+%  mx     my         mz    t                nx     nz
+  -ix &   -d &        0 &  0             & b F_0 & 0     \\ % mx
+    d &  -ix &        h & - s_2 b n_{y0} & 0     & 0     \\ % my
+    0 &   -h &      -ix & 0              & 0     & b F_0 \\ % mz
+    0 & n_{y0} &      0 & -ix            & m_{x0}-h & m_{z0}-1 \\ % theta
+  C_0 &    0 & - n_{y0} & - 4/5 s_2 (m_{x0}-h) & -2ix & 0 \\ % nx
+ n_{y0} &  0 &      C_0 & - 4/5 s_2 (m_{z0}-1) & 0 & -2ix \\ % ny
+\end{array}\right|=0
+$$
+
+Подставляем равновесные значения из~(\ref{eq:legg_eq}), пренебрегая,
+где это возможно, членами более высокого порядка по $h$ и $d$ и
+раскрываем определитель. Получем уравнение 3 порядка на $x^2$:
+
+%$$
+%\left|
+%\begin{array}{rrrrrr}
+% % mx   my      mz    t                nx     nz
+% -ix &  -d &    0 &    0 & -s_2 b\Theta_0 & 0     \\ % mx
+%   d & -ix &    h & - sb &              0 & 0     \\ % my
+%   0 &  -h &  -ix &    0 &              0 & -s_2 b\Theta_0 \\ % mz
+%   0 & s_1 &    0 & -ix  &   s\frac{\sqrt{15}}{4} & -\frac54  \\ % theta
+% s_2\frac{\sqrt{15}}{5} &   0 & -s_1 & - s_1 \frac{\sqrt{15}}{5} & -2ix & 0 \\ % nx
+% s_1 &   0 &  s_2\frac{\sqrt{15}}{5} &   s_2 & 0 & -2ix \\ % ny
+%\end{array}\right|=0
+%$$
+
+$$
+- 4 s_2 x^6
++ 4 (1+b) x^4
+- \frac1{\sqrt{15}} \left[ 3/2(\sqrt{15}d - sh)
+   + 4b(\sqrt{15}d + 3sh) \right] x^2
++ \frac25 b (\sqrt{15}d-sh) sh
+=0
+$$

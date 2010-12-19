@@ -46,73 +46,74 @@ m_y = n_z = n_x=0,\quad n_y=\pm1
 \begin{equation}
 \left\{
 \begin{array}{ccl}
-0 &=&   h m_z  +  d m_x \pm bF\\
-0 &=&  2(1+d) + (m_z-1) \mp C(m_x-h)\\
-0 &=&  (m_x-h) \pm C(m_z-1)\\
+0 &=&   h m_z  +  d m_x + bn_yF\\
+0 &=&   2(1+d) + (m_z-1) - n_yC(m_x-h)\\
+0 &=&   m_x - h + n_yC(m_z-1)\\
 \end{array}\right.
 \end{equation}
 
+(здесь я воспользовался тем, что $n_y n_y = 1$).
+
+\vspace{5mm}
 \hrule\vspace{5mm}
-Видно, что при $h,d\to0$ решение первого уравнения~--- $F=0$,
-то есть $\theta = \pm\arccos(-1/4)$.
+Видно, что при $h,d\to0$ решение первого уравнения~--- $F=0$, то есть
+$\theta = \pm\arccos(-1/4)$. Введем числа $s_1 = \pm1$~--- знак $n_y$,
+$s_2 = \pm1$~--- знак $\theta$ и $s=s_1 s_2$.
 
-Будем искать решение в виде
-$\theta = \pm\left[\arccos(-1/4) + \Theta\right]$ при $\Theta \sim h,d\ll 1$.
-
-Пренебрегая членами, квадратичными по $\Theta$, получим:
+Будем искать решение в виде  $\theta = s_2\left[\arccos(-1/4) +
+\Theta\right]$, где $\Theta \sim h,d\ll 1$. Пренебрегая членами,
+квадратичными по $\Theta$, получим:
 
 \begin{equation}
-  \sin(\theta) = \pm \frac{\sqrt{15}-\Theta}{4}, \qquad
+  \sin(\theta) = s_2 \frac{\sqrt{15}-\Theta}{4}, \qquad
   \cos(\theta) = - \frac{1 + \sqrt{15}\Theta}{4}
 \end{equation}
 
 \begin{equation}
-  C = \ctg(\theta/2) = \pm\sqrt{\frac{1+\cos\Theta}{1-\cos\Theta}} =
-\pm\left(\sqrt{\frac35} - \frac45\Theta\right), \quad
-  F = \frac{4}{15}\sin{\theta}(1+4\cos{\theta}) = \mp\Theta
+  C = \ctg(\theta/2) = s_2\sqrt{\frac{1+\cos\Theta}{1-\cos\Theta}} =
+s_2\left(\sqrt{\frac35} - \frac45\Theta\right), \quad
+  F = \frac{4}{15}\sin{\theta}(1+4\cos{\theta}) = -s_2\Theta
 \end{equation}
 \hrule\vspace{5mm}
 
-Видно, что надо рассматривать два разных случая:
-с одинаковыми и с разными знаками у $n_y$ и $\theta$.
+Подставляем $C$ и $F$ в уравнения:
 
 \begin{equation}
 \left\{
 \begin{array}{ccl}
-0 &=&   h m_z  +  d m_x \mp b\Theta\\
-0 &=&  2(1+d) + (m_z-1) \mp \left(\sqrt{\frac35} - \frac45\Theta\right) (m_x-h)\\
-0 &=&  (m_x-h) \pm \left(\sqrt{\frac35} - \frac45\Theta\right)(m_z-1)\\
+0 &=&   h m_z  +  d m_x - s b\Theta\\
+0 &=&   2(1+d) + (m_z-1) - s \left(\sqrt{\frac35} - \frac45\Theta\right)(m_x-h)\\
+0 &=&   m_x - h + s\left(\sqrt{\frac35} - \frac45\Theta\right)(m_z-1)\\
 \end{array}\right.
 \end{equation}
-
 
 Из второго уравнения
 \begin{equation}
-m_z =  - 1 - 2d  \pm\sqrt{\frac35}(m_x-h) \mp \frac45\Theta m_x
+m_z =  - 1 - 2d + s\sqrt{\frac35}(m_x-h) - s \frac45\Theta m_x
 \end{equation}
 
 \begin{equation}
 \left\{
 \begin{array}{ccl}
-m_x (d \pm \sqrt{\frac35}h) &=& h \pm b\Theta\\
+m_x (d + s \sqrt{\frac35}h) &=& h + s b\Theta\\
 m_x (1-\sqrt{\frac35} \Theta) &=& h
-\pm \frac{\sqrt{15}}4 (1+d)
-\mp \Theta
++ s \frac{\sqrt{15}}4 (1+d)
+- s \Theta
 \end{array}\right.
 \end{equation}
 
 \begin{equation}
-\frac{h \pm b\Theta}{d \pm \sqrt{\frac35}h}(1-\sqrt{\frac35} \Theta) =
- h \pm \frac{\sqrt{15}}4 (1+d) \mp \Theta
+\frac{h + s b\Theta}{d + s \sqrt{\frac35}h}(1-\sqrt{\frac35} \Theta) =
+ h + s \frac{\sqrt{15}}4 (1+d) - s \Theta
 \end{equation}
 
 \begin{equation}
-h \pm b\Theta = \pm \frac{\sqrt{15}}4\left(d \pm \sqrt{\frac35}h\right)
+h + s b\Theta =  s \frac{\sqrt{15}}4\left(d + s \sqrt{\frac35}h\right)
 \end{equation}
 
 \begin{equation}
-\Theta = \frac1{4b}\left(\sqrt{15}d \mp h\right), \qquad
-m_x  = h \pm \frac{\sqrt{15}}4 (1+d) \mp \Theta, \qquad
+\Theta = \frac1{4b}\left(\sqrt{15}d - s h\right), \qquad
+m_x  = h + s \frac{\sqrt{15}}4 (1+d) - s \Theta, \qquad
 m_z  = - \frac14 - \frac54 d - 2\sqrt{\frac35} \Theta
 \end{equation}
 
@@ -120,39 +121,25 @@ m_z  = - \frac14 - \frac54 d - 2\sqrt{\frac35} \Theta
 Стационарное решение уравнения Леггетта во вращающейся системе
 координат для малых $h$ и $d$:
 $$
-n_x=n_z=0, \quad m_y = 0
+n_x=0, \qquad
+n_y=s_1, \qquad
+n_z=0,
 $$
 
-\parbox{0.5\textwidth}{
 $$
-n_y=\pm 1,
+\Theta = \frac1{4b}\left(\sqrt{15}d - s h\right),\qquad
+\theta=s_2 [\arccos(-1/4) + \Theta],
 $$
+
 $$
-\theta=\pm \arccos(-1/4) \pm \frac1{4b}(\sqrt{15}d - h),
-$$
-$$
-m_x  = h + \frac{\sqrt{15}}4 (1+d) - \Theta,
-$$
-$$
+m_x  = h + s\frac{\sqrt{15}}4 (1+d) - s\Theta, \qquad
+m_y = 0, \qquad
 m_z  = - \frac14 - \frac54 d - 2\sqrt{\frac35} \Theta
 $$
-}
-\parbox{0.5\textwidth}{
-$$
-n_y=\pm 1,
-$$
-$$
-\theta=\mp \arccos(-1/4) \mp \frac1{4b}(\sqrt{15}d + h),
-$$
-$$
-m_x  = h - \frac{\sqrt{15}}4 (1+d) + \Theta,
-$$
-$$
-m_z  = - \frac14 - \frac54 d - 2\sqrt{\frac35} \Theta
-$$
-}}}
+
+Здесь $s_1=\pm1, s_2=\pm1, s=s_1s_2$, то есть, различных решений всего четыре:
 
 \noindent\includegraphics{pic2.eps}
+}}
 
-Видно, что решения 1, 3 и 2, 4 одинаковы с точностью до поворота системы координат
-и замены $h \to -h$.
+
