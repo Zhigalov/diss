@@ -1,4 +1,4 @@
-parts=01_intro 06_hpd_osc 07_num 08_exp 09_res
+parts=01_intro 02_theor 03_num 04_tech 05_res
 
 all: diss.pdf
 
