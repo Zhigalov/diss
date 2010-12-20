@@ -18,3 +18,6 @@ diss.dvi: diss.tex ${parts:=.tex}
 
 clean:
 	rm -f *.aux *.log
+
+spell:
+	ispell -d russian-lebedev ${parts:=.tex}
