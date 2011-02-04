@@ -1,6 +1,7 @@
 pics=he3phd he3aphd flare_out cw_nmr cw_nmr_a hpd\
      legg_eq f_roots\
-     cells coils spectr
+     cells coils spectr\
+     res_hpd res_signals
 
 #all: ${pics:=.png} ${pics:=.tex} ${pics:=.eps}
 all: ${pics:=.tex} ${pics:=.eps}
