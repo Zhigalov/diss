@@ -19,6 +19,6 @@ plot [0:][0:]\
   f1(x),f2(x),f3(x),\
  "res_fh195a" using ($1*6.27):($2**2) with points pt 7 ps 2,\
  "res_fh195b" using ($1*6.27):($3**2) with points pt 7 ps 2,\
- "res_fh255a" with points pt 7 ps 2
+ "res_fh248a" with points pt 7 ps 2
 
 pause -1
