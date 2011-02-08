@@ -23,12 +23,12 @@
 \tolerance=600
 \pagestyle{empty}
 
-\newcommand{\image}[2]{
-\begin{figure}[h!]
+\newcommand{\image}[3]{
+\begin{figure}[#1]
 \begin{center}
-\input{images/#1.tex}
-\caption{\small#2}
-\label{image:#1}
+\input{images/#2.tex}
+\caption{\small#3}
+\label{image:#2}
 \end{center}
 \end{figure}
 }
