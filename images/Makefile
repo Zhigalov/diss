@@ -1,4 +1,4 @@
-pics=he3phd he3aphd flare_out cw_nmr cw_nmr_a hpd\
+pics=he3phd he3aphd flare_out cw_nmr cw_nmr_a hpd nmr_hpd\
      legg_eq f_roots\
      cells coils spectr wire1 wire2\
      res_hpd res_obr res_fh res_fd res_ft
