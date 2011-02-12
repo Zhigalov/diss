@@ -46,6 +46,11 @@ V.~V. Dmitriev, D.~A. Krasnikhin, N.~Mulders, A.~A. Senin, G.~E. Volovik, and
   aerogel.
 \newblock {\em JETP Letters}, 91(11):599--606, 2010.
 
+\bibitem{1975_he3_teor_leggett}
+Anthony~J. Leggett.
+\newblock A theoretical description of the new phases of liquid 3he.
+\newblock {\em Rev. Mod. Phys.}, 47(2):331--414, Apr 1975.
+
 \bibitem{1989_he3b_nmr}
 P.~J. Hakonen, M.~Krusius, M.~M. Salomaa, R.~H. Salmelin, J.~T. Simola, A.~D.
   Gongadze, G.~E. Vachnadze, and G.~A. Kharadze.
@@ -59,10 +64,10 @@ D~Vollhardt and P~Wolfle.
 \newblock {\em The Superfluid Phases of Helium 3}.
 \newblock Taylor\&Francis, 1990.
 
-\bibitem{1975_he3_teor_leggett}
-Anthony~J. Leggett.
-\newblock A theoretical description of the new phases of liquid 3he.
-\newblock {\em Rev. Mod. Phys.}, 47(2):331--414, Apr 1975.
+\bibitem{2006_diss_zmeev}
+Д.~Е. Змеев.
+\newblock {\em Исследования сверхтекучих фаз 3He в аэрогеле}.
+\newblock PhD thesis, Институт физических проблем им. П.Л.Капицы, 2006.
 
 \bibitem{2004_aero_blegg}
 В.~В. Дмитриев, В.~В. Завьялов, Д.~Е. Змеев, and Н.~Малдерс.
@@ -96,6 +101,22 @@ V.~V. Dmitriev, I.~V. Kosarev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
   Temperature Physics, LT23, held in Hiroshima, Japan, 20-27 August 2002},
   Amsterdam, 2003. Elsevier.
 
+\bibitem{1975_he3_relax_legg_tak}
+A.~J. Leggett and S.~Takagi.
+\newblock Nmr in a-3he and b-3he: The intrinsic relaxation mechanism.
+\newblock {\em Phys. Rev. Lett.}, 34(23):1424--1427, Jun 1975.
+
+\bibitem{1977_he3_legget_takagi}
+A.~J. Leggett and S.~Takagi.
+\newblock Orientational dynamics of superfluid 3he: A "two-fluid" model. i.
+  spin dynamics with relaxation.
+\newblock {\em Annals of Physics}, 106(1):79 -- 133, 1977.
+
+\bibitem{1985_hpd_f}
+И.~А. Фомин.
+\newblock Разбиение прецессии намагиченности в $^3$he-b на два домена. Теория.
+\newblock {\em ЖЭТФ}, 88:2039--2051, 1985.
+
 \bibitem{1985_hpd}
 А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, and
   К.~Флахбарт.
@@ -103,22 +124,12 @@ V.~V. Dmitriev, I.~V. Kosarev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
   Эксперимент.
 \newblock {\em ЖЭТФ}, 88:2025--2038, 1985.
 
-\bibitem{1985_hpd_f}
-И.~А. Фомин.
-\newblock Разбиение прецессии намагиченности в $^3$he-b на два домена. Теория.
-\newblock {\em ЖЭТФ}, 88:2039--2051, 1985.
-
 \bibitem{1989_cwhpd}
 А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, Е.~В.
   Поддьякова, and О.~Д. Тимофеевская.
 \newblock Особенности непрерывного ЯМР в $^3$he-b, обусловленные спиновым
   сверхтоком.
 \newblock {\em ЖЭТФ}, 96:956--972, 1989.
-
-\bibitem{1975_he3_relax_legg_tak}
-A.~J. Leggett and S.~Takagi.
-\newblock Nmr in a-3he and b-3he: The intrinsic relaxation mechanism.
-\newblock {\em Phys. Rev. Lett.}, 34(23):1424--1427, Jun 1975.
 
 \bibitem{2002_aero_hpd}
 V.~V. Dmitriev, I.~V. Kosarev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
@@ -165,10 +176,21 @@ E.~Ga\v~zo, M.~Kupka, M.~Medeov\'a, and P.~Skyba.
 \newblock Spin precession waves in superfluid $^3$he-b.
 \newblock {\em Phys. Rev. Lett.}, 91(5):055301, Jul 2003.
 
-\bibitem{1987_hpd_f}
-И.~А. Фомин.
-\newblock Низкочастотная спиновая динамика 3he-b в магнитном поле.
-\newblock {\em ЖЭТФ}, 93:2002--2014, 1987.
+\bibitem{1979_pdecol}
+N.~K. Madsen and R.~F. Sincovec.
+\newblock {Algorithm 540}: {PDECOL}, general collocation software for partial
+  differential equations [{D3}].
+\newblock {\em {ACM} Transactions on Mathematical Software}, 5(3):326--351,
+  September 1979.
+\newblock See also \cite{Hopkins:1992:RPG}.
+
+\bibitem{1992_pdecol}
+Tim Hopkins.
+\newblock Remark on ``{Algorithm 540}: {PDECOL}, general collocation software
+  for partial differential equations [{D3}]''.
+\newblock {\em {ACM} Transactions on Mathematical Software}, 18(3):343--344,
+  September 1992.
+\newblock See \cite{Madsen:1979:APG}.
 
 \bibitem{1985_cryo}
 А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, and
