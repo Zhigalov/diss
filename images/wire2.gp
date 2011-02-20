@@ -18,7 +18,7 @@ fit [0.6:0.9] f2(x) "wire248" via a2,b2,c2,d2
 fit [0.6:0.9] f3(x) "wire195" via dd,cc
 
 
-plot [0.6:0.9] [40:]\
+plot [0.6:0.9] [20:]\
   f2(x),f3(x),\
   "wire195" with points pt 7 ps 1,\
   "wire248" with points pt 7 ps 1,\
@@ -29,5 +29,7 @@ plot [0.6:0.9] [40:]\
 
 #  "cal195c" using ( 1+ ($1-1)*(1-0.155*($1-1)) ):3,\
 
+print "f248 = ", a1, "*x^3 + ", b1, "*x^2 + ", c1, "*x + ", d1
+print "f195 = ", a1, "*x^3 + ", b1, "*x^2 + ", c1+cc, "*x + ", d1+dd
 
 pause -1
