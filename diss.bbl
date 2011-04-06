@@ -59,15 +59,10 @@ P.~J. Hakonen, M.~Krusius, M.~M. Salomaa, R.~H. Salmelin, J.~T. Simola, A.~D.
 \newblock {\em Journal of Low Temperature Physics}, 76:225--283, 1989.
 \newblock 10.1007/BF00681586.
 
-\bibitem{vw}
-D~Vollhardt and P~Wolfle.
-\newblock {\em The Superfluid Phases of Helium 3}.
-\newblock Taylor\&Francis, 1990.
-
 \bibitem{2006_diss_zmeev}
 Д.~Е. Змеев.
 \newblock {\em Исследования сверхтекучих фаз 3He в аэрогеле}.
-\newblock PhD thesis, Институт физических проблем им. П.Л.Капицы, 2006.
+\newblock 2006.
 
 \bibitem{2004_aero_blegg}
 В.~В. Дмитриев, В.~В. Завьялов, Д.~Е. Змеев, and Н.~Малдерс.
@@ -117,6 +112,11 @@ A.~J. Leggett and S.~Takagi.
 \newblock Разбиение прецессии намагиченности в $^3$he-b на два домена. Теория.
 \newblock {\em ЖЭТФ}, 88:2039--2051, 1985.
 
+\bibitem{1987_hpd_f}
+И.~А. Фомин.
+\newblock Низкочастотная спиновая динамика 3he-b в магнитном поле.
+\newblock {\em ЖЭТФ}, 93:2002--2014, 1987.
+
 \bibitem{1985_hpd}
 А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, and
   К.~Флахбарт.
@@ -137,20 +137,6 @@ V.~V. Dmitriev, I.~V. Kosarev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
 \newblock In {\em Proceedings of the 23rd International Conference on Low
   Temperature Physics, LT23, held in Hiroshima, Japan, 20-27 August 2002},
   Amsterdam, 2003. Elsevier.
-
-\bibitem{2005_he3b_hpd_osc}
-V.V. Dmitriev, V.V. Zavjalov, and D.Ye. Zmeev.
-\newblock Spatially homogeneous oscillations of homogeneously precessing domain
-  in 3he-b.
-\newblock {\em Journal of Low Temperature Physics}, 138:765--770, 2005.
-\newblock 10.1007/s10909-005-2300-5.
-
-\bibitem{2004_aero_btext}
-V.~V. Dmitriev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
-\newblock Nmr studies of texture in the b-like phase of $^3$he in aerogel.
-\newblock In {\em Proceedings of the 24rd International Conference on Low
-  Temperature Physics, LT24, held in Orlando, Florida (USA), 10-17 August
-  2005}, pages 225--228. AIP-Press, 2006.
 
 \bibitem{1986_hpd_tosc_f_r}
 И.~А. Фомин.
@@ -176,6 +162,11 @@ E.~Ga\v~zo, M.~Kupka, M.~Medeov\'a, and P.~Skyba.
 \newblock Spin precession waves in superfluid $^3$he-b.
 \newblock {\em Phys. Rev. Lett.}, 91(5):055301, Jul 2003.
 
+\bibitem{1983_f}
+И.~А. Фомин.
+\newblock Периодические движения намагниченности в b-фазе гелия-3.
+\newblock {\em ЖЭТФ}, 84:2109--2120, 1983.
+
 \bibitem{1979_pdecol}
 N.~K. Madsen and R.~F. Sincovec.
 \newblock {Algorithm 540}: {PDECOL}, general collocation software for partial
@@ -191,6 +182,11 @@ Tim Hopkins.
 \newblock {\em {ACM} Transactions on Mathematical Software}, 18(3):343--344,
   September 1992.
 \newblock See \cite{Madsen:1979:APG}.
+
+\bibitem{vw}
+D.~Vollhardt and P.~Wolfle.
+\newblock {\em The Superfluid Phases of Helium 3}.
+\newblock Taylor\&Francis, 1990.
 
 \bibitem{1985_cryo}
 А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, and
@@ -224,5 +220,19 @@ D.~C. Carless, H.~E. Hall, and J.~R. Hook.
   phase.
 \newblock {\em Journal of Low Temperature Physics}, 50:605--633, 1983.
 \newblock 10.1007/BF00683498.
+
+\bibitem{2005_he3b_hpd_osc}
+V.V. Dmitriev, V.V. Zavjalov, and D.Ye. Zmeev.
+\newblock Spatially homogeneous oscillations of homogeneously precessing domain
+  in 3he-b.
+\newblock {\em Journal of Low Temperature Physics}, 138:765--770, 2005.
+\newblock 10.1007/s10909-005-2300-5.
+
+\bibitem{2004_aero_btext}
+V.~V. Dmitriev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
+\newblock Nmr studies of texture in the b-like phase of $^3$he in aerogel.
+\newblock In {\em Proceedings of the 24rd International Conference on Low
+  Temperature Physics, LT24, held in Orlando, Florida (USA), 10-17 August
+  2005}, pages 225--228. AIP-Press, 2006.
 
 \end{thebibliography}
