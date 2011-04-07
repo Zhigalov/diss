@@ -461,53 +461,75 @@ J_{ij} = -\frac12\ \frac{\partial F_\nabla}{\partial \nabla_i\alpha_j},
 где $\nabla_i\alpha_j$~--- градиенты углов Эйлера, задающих матрицу
 поворота параметра порядка.
 
-Выражение для градиентной энергии имеет вид~(\cite{1987_hpd_f}):
+(...)
 
-\begin{equation}
-F_\nabla = \frac12 \left(
-  c_\parallel^2 \delta_{ij}\delta_{\xi\eta} +
-  (c_\parallel^2 - c_\perp^2 )
-    (\delta_{i\xi}\delta_{j\eta} + \delta_{i\eta}\delta_{j\xi})
-\right) \nabla_\xi n_i \nabla_\eta n_j.
-\end{equation}
+Выражение для градиентной энергии в координатах~$\bf n$ и $\theta$
+(из~\cite{1989_he3b_nmr}):
 
-Здесь параметры~$c_\parallel$ и~$c_\perp$~--- скорости двух типов
-спиновых волн. В дальнейшем будем считать, что пространственные
-неоднородности существуют только вдоль координаты $z$. В этом случае
-получаем
+$$
+F_\nabla = \frac54 \chi_B \left(\frac{c_\perp}{\gamma}\right)^2
+\left[ (\nabla \cdot {\bf n})^2 -
+  \frac{1}{16}\left(\sqrt{3} \nabla \cdot {\bf n} + \sqrt{5} {\bf n} \cdot
+(\nabla\times{\bf n})\right)^2\right]
+$$
 
-\begin{equation}
-F_\nabla = \frac12 c_\parallel^2 (n'^2_x + n'^2_y) +
-  \left(\frac32 c_\parallel^2 - c_\perp^2 \right) n'^2_z,
-\end{equation}
+Для случая пространственной неоднородности вдоль оси~$z$ получаем:
 
-где штрихи обозначают производные по координате~$z$. Производные от
-компонент оси поворота~$n_i$ матрицы параметра порядка выражаются
-через углы Эйлера~$\alpha_i$ следующим образом:
+$$
+F_\nabla = \frac54 \chi_B \left(\frac{c_\perp}{\gamma}\right)^2
+\left[ n_z^{\prime 2} -
+  \frac{1}{16}\left(\sqrt{3} n_z^{\prime 2} +
+  \sqrt{5} (n_x^\prime n_y - n_y^\prime n_x)\right)^2\right],
+$$
 
-\begin{eqnarray}
-n'_x &=&
-  - \alpha'_1 \sin\alpha_2 \cos\alpha_3
-  + \alpha'_2 \sin\alpha_3,\\
-n'_y &=&
-    \alpha'_1 \sin\alpha_2 \sin\alpha_3
-  + \alpha'_2 \cos\alpha_3,\\
-n'_z &=& \alpha'_1 \cos\alpha_2  + \alpha'_3.
-\end{eqnarray}
-
-Подставляя градиентную энергию в выражение спиновых токов, получаем:
-
-\begin{eqnarray}
-J_{31} &=& -\frac12
-  c_\parallel^2 \sin\alpha_2 (- n'_x  \cos\alpha_3  + n'_y \sin\alpha_3) +
-  \left(\frac32 c_\parallel^2 - c_\perp^2 \right) 2n'_z \cos\alpha_2,\\
-J_{32} &=& -\frac12 c_\parallel^2 (n'_x \sin\alpha_3  + n'_y \cos\alpha_3),\\
-J_{33} &=& - \left(\frac32 c_\parallel^2 - c_\perp^2 \right) n'_z.
-\end{eqnarray}
+где штрихом обозначена производная по координате~$z$.
 
 
+%Выражение для градиентной энергии имеет вид~(\cite{1987_hpd_f}):
 
-(Выражения для спиновых токов...)
+%\begin{equation}
+%F_\nabla = \frac12 \left(
+%  c_\parallel^2 \delta_{ij}\delta_{\xi\eta} +
+%  (c_\parallel^2 - c_\perp^2 )
+%    (\delta_{i\xi}\delta_{j\eta} + \delta_{i\eta}\delta_{j\xi})
+%\right) \nabla_\xi n_i \nabla_\eta n_j.
+%\end{equation}
+%
+%Здесь параметры~$c_\parallel$ и~$c_\perp$~--- скорости двух типов
+%спиновых волн. В дальнейшем будем считать, что пространственные
+%неоднородности существуют только вдоль координаты $z$. В этом случае
+%получаем
+%
+%\begin{equation}
+%F_\nabla = \frac12 c_\parallel^2 (n'^2_x + n'^2_y) +
+%  \left(\frac32 c_\parallel^2 - c_\perp^2 \right) n'^2_z,
+%\end{equation}
+%
+%где штрихи обозначают производные по координате~$z$. Производные от
+%компонент оси поворота~$n_i$ матрицы параметра порядка выражаются
+%через углы Эйлера~$\alpha_i$ следующим образом:
+%
+%\begin{eqnarray}
+%n'_x &=&
+%  - \alpha'_1 \sin\alpha_2 \cos\alpha_3
+%  + \alpha'_2 \sin\alpha_3,\\
+%n'_y &=&
+%    \alpha'_1 \sin\alpha_2 \sin\alpha_3
+%  + \alpha'_2 \cos\alpha_3,\\
+%n'_z &=& \alpha'_1 \cos\alpha_2  + \alpha'_3.
+%\end{eqnarray}
+%
+%Подставляя градиентную энергию в выражение спиновых токов, получаем:
+%
+%\begin{eqnarray}
+%J_{31} &=& -\frac12
+%  c_\parallel^2 \sin\alpha_2 (- n'_x  \cos\alpha_3  + n'_y \sin\alpha_3) +
+%  \left(\frac32 c_\parallel^2 - c_\perp^2 \right) 2n'_z \cos\alpha_2,\\
+%J_{32} &=& -\frac12 c_\parallel^2 (n'_x \sin\alpha_3  + n'_y \cos\alpha_3),\\
+%J_{33} &=& - \left(\frac32 c_\parallel^2 - c_\perp^2 \right) n'_z.
+%\end{eqnarray}
+%
+%(Выражения для спиновых токов...)
 
 \subsection*{Однородно-прецессирующий домен}
 

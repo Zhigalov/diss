@@ -62,7 +62,8 @@ P.~J. Hakonen, M.~Krusius, M.~M. Salomaa, R.~H. Salmelin, J.~T. Simola, A.~D.
 \bibitem{2006_diss_zmeev}
 Д.~Е. Змеев.
 \newblock {\em Исследования сверхтекучих фаз 3He в аэрогеле}.
-\newblock 2006.
+\newblock Кандидатская диссертация. Институт физических проблем им. П.Л.Капицы,
+  2006.
 
 \bibitem{2004_aero_blegg}
 В.~В. Дмитриев, В.~В. Завьялов, Д.~Е. Змеев, and Н.~Малдерс.
@@ -111,11 +112,6 @@ A.~J. Leggett and S.~Takagi.
 И.~А. Фомин.
 \newblock Разбиение прецессии намагиченности в $^3$he-b на два домена. Теория.
 \newblock {\em ЖЭТФ}, 88:2039--2051, 1985.
-
-\bibitem{1987_hpd_f}
-И.~А. Фомин.
-\newblock Низкочастотная спиновая динамика 3he-b в магнитном поле.
-\newblock {\em ЖЭТФ}, 93:2002--2014, 1987.
 
 \bibitem{1985_hpd}
 А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, Ю.~М. Мухарский, and
@@ -169,19 +165,19 @@ E.~Ga\v~zo, M.~Kupka, M.~Medeov\'a, and P.~Skyba.
 
 \bibitem{1979_pdecol}
 N.~K. Madsen and R.~F. Sincovec.
-\newblock {Algorithm 540}: {PDECOL}, general collocation software for partial
-  differential equations [{D3}].
-\newblock {\em {ACM} Transactions on Mathematical Software}, 5(3):326--351,
+\newblock Algorithm 540: Pdecol, general collocation software for partial
+  differential equations [d3].
+\newblock {\em ACM Transactions on Mathematical Software}, 5(3):326--351,
   September 1979.
-\newblock See also \cite{Hopkins:1992:RPG}.
+\newblock See also Hopkins:1992:RPG.
 
 \bibitem{1992_pdecol}
 Tim Hopkins.
-\newblock Remark on ``{Algorithm 540}: {PDECOL}, general collocation software
-  for partial differential equations [{D3}]''.
-\newblock {\em {ACM} Transactions on Mathematical Software}, 18(3):343--344,
+\newblock Remark on "algorithm 540: Pdecol, general collocation software for
+  partial differential equations [d3]".
+\newblock {\em ACM Transactions on Mathematical Software}, 18(3):343--344,
   September 1992.
-\newblock See \cite{Madsen:1979:APG}.
+\newblock See Madsen:1979:APG.
 
 \bibitem{vw}
 D.~Vollhardt and P.~Wolfle.
