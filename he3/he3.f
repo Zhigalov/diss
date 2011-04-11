@@ -23,10 +23,9 @@ C     IF(RUNST) THEN
 C     CALL EXEC(14,2,OUT,NOUT*2)
 C     CALL EXEC(6,0,-1)
 C     END IF
-      LU=0
       OPEN (101,STATUS='SCRATCH')
-      WRITE(LU,'(A,''Command : '',\)') PNAM
-      READ(LU,'(A)')BUFF
+      WRITE(*,'(A,''Command : '')') PNAM
+      READ(*,'(A)')BUFF
 c     LBUFF=ITLOG()
       LBUFF=80
  2    CONTINUE
@@ -354,7 +353,7 @@ C--
 c         LENB=ITLOG()
           LENB=80
           IF(BUFF(:4).EQ.'****') GOTO 55
-          WRITE(LU,'(A)')BUFF(:LENB)
+          WRITE(*,'(A)')BUFF(:LENB)
  1201   continue
  55     CLOSE(49)
         BUFF=' '
@@ -365,9 +364,9 @@ c         LENB=ITLOG()
         STOP
       ELSE IF(BUFF.EQ.'MT') THEN
         MT=.TRUE.
-        WRITE(*,'('' Quantity: '',\)')
+        WRITE(*,'('' Quantity: '')')
         read(*,'(A)') QUAN
-        WRITE(*,'('' First,last,step: '',\)')
+        WRITE(*,'('' First,last,step: '')')
         read(*,*) FIRST,FLAST,STEP
         VAR=FIRST
         OPEN(102,FILE='HE3.DAT')
@@ -696,10 +695,9 @@ C--
       CPARF=SF(P,T)*SQRT(2.)
       END
 
-$INCLUDE: 'E02AEE.FOR'
-$INCLUDE: 'E02CBE.FOR'
-$INCLUDE: 'M01AGE.FOR'
-$INCLUDE: 'P01AAE.FOR'
-$INCLUDE: 'X02AAE.FOR'
-$INCLUDE: 'X04AAE.FOR'
-
+      INCLUDE 'E02AEE.FOR'
+      INCLUDE 'E02CBE.FOR'
+      INCLUDE 'M01AGE.FOR'
+      INCLUDE 'P01AAE.FOR'
+      INCLUDE 'X02AAE.FOR'
+      INCLUDE 'X04AAE.FOR'
