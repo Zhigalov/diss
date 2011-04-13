@@ -5,7 +5,7 @@ C--     Greywall. Phys. Rev.B v.33 #11 p.7520
 C       P [bars], Tc [mK]
         data ANA/6.02252E23/,PI/3.141592/,HC/1.05450E-27/,R/8.3143E+7/
 C-      HC in SGS., AKB too.
-        data AKB/1.38054E-16/,GAM/20378/,AM3/5.0079E-24/
+        data AKB/1.38054E-16/,GAM/20378.0/,AM3/5.0079E-24/
       end
 
 CC    T_c [mK] vs P [bars] -- TCF(P)
