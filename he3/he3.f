@@ -78,7 +78,8 @@ C       mV   Oe/cm      cm    oE/A     mV/A
         call OUTS(FIELD)
         print '(A,''H('',F4.1,'' mA)='',F5.3,'' mV'')',PNAM,GRAD,FIELD
       end if
-C--
+
+C--  Tc
       if (ITC.GT.0) then
         call FINDS(ITC,2,IS1,IS2)
 C       read(BUFF(IS1:IS2),*)P
@@ -103,12 +104,13 @@ C       read(BUFF(IS1:IS2),*)P,T
         LF=SQRT(LF2)
         call OUTS(LF)
         print '(A,''Leg. fr. LF ('',F4.1,'' bar,'',F5.3,'' mK)='',
-     ,    1PG11.5'' Hz'',1x,G11.5,'' rad/sec'')',PNAM,P,T,LF,LF*2D0*PI
+     *    1PG11.5'' Hz'',1x,G11.5,'' rad/sec'')',PNAM,P,T,LF,LF*2D0*PI
         print '(A,10X,''LF**2='',1PG11.5,'' Hz**2, '',
-     ,    G11.5,'' (rad/sec)**2'')',
-     ,    PNAM,LF2,LF2*(2D0*PI)**2
+     *    G11.5,'' (rad/sec)**2'')',
+     *    PNAM,LF2,LF2*(2D0*PI)**2
       end if
-C--
+
+C--  Susceptibility
       if (IHI.GT.0) then
         call FINDS(IHI,2,IS1,IS2)
 C       read(BUFF(IS1:IS2),*)P,T
@@ -119,14 +121,16 @@ C       read(BUFF(IS1:IS2),*)P,T
         HI=HIF (P,T)
         call OUTS(HI)
         print '(A,''Susceptibility ('',F4.1,'' bar,'',F5.3,'' mK)='',
-     ,    1PG11.5'' sgs'')',PNAM,P,T,HI
+     *    1PG11.5'' sgs'')',PNAM,P,T,HI
       end if
-C--
+
+C--  Gyromagnetic ratio
       if (IGMM.GT.0) then
         call OUTS(GAM)
         print '(A,''Gyromagnetic ratio = '',F7.1,'' sgs'')',PNAM,GAM
       end if
-C--
+
+C--  Molar volume
       if (IMV.GT.0) then
         call FINDS(IMV,2,IS1,IS2)
 C       read(BUFF(IS1:IS2),*)P
@@ -135,10 +139,12 @@ C       read(BUFF(IS1:IS2),*)P
         read(101,*)P
         MV=MVF(P)
         call OUTS(MV)
-        print '(A,''Molar volume('',F4.1,'' bar)='',F6.3'' cm**3'')',
-     ,    PNAM,P,MV
+        print
+     *    '(A,''Molar volume('',F4.1,'' bar)='',F6.3'' cm**3'')',
+     *    PNAM,P,MV
       end if
-C--
+
+C--  Fermi velosity
       if (IVF.GT.0) then
         call FINDS(IVF,2,IS1,IS2)
 C       read(BUFF(IS1:IS2),*)P
@@ -148,10 +154,11 @@ C       read(BUFF(IS1:IS2),*)P
         VF=VFF(P)
         call OUTS(VF)
         print
-     ,  '(A,''Fermi velosity ('',F5.2,'' bar)='',F7.1,'' cm/sec'')',
-     ,  PNAM,P,VF
+     *  '(A,''Fermi velosity ('',F5.2,'' bar)='',F7.1,'' cm/sec'')',
+     *  PNAM,P,VF
       end if
-C--
+
+C--  Melting pressure
       if (IMC.GT.0) then
         call FINDS(IMC,2,IS1,IS2)
 C       read(BUFF(IS1:IS2),*)T
@@ -161,8 +168,8 @@ C       read(BUFF(IS1:IS2),*)T
         MC=MCF(T)
         call OUTS(MC)
         print
-     ,  '(A,''Melting pressure('',F6.4,'' mK)='',F8.5,'' bar'')',
-     ,  PNAM,T,MC
+     *  '(A,''Melting pressure('',F6.4,'' mK)='',F8.5,'' bar'')',
+     *  PNAM,T,MC
       end if
 
 C--   F1S
@@ -180,26 +187,27 @@ C       read(BUFF(IS1:IS2),*)P
 
 C--   Z0
       if (IZ0.GT.0) then
-      call FINDS(IZ0,2,IS1,IS2)
-      write(101,'(A)')BUFF(IS1:IS2)
-      rewind (101)
-      read(101,*)P
-      Z0=Z0F(P)
-      call OUTS(Z0)
-      print '(A,''Z0('',F5.2,'' bar)='',F7.4)',PNAM,P,Z0
+        call FINDS(IZ0,2,IS1,IS2)
+        write(101,'(A)')BUFF(IS1:IS2)
+        rewind (101)
+        read(101,*)P
+        Z0=Z0F(P)
+        call OUTS(Z0)
+        print '(A,''Z0('',F5.2,'' bar)='',F7.4)',PNAM,P,Z0
       end if
 
 C--   Yosida
       if (IYO.GT.0) then
-      call FINDS(IYO,2,IS1,IS2)
-      write(101,'(A)')BUFF(IS1:IS2)
-      rewind (101)
-      read(101,*)TTC
-      Y=YOSHIDF(TTC)
-      call OUTS(Y)
-      print '(A,''Y('',F5.2,'' bar)='',F7.5)',PNAM,P,Y
+        call FINDS(IYO,2,IS1,IS2)
+        write(101,'(A)')BUFF(IS1:IS2)
+        rewind (101)
+        read(101,*)TTC
+        Y=YOSHIDF(TTC)
+        call OUTS(Y)
+        print '(A,''Y('',F5.2,'' Tc)='',F7.5)',PNAM,TTC,Y
       end if
-C--
+
+C--   Effective mass
       if (IMA.GT.0) then
         call FINDS(IMA,2,IS1,IS2)
 C       read(BUFF(IS1:IS2),*)P
@@ -210,10 +218,11 @@ C       read(BUFF(IS1:IS2),*)P
         call OUTS(MA)
         call OUTS(MA)
         print
-     ,    '(A,''Effective mass('',F5.2,'' bar)='',1PG13.7,'' g = '',
-     ,    0PF5.5)',PNAM,P,MA,MA/AM3
+     *    '(A,''Effective mass('',F5.2,'' bar)='',1PG13.7,'' g = '',
+     *    0PF5.5)',PNAM,P,MA,MA/AM3
       end if
-C--
+
+C--   Fermi momentum
       if (IPF.GT.0) then
         call FINDS(IPF,2,IS1,IS2)
 C       read(BUFF(IS1:IS2),*)P
@@ -223,10 +232,11 @@ C       read(BUFF(IS1:IS2),*)P
         PF=PFF(P)
         call OUTS(PF)
         print
-     ,    '(A,''Fermi momentum ('',F5.2,'' bar)='',1PG13.7,'' sgs'')',
-     ,    PNAM,P,PF
+     *    '(A,''Fermi momentum ('',F5.2,'' bar)='',1PG13.7,'' sgs'')',
+     *    PNAM,P,PF
       end if
-C--
+
+C--   Tab
       if (ITAB.GT.0) then
         call FINDS(ITAB,3,IS1,IS2)
 C       read(BUFF(IS1:IS2),*)P
@@ -235,20 +245,21 @@ C       read(BUFF(IS1:IS2),*)P
         read(101,*)P
         TAB=TABF(P)
         call OUTS(TAB)
-        print '(A,''T A-B('',F4.1,'' bar)='',F5.3'' mK'')',PNAM,P,TAB
+        print '(A,''T A-B('',F4.1,'' bar)='',F5.3'' mK'')',
+     *    PNAM,P,TAB
       end if
-C--
+
+C--   GAMMA=C/RT
       if (IGAMM.GT.0) then
         call FINDS(IGAMM,4,IS1,IS2)
 C       read(BUFF(IS1:IS2),*)P
         write(101,'(A)')BUFF(IS1:IS2)
         rewind (101)
         read(101,*)P
-
         GAMMA=GAMMAF(P)
         call OUTS(GAMMA)
         print '(A,''C/RT ('',F4.1,'' bar)='',F5.3,'' 1/(K*mol)'')',
-     ,    PNAM,P,GAMMA
+     *    PNAM,P,GAMMA
       end if
 
 C--  Osheroff's spin wave velocity.
@@ -258,97 +269,86 @@ C       read(BUFF(IS1:IS2),*)P,T
         write(101,'(A)')BUFF(IS1:IS2)
         rewind (101)
         read(101,*)P,T
-
         T=TF(T,P)
         S=SF(P,T)
         call OUTS(S)
         print'(A,''S('',F4.1,'' bar, '',F5.3,'' mK)='',
-     ,    1PG13.6,'' cm/sek'')',PNAM,P,T,S
+     *    1PG13.6,'' cm/sek'')',PNAM,P,T,S
       end if
 
 C--  Parallel Fomin spin wave velocity.
       if (ICPAR.GT.0) then
         call FINDS(ICPAR,4,IS1,IS2)
-
 C       read(BUFF(IS1:IS2),*)P,T
         write(101,'(A)')BUFF(IS1:IS2)
         rewind (101)
         read(101,*)P,T
-
         T=TF(T,P)
         CPAR=CPARF(P,T)
         call OUTS(CPAR)
         print'(A,''Cpar('',F4.1,'' bar, '',F5.3,'' mK)='',
-     ,    1PG13.6,'' cm/sek'')',PNAM,P,T,CPAR
+     *    1PG13.6,'' cm/sek'')',PNAM,P,T,CPAR
       end if
 
 C--  Perpendicular Fomin spin wave velocity.
       if (ICPER.GT.0) then
         call FINDS(ICPER,4,IS1,IS2)
-
 C       read(BUFF(IS1:IS2),*)P,T
         write(101,'(A)')BUFF(IS1:IS2)
         rewind (101)
         read(101,*)P,T
-
         T=TF(T,P)
         CPER=CPERF(P,T)
         call OUTS(CPER)
         print'(A,''Cperp('',F4.1,'' bar, '',F5.3,'' mK)='',
-     ,    1PG13.6,'' cm/sek'')',PNAM,P,T,CPER
+     *    1PG13.6,'' cm/sek'')',PNAM,P,T,CPER
       end if
 
 C--  Fomin combination of spin wave velocities.
       if (ICF.GT.0) then
         call FINDS(ICF,2,IS1,IS2)
-
 C       read(BUFF(IS1:IS2),*)P,T
         write(101,'(A)')BUFF(IS1:IS2)
         rewind (101)
         read(101,*)P,T
-
         T=TF(T,P)
         CF=SF(P,T)*DSQRT(11D0/8D0)
         call OUTS(C)
         print'(A,''C('',F4.1,'' bar, '',F5.3,'' mK)='',
-     ,    1PG13.6,'' cm/sek'')'  ,PNAM,P,T,CF
+     *    1PG13.6,'' cm/sek'')'  ,PNAM,P,T,CF
       end if
 
 C--  Heat capacity.
       if (ISH.GT.0) then
         call FINDS(ISH,2,IS1,IS2)
-
 C       read(BUFF(IS1:IS2),*)P,T
         write(101,'(A)')BUFF(IS1:IS2)
         rewind (101)
         read(101,*)P,T
-
         SH=GAMMAF(P)*R*T*1D-3
         call OUTS(SH)
         print'(A,''C('',F4.1,'' bar, '',F5.3,'' mK)='',
-     ,    1PG13.6,'' erg/(K*mol)'')',PNAM,P,T,SH
+     *    1PG13.6,'' erg/(K*mol)'')',PNAM,P,T,SH
       end if
-C--
+
+C--  Spin diffusion
         if (ID.GT.0) then
           call FINDS(ID,1,IS1,IS2)
-
 C         read(BUFF(IS1:IS2),*)P,T
           write(101,'(A)')BUFF(IS1:IS2)
           rewind (101)
           read(101,*)P,T
-
           T=TF(T,P)
           if (T.LE.TCF(P)) then
             print *,'Superflow region. Check if data out range.'
           endif
-
           D=DF(P,T)
           call OUTS(D)
           print'(A,''D('',F4.1,'' bar, '',F5.3,'' mK)='',
-     ,      1PG13.6,'' cm**2/sec'')',PNAM,P,T,D
+     *      1PG13.6,'' cm**2/sec'')',PNAM,P,T,D
         end if
 
-C       Output of a table
+C--  Output of a table
         if (MT) then
           write(102,*)VAR,OUT(1)
           VAR = VAR+STEP
@@ -359,7 +359,8 @@ C       Output of a table
           end if
           goto 2
         end if
-C--
+
+C--  Help message
         if (BUFF.EQ.'H'.OR.BUFF.EQ.'?') then
           open (49,FILE='HE3.HLP',STATUS='OLD')
           do 1201 J=1,10000
@@ -371,11 +372,15 @@ c           LENB=ITLOG()
  1201     continue
  55       close(49)
           BUFF=' '
+
+C--  Exit
         else if (BUFF.EQ.'E'.OR.BUFF.EQ.'A'.OR.
      .      BUFF.EQ.'EX') then
           print *,pnam,'End.'
           close (101)
           stop
+
+C--  Make table
         else if (BUFF.EQ.'MT') then
           MT=.TRUE.
           write(*,'('' Quantity: '')')
@@ -385,7 +390,7 @@ c           LENB=ITLOG()
           VAR=FIRST
           OPEN(102,FILE='HE3.DAT')
           write(102,*)'Table of ',quan
-	  GOTO 2
+          goto 2
         end if
 C--
         if (INDEX(BUFF,'/').GT.0.OR.INDEX(BUFF,'+').GT.0.OR.
@@ -458,82 +463,3 @@ C       print *,'I,IS1,IS2,IL,IE,NOUT',I,IS1,IS2,IL,IE,NOUT
         TF=DABS(T)
       end
 
-C--
-      function HIF (P,T)
-      real*8 HIF,P,T,MVF,Y,YOSHIDF,TTC,TCF,DNDEF,Z0F,Z0
-      common /HE3DATA/ PCP,TPCP,PA,ANA,PI,HC,R,AKB,GAM,AM3
-      real*8 PCP,TPCP,PA,ANA,PI,HC,R,AKB,GAM,AM3
-      HIF=0.25D0*GAM**2*HC*DNDEF(P)*HC*ANA/(1D0+Z0F(P)/4D0)/MVF(P)
-      TTC=T/TCF(P)
-      if (TTC.LT.1D0) then
-      Z0=Z0F(P)
-      Y=YOSHIDF(TTC)
-C     print *,Z,Y,((1.+Z0/4.)*(2.+Y)/3.)/(1.+Z0/4.*(2.+Y)/3.)
-      HIF=HIF*((1D0+Z0/4D0)*(2D0+Y)/3D0)/(1D0+Z0/4D0*(2D0+Y)/3D0)
-      end if
-      end
-C--
-      function Z0F(P)
-C-- Sourse B-phase notebook.
-C Least squares fitting. From file: YZ0
-C  Z0=                   vs.  P=
-C Polinom of the order : 5
-C Residual: 0.000
-      real*8 Z0F,P
-      real*8 A(5)
-      DATA M1/ 5/
-      real*8 XMIN,XMAX,XCAP
-      DATA XMIN/0.000000D0/,XMAX/34.36000D0/
-      DATA A/-5.762472D0, -0.1136529D0, 5.5511940D-02,
-     .       -1.7914600D-02, 4.0055060D-03/
-      IFAIL=1
-      XCAP=((P-XMIN)-(XMAX-P))/(XMAX-XMIN)
-      call E02AEE(M1,A,XCAP,Z0F,IFAIL)
-      if (IFAIL.NE.0)print *,'Error in E02AEE :',IFAIL
-      end
-C--
-      function YOSHIDF(TTC)
-C-- Sourse B-phase notebook.
-C Least squares fitting. From file: YOSHID
-C  Y=                    vs.  T=
-C Polinom of the order : 5
-C Residual: 0.000
-        real*8 YOSHIDF,TTC
-        real*8 A(5)
-        DATA M1/5/
-        real*8 XMIN,XMAX,XCAP
-        DATA XMIN/9.9999994D-02/,XMAX/1.000000D0/
-        DATA A/.7349111D0, .5123515D0, .1371038D0,
-     ,         -1.4855450D-02, -4.5979050D-03/
-        if (TTC.GE.0.1D0) then
-          IFAIL=1
-          XCAP=((TTC-XMIN)-(XMAX-TTC))/(XMAX-XMIN)
-          call E02AEE(M1,A,XCAP,YOSHIDF,IFAIL)
-          if (IFAIL.NE.0)print *,'Error in E02AEE :',IFAIL
-        else
-          YOSHIDF=0D0
-        end if
-        return
-      end
-C--
-      function F0AF(P)
-C-      Sourse - Greywall, Phys.Rev.  v.27  5  (1983)
-C       Least squares fitting. From file: YF0A
-C       F0A=                  vs.  P=
-C       Polinom of the order : 7
-C       Residual: 0.000
-        real*8 F0AF,P
-        real*8 A(7)
-        DATA M1/7/
-        real*8 XMIN,XMAX,XCAP
-        DATA XMIN/0.000000D0/,XMAX/34.36000D0/
-        DATA A/-1.489332D0, -2.3159460D-02,  1.3571171D-02,
-     .         -4.2908173D-03,  1.4413130D-03, -1.1601811D-03,
-     .          9.9658221D-04/
-        IFAIL=1
-        XCAP=((P-XMIN)-(XMAX-P))/(XMAX-XMIN)
-        call E02AEE(M1,A,XCAP,F0AF,IFAIL)
-        if (IFAIL.NE.0)print *,'Error in E02AEE :',IFAIL
-      end
-C---
-      include 'he3_funcs.f'

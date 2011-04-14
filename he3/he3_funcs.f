@@ -141,7 +141,7 @@ C       MAF=DNDEF(P)*PF/3./MVF(P)*PF
       end
 
 CC    FERMI MOMENTUM [sgs] vs P [bar] -- PFF(P)
-      real*8 function PFF(P)
+      function PFF(P)
         common /HE3DATA/ PCP,TPCP,PA,ANA,PI,HC,R,AKB,GAM,AM3
         real*8 PCP,TPCP,PA,ANA,PI,HC,R,AKB,GAM,AM3
         real*8 PFF,P,MVF
@@ -150,7 +150,7 @@ CC    FERMI MOMENTUM [sgs] vs P [bar] -- PFF(P)
       end
 
 CC    FERMI VELOSITY [cm/s] vs P [bar] -- VFF(P)
-      real*8 function VFF(P)
+      function VFF(P)
         real*8 VFF,P,PFF,MAF
         VFF=PFF(P)/MAF(P)
         return
@@ -218,7 +218,7 @@ C     Least squares fitting. From file: YDIFD
 C     DT2=                  vs.  P=
 C     Polinom of the order : 4
 C     Residual: 0.000
-      real*8 function DNORF(P,T)
+      function DNORF(P,T)
         real*8 DNORF,P,T,DT2F, XCAP,F
         DATA M1/4/
         real*8 XMAX, XMIN
@@ -247,6 +247,86 @@ C          print *,'Superflow region. Check if data out range.'
         end if
         return
       end
+
+CC    SUSEPTIBILITY [sgs] vs P [bar], T [mK] -- HIF(P,T)
+      function HIF(P,T)
+        real*8 HIF,P,T,MVF,Y,YOSHIDF,TTC,TCF,DNDEF,Z0F,Z0
+        common /HE3DATA/ PCP,TPCP,PA,ANA,PI,HC,R,AKB,GAM,AM3
+        real*8 PCP,TPCP,PA,ANA,PI,HC,R,AKB,GAM,AM3
+        HIF=0.25D0*GAM**2*HC*DNDEF(P)*HC*ANA/(1D0+Z0F(P)/4D0)/MVF(P)
+        TTC=T/TCF(P)
+        if (TTC.LT.1D0) then
+          Z0=Z0F(P)
+          Y=YOSHIDF(TTC)
+C         print *,Z,Y,((1.+Z0/4.)*(2.+Y)/3.)/(1.+Z0/4.*(2.+Y)/3.)
+          HIF=HIF*((1D0+Z0/4D0)*(2D0+Y)/3D0)/(1D0+Z0/4D0*(2D0+Y)/3D0)
+        end if
+      end
+
+
+CC    YOSIDA FUNCTION vs T/Tc -- YOSHIDF(TTC)
+C     Sourse B-phase notebook.
+C     Least squares fitting. From file: YOSHID
+C     Polinom of the order : 5
+C     Residual: 0.000
+      function YOSHIDF(TTC)
+        real*8 YOSHIDF,TTC
+        real*8 A(5)
+        DATA M1/5/
+        real*8 XMIN,XMAX,XCAP
+        DATA XMIN/9.9999994D-02/,XMAX/1.000000D0/
+        DATA A/.7349111D0, .5123515D0, .1371038D0,
+     ,         -1.4855450D-02, -4.5979050D-03/
+        if (TTC.GE.0.1D0) then
+          IFAIL=1
+          XCAP=((TTC-XMIN)-(XMAX-TTC))/(XMAX-XMIN)
+          call E02AEE(M1,A,XCAP,YOSHIDF,IFAIL)
+          if (IFAIL.NE.0)print *,'Error in E02AEE :',IFAIL
+        else
+          YOSHIDF=0D0
+        end if
+        return
+      end
+
+CC    Z0 vs P [bar] -- Z0F(P)
+C--   Sourse B-phase notebook.
+C     Least squares fitting. From file: YZ0
+C     Polinom of the order : 5
+C     Residual: 0.000
+      function Z0F(P)
+        real*8 Z0F,P
+        real*8 A(5)
+        DATA M1/ 5/
+        real*8 XMIN,XMAX,XCAP
+        DATA XMIN/0.000000D0/,XMAX/34.36000D0/
+        DATA A/-5.762472D0, -0.1136529D0, 5.5511940D-02,
+     *       -1.7914600D-02, 4.0055060D-03/
+        IFAIL=1
+        XCAP=((P-XMIN)-(XMAX-P))/(XMAX-XMIN)
+        call E02AEE(M1,A,XCAP,Z0F,IFAIL)
+        if (IFAIL.NE.0) print *,'Error in E02AEE :',IFAIL
+      end
+
+CC    F0A vs P [bar] -- F0AF(P)
+C-    Sourse - Greywall, Phys.Rev.  v.27  5  (1983)
+C     Least squares fitting. From file: YF0A
+C     Polinom of the order : 7
+C     Residual: 0.000
+      function F0AF(P)
+        real*8 F0AF,P
+        real*8 A(7)
+        DATA M1/7/
+        real*8 XMIN,XMAX,XCAP
+        DATA XMIN/0.000000D0/,XMAX/34.36000D0/
+        DATA A/-1.489332D0, -2.3159460D-02,  1.3571171D-02,
+     .         -4.2908173D-03,  1.4413130D-03, -1.1601811D-03,
+     .          9.9658221D-04/
+        IFAIL=1
+        XCAP=((P-XMIN)-(XMAX-P))/(XMAX-XMIN)
+        call E02AEE(M1,A,XCAP,F0AF,IFAIL)
+        if (IFAIL.NE.0)print *,'Error in E02AEE :',IFAIL
+      end
+
 
       include 'E02AEE.FOR'
       include 'E02CBE.FOR'
