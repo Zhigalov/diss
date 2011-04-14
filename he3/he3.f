@@ -1,5 +1,7 @@
 CLIBR=NAF: E02AEE, E02CBE, M01AGE.
       program HE3
+      implicit real*8(A-H,O-Z)
+      include 'he3_const.fh'
       character BUFF*150,PNAM*8,BUFF1*150,BUFF2*4,QUAN*20
       integer IBUFF1(75)
       EQUIVALENCE(IBUFF1,BUFF2),(BUFF2(3:),BUFF1)
@@ -10,8 +12,7 @@ CLIBR=NAF: E02AEE, E02CBE, M01AGE.
 C     LOGICAL RUNST
       common BUFF
       common /OUTB/ OUT(20),NOUT,IOUT(20,2)
-      common /DATA/ PCP,TPCP,PA ,ANA,PI,HC,R,AKB,GAM,AM3
-      real MVF,MV,MC,MCF,MA,MAF,LF2F,LF2,LF
+      real*8 MV,MC,MA,LF2,LF
       DATA PNAM/'/HE3:'/
       DATA BUFF2/',,'/
 C     LBUFF=LEN*2
@@ -64,17 +65,18 @@ c     LBUFF=ITLOG()
       ICM=INDEX(BUFF,'CM')
       IZ0=INDEX(BUFF,'Z0')
       IYO=INDEX(BUFF,'YO')
+
 C--  Gradient to field.
       if (IGH.GT.0) then
-      call FINDS(IGH,2,IS1,IS2)
-C     read(BUFF(IS1:IS2),*)GRAD
-      write(101,'(A)')BUFF(IS1:IS2)
-      rewind (101)
-      read(101,*)GRAD
-      FIELD=GRAD/400  *  .2  /370    * 10000
+        call FINDS(IGH,2,IS1,IS2)
+C       read(BUFF(IS1:IS2),*)GRAD
+        write(101,'(A)')BUFF(IS1:IS2)
+        rewind (101)
+        read(101,*)GRAD
+        FIELD=GRAD/400D0 * 0.2D0/370D0 * 10000D0
 C       mV   Oe/cm      cm    oE/A     mV/A
-      call OUTS(FIELD)
-      print '(A,''H('',F4.1,'' mA)='',F5.3,'' mV'')',PNAM,GRAD,FIELD
+        call OUTS(FIELD)
+        print '(A,''H('',F4.1,'' mA)='',F5.3,'' mV'')',PNAM,GRAD,FIELD
       end if
 C--
       if (ITC.GT.0) then
@@ -95,16 +97,16 @@ C       read(BUFF(IS1:IS2),*)P,T
         write(101,'(A)')BUFF(IS1:IS2)
         rewind (101)
         read(101,*)P,T
-        if (T.GT.0) T=T*TCF(P)
+        if (T.GT.0D0) T=T*TCF(P)
         T=ABS(T)
         LF2=LF2F(P,T/TCF(P))
         LF=SQRT(LF2)
         call OUTS(LF)
         print '(A,''Leg. fr. LF ('',F4.1,'' bar,'',F5.3,'' mK)='',
-     ,    1PG11.5'' Hz'',1x,G11.5,'' rad/sec'')',PNAM,P,T,LF,LF*2*PI
+     ,    1PG11.5'' Hz'',1x,G11.5,'' rad/sec'')',PNAM,P,T,LF,LF*2D0*PI
         print '(A,10X,''LF**2='',1PG11.5,'' Hz**2, '',
      ,    G11.5,'' (rad/sec)**2'')',
-     ,    PNAM,LF2,LF2*(2*PI)**2
+     ,    PNAM,LF2,LF2*(2D0*PI)**2
       end if
 C--
       if (IHI.GT.0) then
@@ -113,7 +115,7 @@ C       read(BUFF(IS1:IS2),*)P,T
         write(101,'(A)')BUFF(IS1:IS2)
         rewind (101)
         read(101,*)P,T
-        if (T.LT.0) T=-T*TCF(P)
+        if (T.LT.0D0) T=-T*TCF(P)
         HI=HIF (P,T)
         call OUTS(HI)
         print '(A,''Susceptibility ('',F4.1,'' bar,'',F5.3,'' mK)='',
@@ -171,7 +173,7 @@ C       read(BUFF(IS1:IS2),*)P
         rewind (101)
         read(101,*)P
         MA=MAF(P)
-        F1S=(MA/AM3-1)*3.
+        F1S=(MA/AM3-1D0)*3D0
         call OUTS(F1S)
         print '(A,''F1-S('',F5.2,'' bar)='',F6.3)',PNAM,P,F1S
       end if
@@ -306,7 +308,7 @@ C       read(BUFF(IS1:IS2),*)P,T
         read(101,*)P,T
 
         T=TF(T,P)
-        CF=SF(P,T)*SQRT(11./8.)
+        CF=SF(P,T)*DSQRT(11D0/8D0)
         call OUTS(C)
         print'(A,''C('',F4.1,'' bar, '',F5.3,'' mK)='',
      ,    1PG13.6,'' cm/sek'')'  ,PNAM,P,T,CF
@@ -321,7 +323,7 @@ C       read(BUFF(IS1:IS2),*)P,T
         rewind (101)
         read(101,*)P,T
 
-        SH=GAMMAF(P)*R*T*1E-3
+        SH=GAMMAF(P)*R*T*1D-3
         call OUTS(SH)
         print'(A,''C('',F4.1,'' bar, '',F5.3,'' mK)='',
      ,    1PG13.6,'' erg/(K*mol)'')',PNAM,P,T,SH
@@ -451,21 +453,23 @@ C       print *,'I,IS1,IS2,IL,IE,NOUT',I,IS1,IS2,IL,IE,NOUT
       end
 
       function TF(T,P)
-        if (T.LT.0) T=T*TCF(P)
-        TF=ABS(T)
+        real*8 TF,T,P,TCF
+        if (T.LT.0D0) T=T*TCF(P)
+        TF=DABS(T)
       end
 
 C--
       function HIF (P,T)
-      real MVF
-      common /DATA/ PCP,TPCP,PA ,ANA,PI,HC,R,AKB,GAM,AM3
-      HIF=.25*GAM**2*HC*DNDEF(P)*HC*ANA/(1+Z0F(P)/4)/MVF(P)
+      real*8 HIF,P,T,MVF,Y,YOSHIDF,TTC,TCF,DNDEF,Z0F,Z0
+      common /HE3DATA/ PCP,TPCP,PA,ANA,PI,HC,R,AKB,GAM,AM3
+      real*8 PCP,TPCP,PA,ANA,PI,HC,R,AKB,GAM,AM3
+      HIF=0.25D0*GAM**2*HC*DNDEF(P)*HC*ANA/(1D0+Z0F(P)/4D0)/MVF(P)
       TTC=T/TCF(P)
-      if (TTC.LT.1) then
+      if (TTC.LT.1D0) then
       Z0=Z0F(P)
       Y=YOSHIDF(TTC)
 C     print *,Z,Y,((1.+Z0/4.)*(2.+Y)/3.)/(1.+Z0/4.*(2.+Y)/3.)
-      HIF=HIF*((1.+Z0/4.)*(2.+Y)/3.)/(1.+Z0/4.*(2.+Y)/3.)
+      HIF=HIF*((1D0+Z0/4D0)*(2D0+Y)/3D0)/(1D0+Z0/4D0*(2D0+Y)/3D0)
       end if
       end
 C--
@@ -475,11 +479,13 @@ C Least squares fitting. From file: YZ0
 C  Z0=                   vs.  P=
 C Polinom of the order : 5
 C Residual: 0.000
-      real A(5)
+      real*8 Z0F,P
+      real*8 A(5)
       DATA M1/ 5/
-      DATA XMIN/   0.000000    /,XMAX/   34.36000    /
-     0 DATA A/-5.762472,-.1136529,5.5511940E-02,
-     1 -1.7914600E-02,4.0055060E-03/
+      real*8 XMIN,XMAX,XCAP
+      DATA XMIN/0.000000D0/,XMAX/34.36000D0/
+      DATA A/-5.762472D0, -0.1136529D0, 5.5511940D-02,
+     .       -1.7914600D-02, 4.0055060D-03/
       IFAIL=1
       XCAP=((P-XMIN)-(XMAX-P))/(XMAX-XMIN)
       call E02AEE(M1,A,XCAP,Z0F,IFAIL)
@@ -492,18 +498,20 @@ C Least squares fitting. From file: YOSHID
 C  Y=                    vs.  T=
 C Polinom of the order : 5
 C Residual: 0.000
-        real A(  5)
-        DATA M1/ 5/
-        DATA XMIN/  9.9999994E-02/,XMAX/   1.000000    /
-        DATA A/   .7349111    ,   .5123515    ,   .1371038
-     ,  , -1.4855450E-02, -4.5979050E-03/
-        if (TTC.GE..1) then
+        real*8 YOSHIDF,TTC
+        real*8 A(5)
+        DATA M1/5/
+        real*8 XMIN,XMAX,XCAP
+        DATA XMIN/9.9999994D-02/,XMAX/1.000000D0/
+        DATA A/.7349111D0, .5123515D0, .1371038D0,
+     ,         -1.4855450D-02, -4.5979050D-03/
+        if (TTC.GE.0.1D0) then
           IFAIL=1
           XCAP=((TTC-XMIN)-(XMAX-TTC))/(XMAX-XMIN)
           call E02AEE(M1,A,XCAP,YOSHIDF,IFAIL)
           if (IFAIL.NE.0)print *,'Error in E02AEE :',IFAIL
         else
-          YOSHIDF=0
+          YOSHIDF=0D0
         end if
         return
       end
@@ -514,12 +522,14 @@ C       Least squares fitting. From file: YF0A
 C       F0A=                  vs.  P=
 C       Polinom of the order : 7
 C       Residual: 0.000
-        real A(  7)
-        DATA M1/ 7/
-        DATA XMIN/   0.000000    /,XMAX/   34.36000    /
-        DATA A/-1.489332, -2.3159460E-02,  1.3571171E-02,
-     ,    -4.2908173E-03,  1.4413130E-03, -1.1601811E-03,
-     .    9.9658221E-04/
+        real*8 F0AF,P
+        real*8 A(7)
+        DATA M1/7/
+        real*8 XMIN,XMAX,XCAP
+        DATA XMIN/0.000000D0/,XMAX/34.36000D0/
+        DATA A/-1.489332D0, -2.3159460D-02,  1.3571171D-02,
+     .         -4.2908173D-03,  1.4413130D-03, -1.1601811D-03,
+     .          9.9658221D-04/
         IFAIL=1
         XCAP=((P-XMIN)-(XMAX-P))/(XMAX-XMIN)
         call E02AEE(M1,A,XCAP,F0AF,IFAIL)

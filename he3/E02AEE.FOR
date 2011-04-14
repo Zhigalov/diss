@@ -20,7 +20,7 @@ C     MARK 5 RELEASE
 C     MARK 7 REVISED IER-140 (DEC 1978)
 C     MARK 9 REVISED. IER-352 (SEP 1981)
       INTEGER NPLUS1, IFAIL, P01AAE, IERROR, K, KREV, N, NPLUS2
-      REAL A(NPLUS1), XCAP, P, X02AAE, BK, BKP1, BKP2, DK,
+      REAL*8 A(NPLUS1), XCAP, P, X02AAE, BK, BKP1, BKP2, DK,
      * ETA, FACTOR
       CHARACTER SRNAME*8
       DATA SRNAME /'E02AEE'/
@@ -30,62 +30,62 @@ C
 C     INSERT CALL TO X02AAE
 C
 C     ETA  IS THE SMALLEST POSITIVE NUMBER SUCH THAT
-C     THE COMPUTED VALUE OF  1.0 + ETA  EXCEEDS UNITY.
+C     THE COMPUTED VALUE OF  1.0D0 + ETA  EXCEEDS UNITY.
 C
       IF (NPLUS1.GE.1) GO TO 10
       IERROR = 2
       GO TO 160
-   10 IF (ABS(XCAP).LE.1.0+4.0*ETA) GO TO 20
+   10 IF (ABS(XCAP).LE.1.0D0+4.0D0*ETA) GO TO 20
       IERROR = 1
-      P = 0.0
+      P = 0.0D0
       GO TO 160
    20 IF (NPLUS1.GT.1) GO TO 40
-      P = 0.5*A(1)
+      P = 0.5D0*A(1)
       GO TO 160
    40 N = NPLUS1 - 1
       NPLUS2 = N + 2
       K = NPLUS2
-      IF (XCAP.GT.0.5) GO TO 120
-      IF (XCAP.GE.-0.5) GO TO 80
+      IF (XCAP.GT.0.5D0) GO TO 120
+      IF (XCAP.GE.-0.5D0) GO TO 80
 C
 C     GENTLEMAN*S MODIFIED RECURRENCE.
 C
-      FACTOR = 2.0*(1.0+XCAP)
-      DK = 0.0
-      BK = 0.0
+      FACTOR = 2.0D0*(1.0D0+XCAP)
+      DK = 0.0D0
+      BK = 0.0D0
       DO 60 KREV=1,N
          K = K - 1
          DK = A(K) - DK + FACTOR*BK
          BK = DK - BK
    60 CONTINUE
-      P = 0.5*A(1) - DK + 0.5*FACTOR*BK
+      P = 0.5D0*A(1) - DK + 0.5D0*FACTOR*BK
       GO TO 160
 C
 C     CLENSHAW*S ORIGINAL RECURRENCE.
 C
-   80 FACTOR = 2.0*XCAP
-      BKP1 = 0.0
-      BK = 0.0
+   80 FACTOR = 2.0D0*XCAP
+      BKP1 = 0.0D0
+      BK = 0.0D0
       DO 100 KREV=1,N
          K = K - 1
          BKP2 = BKP1
          BKP1 = BK
          BK = A(K) - BKP2 + FACTOR*BKP1
   100 CONTINUE
-      P = 0.5*A(1) - BKP1 + 0.5*FACTOR*BK
+      P = 0.5D0*A(1) - BKP1 + 0.5D0*FACTOR*BK
       GO TO 160
 C
 C     REINSCH*S MODIFIED RECURRENCE.
 C
-  120 FACTOR = 2.0*(1.0-XCAP)
-      DK = 0.0
-      BK = 0.0
+  120 FACTOR = 2.0D0*(1.0D0-XCAP)
+      DK = 0.0D0
+      BK = 0.0D0
       DO 140 KREV=1,N
          K = K - 1
          DK = A(K) + DK - FACTOR*BK
          BK = BK + DK
   140 CONTINUE
-      P = 0.5*A(1) + DK - 0.5*FACTOR*BK
+      P = 0.5D0*A(1) + DK - 0.5D0*FACTOR*BK
   160 IF (IERROR) 180, 200, 180
   180 IFAIL = P01AAE(IFAIL,IERROR,SRNAME)
       RETURN
