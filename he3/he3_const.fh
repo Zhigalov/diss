@@ -4,7 +4,7 @@
 C--   Greywall. Phys. Rev.B v.33 #11 p.7520
 C     P [bars], Tc [mK]
       data ANA/6.02252D23/,PI/3.1415926D0/,HC/1.05450D-27/,R/8.3143D+7/
-C-    HC in SGS., AKB too.
+C     HC in SGS., AKB too.
       data AKB/1.38054D-16/,GAM/20378.0D0/,AM3/5.0079D-24/
 
       real*8 TCF,TABF,MVF,MCF,GAMMAF,LF2F,MAF,PFF
