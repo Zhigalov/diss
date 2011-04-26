@@ -23,19 +23,18 @@ fosc1(h,l) = gh1/pi * sqrt(h/H1 * bb1(l)/sqrt(15.0)/(1+8.0/3.0*bb1(l)))
 fosc2(h,l) = gh2/pi * sqrt(h/H2 * bb2(l)/sqrt(15.0)/(1+8.0/3.0*bb2(l)))
 
 
-f1(x)=a1*x
-f2(x)=a2*x
-f3(x)=a3*x
+#f1(x)=a1*x
+#f2(x)=a2*x
+#f3(x)=a3*x
 
-fit f1(x) "res_fh195a" using ($1*6.27):($2**2) via a1
-fit f2(x) "res_fh195b" using ($1*6.27):($3**2) via a2
-fit f3(x) "res_fh248a" via a3
+#fit f1(x) "res_fh195a" using ($1*6.27):($2**2) via a1
+#fit f2(x) "res_fh195b" using ($1*6.27):($3**2) via a2
+#fit f3(x) "res_fh248a" via a3
 
 plot [0:][0:]\
-  f1(x),f2(x),f3(x),\
-  fosc1(x, lf1),\
-  fosc1(x, lf2),\
-  fosc2(x, lf3),\
+  fosc1(x*1e-3, lf1)**2,\
+  fosc1(x*1e-3, lf2)**2,\
+  fosc2(x*1e-3, lf3)**2,\
  "res_fh195a" using ($1*6.27):($2**2) with points pt 7 ps 2,\
  "res_fh195b" using ($1*6.27):($3**2) with points pt 7 ps 2,\
  "res_fh248a" with points pt 7 ps 2
