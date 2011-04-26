@@ -4,7 +4,7 @@ set terminal "x11"
 set style data lines
 set nokey
 
-#set terminal "fig" metric size 5 5
+#set terminal "fig" metric size 15 6
 #set output "t.fig"
 
 set style line 1 lc 1
