@@ -4,7 +4,7 @@ set terminal "x11"
 set samples 500
 set style data linespoints
 
-set terminal "fig" metric size 10 6
+set terminal "fig" metric size 15 9
 set output "fh.fig"
 
 flegg=89803

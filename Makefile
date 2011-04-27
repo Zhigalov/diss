@@ -14,6 +14,7 @@ bib:
 %.dvi: %.tex
 	latex $<
 diss.dvi: diss.tex ${parts:=.tex}
+	make -C images
 	latex $<
 
 clean:
