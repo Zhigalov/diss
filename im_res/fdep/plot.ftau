@@ -1,0 +1,46 @@
+#!/usr/bin/gnuplot
+
+# 180504
+# 180504.hpd   15:27-17:33  U=1V  wire=31  T=0.45Tc
+# 180504a.hpd  15:27-17:33  U=0.1..2.0V  wire=22.7-27.5
+# 180504b.hpd  17:33-18:35  U=0.5V  wire=27-34
+# 180504c.hpd  18:35-19:53  U=0.5V  wire=34-40 T=0.48-0.54
+# 180504d.hpd  19:53-??     U=0.5V  wire=40 T=0.54Tc
+
+# bulk, 24.8 bar, 906.5 Hz
+
+set terminal "x11"
+set style data points
+set style line 1 pt 7 ps 3
+set nokey
+
+#set terminal "fig" metric
+#set output "out.fig"
+
+u1=1.50 #180504/10
+u3=1.95 #180504/11
+u4=7.30 #180504/12
+u5=3.10 #180504/13
+
+
+f(x)=f0-f1*exp(x/k)
+f0=580
+f1=1
+k=10000
+
+f1(x)=a1*x
+f2(x)=a2*x
+
+fit [260:] f1(x) "treat1" using (-268*($6-u1)):7 via a1
+fit f2(x) "treat5a" using (-268*($5-u5)):6 via a2
+plot\
+  f1(x), f2(x),\
+ "treat1" using (-268*($6-u1)):7 ls 1 lc 1,\
+ "treat5a" using (-268*($5-u5)):6 ls 1 lc 4
+
+# "treat3" using (-268*($5-u3)):($6) ls 1 lc 2,\
+# "treat4" using (-268*($5-u4)):($6) ls 1 lc 3,\
+
+
+print a1,a2
+pause -1
