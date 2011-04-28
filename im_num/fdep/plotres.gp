@@ -4,8 +4,8 @@ set terminal "x11"
 set samples 500
 set style data linespoints
 
-set terminal "fig" metric size 15 9
-set output "fh.fig"
+#set terminal "fig" metric size 15 9
+#set output "fh.fig"
 
 flegg=89803
 gamma=20378
@@ -41,13 +41,13 @@ plot [-0.25:4.2] [0.68:1.03]\
 #print k1, k2, k3
 pause -1
 
-gg(x)=D/(x-x2)
+gg(x)=D/(x+0.5)
 x2=x1
 
-set output "th.fig"
+#set output "th.fig"
 
-fit [0.155:] gg(x) "RES3" using (($1-0.18)/0.18):3 via D,x2
-plot [-0.42:4.2]\
+fit [0.155:] gg(x) "RES3" using (($1-0.18)/0.18):3 via D
+plot [-0.5:4.2]\
   "RES1" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 6 lc 1,\
   "RES3" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 7 lc 1,\
   "RES6" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 8 lc 1,\
