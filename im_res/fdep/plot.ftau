@@ -36,7 +36,8 @@ fit f2(x) "treat5a" using (-268*($5-u5)):6 via a2
 plot\
   f1(x), f2(x),\
  "treat1" using (-268*($6-u1)):7 ls 1 lc 1,\
- "treat5a" using (-268*($5-u5)):6 ls 1 lc 4
+ "treat5a" using (-268*($5-u5)):6 ls 1 lc 4,\
+ "num_data" using ($1/0.18*580):(1000/$3)
 
 # "treat3" using (-268*($5-u3)):($6) ls 1 lc 2,\
 # "treat4" using (-268*($5-u4)):($6) ls 1 lc 3,\

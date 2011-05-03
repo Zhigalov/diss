@@ -43,6 +43,13 @@ C4= 0.00052
 x4= 0.151
 y4= 0.318
 
+ff5(x)=A5-B5*exp((x-x5)/y5)-C5/(x-x5)**2
+A5= 633.0
+B5= 1.11
+C5= 0.00052
+x5= 0.151
+y5= 0.318
+
 ll1=89803
 ll2=137714
 ll3=176885
@@ -53,6 +60,7 @@ fit [0.155:] ff1(x) "RES3" using 1:2 via A1,B1,C1,x1,y1
 fit [0.155:] ff2(x) "RES3T08" using 1:2 via A2,B2,C2,x2,y2
 fit [0.155:] ff3(x) "RES3T07" using 1:2 via A3,B3,C3,x3,y3
 fit [0.155:] ff4(x) "RES3T06" using 1:2 via A4,B4,C4,x4,y4
+#fit [0.155:] ff5(x) "RES3T094" using 1:2 via A5,B5,C5,x5,y5
 plot [-0.155:4.2] [0.80:1.01]\
    ff1((x+1)*0.18)/fosc(0.003,ll1),\
    ff2((x+1)*0.18)/fosc(0.003,ll2),\
@@ -78,23 +86,26 @@ gg1(x)=D1*(x - E1)
 gg2(x)=D2*(x - E2)
 gg3(x)=D3*(x - E3)
 gg4(x)=D4*(x - E4)
+gg5(x)=D5*(x - E5)
 
 E1=-0.5
 E2=-0.5
 E3=-0.5
 E4=-0.5
+E5=-0.5
 
 fit [0.155:] gg1(x) "RES3" using (($1-0.18)/0.18):(1/$3) via D1
 fit [0.155:] gg2(x) "RES3T08" using (($1-0.18)/0.18):(1/$3) via D2
 fit [0.155:] gg3(x) "RES3T07" using (($1-0.18)/0.18):(1/$3) via D3
 fit [0.155:] gg4(x) "RES3T06" using (($1-0.18)/0.18):(1/$3) via D4
+fit [0.155:] gg5(x) "RES3T094" using (($1-0.18)/0.18):(1/$3) via D5
 plot [-0.5:4.2]\
   "RES3" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 7,\
   "RES3T08" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 7,\
   "RES3T07" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 7,\
   "RES3T06" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 7,\
   "RES3T094" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 6,\
- gg1(x), gg2(x),  gg3(x), gg4(x)
+ gg1(x), gg2(x),  gg3(x), gg4(x), gg5(x)
 
 print A1,B1,C1,x1,y1
 print A2,B2,C2,x2,y2
@@ -104,5 +115,6 @@ print D1,E1
 print D2,E2
 print D3,E3
 print D4,E4
+print D5,E5
 
 pause -1

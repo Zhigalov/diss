@@ -3,6 +3,9 @@
 *.pdf
 *.aux
 *.log
+*.bak
 *.ilg
 *.ind
+*.blg
+*.toc
 images.src
