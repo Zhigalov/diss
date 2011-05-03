@@ -23,22 +23,22 @@ C= 0.00052
 x0= 0.318
 x1= 0.152
 
-fit [0:] ff(x) "RES" using 1:2 via A,B,C,x0,x1
+#fit [0:] ff(x) "RES" using 1:2 via A,B,C,x0,x1
 
-plot [-0.25:4.2] [0.85:1.03]\
-   "RES" using (($1-0.18)/0.18):($2/fosc(HR,flegg)) with points ps 2 pt 6 lc 1,\
-   ff((x-0.18)/0.18)/fosc(HR,flegg),\
+plot [] [0.85:1.03]\
+   "RES" using (($1-0.18)*0.1*gamma):($2/fosc(HR,flegg)) with points ps 2 pt 6 lc 1,\
    1
 pause -1
+ #  ff((x-0.18)*0.1*gamma)/fosc(HR,flegg),\
 
-gg(x)=D/(x+0.5)
-x2=x1
+gg(x)=D*(x+x0)
+x0=100
 
 #set output "th.fig"
 set nokey
 
-fit [0.155:] gg(x) "RES" using (($1-0.18)/0.18):3 via D
-plot [-0.5:4.2]\
-  "RES" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 6 lc 1,\
- 1/gg(x)
+fit gg(x) "RES" using (($1-0.18)*0.1*gamma):(1/$3) via D,x0
+plot []\
+  "RES" using (($1-0.18)*0.1*gamma):(1/$3) with points ps 2 pt 6 lc 1,\
+ gg(x)
 pause -1

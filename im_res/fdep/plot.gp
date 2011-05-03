@@ -30,10 +30,11 @@ u5=2.87 #180504/13
 l1=265842
 l2=247437
 
+gamma=20378
+
 H=284
-HR=0.003
 pi=3.1415926
-gammaH=906000*2*pi
+gammaH=gamma*H
 bb(l)=(l*2*pi/gammaH)**2
 fosc(h,l) = gammaH/pi * sqrt(h/H * bb(l)/sqrt(15.0)/(1+8.0/3.0*bb(l)))
 
@@ -47,6 +48,7 @@ plot [-400:1800][0.75:1.05]\
        "" using (-268*($6-u1)):($5/fosc(0.00627/2,l1)) ls 1 lc 1 pt 6,\
  "treat5" using (-268*($5-u5)):($3/fosc(0.003135/2,l2)) ls 1 lc 4,\
        "" using (-268*($5-u5)):($4/fosc(0.003135/2,l2)) ls 1 lc 4 pt 6,\
+ "num_data" using (($1)*0.1*gamma):($2/fosc(0.003135/2,l2)) with points ps 2 pt 5 lc 1,\
  "cw" using (-268*($1-u5)):($2*0.7e2+0.761) with lines,1
 
 print fosc(6.27,242680)

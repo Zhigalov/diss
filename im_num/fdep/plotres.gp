@@ -36,20 +36,33 @@ plot [-0.25:4.2] [0.68:1.03]\
    "RES1" using (($1-0.18)/0.18):($2/fosc(0.00098,89803)) with points ps 2 pt 6 lc 1,\
    "RES3" using (($1-0.18)/0.18):($2/fosc(0.003,89803)) with points ps 2 pt 7 lc 1,\
    "RES6" using (($1-0.18)/0.18):($2/fosc(0.006,89803)) with points ps 2 pt 8 lc 1,\
+   "grad02/RES" using (($1-0.18)/0.18 * 2 + 0.5):($2/fosc(0.003,89803)) with points ps 2 pt 3 lc 1,\
    f1(x), f2(x), f3(x),1
 #   ff((x+1)*0.18)/fosc(0.003,89803), 1
 #print k1, k2, k3
 pause -1
 
-gg(x)=D/(x+0.5)
-x2=x1
+gg1(x)=(x-x1)*D1
+x1=-0.5
+gg2(x)=(x-x2)*D2
+x2=-0.5
+gg3(x)=(x-x3)*D3
+x3=-0.5
 
+
+set nokey
 #set output "th.fig"
 
-fit [0.155:] gg(x) "RES3" using (($1-0.18)/0.18):3 via D
+fit [0.155:] gg1(x) "RES1" using (($1-0.18)/0.18):(1/$3) via D1,x1
+fit [0.155:] gg2(x) "RES3" using (($1-0.18)/0.18):(1/$3) via D2,x2
+fit [0.155:] gg3(x) "RES6" using (($1-0.18)/0.18):(1/$3) via D3,x3
 plot [-0.5:4.2]\
   "RES1" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 6 lc 1,\
   "RES3" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 7 lc 1,\
   "RES6" using (($1-0.18)/0.18):(1/$3) with points ps 2 pt 8 lc 1,\
- 1/gg(x)
+  "grad02/RES" using (($1-0.18)/0.18 * 2 +0.5):(1/$3) with points ps 2 pt 3 lc 1,\
+ gg1(x), gg2(x), gg3(x), (x+0.5)*0.159
+print x1,D1
+print x2,D2
+print x3,D3
 pause -1
