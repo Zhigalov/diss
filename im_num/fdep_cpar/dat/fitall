@@ -1,0 +1,18 @@
+#!/bin/sh -eu
+
+get_x0(){
+  sed -n -e '
+    s/^[[:space:]]*\([0-9\.]\+\) .*/\1/p;T;q
+  ' $1
+}
+
+> res
+for i in *.dat; do
+  [ -f "$i" ] || continue
+  x0="$(get_x0 "$i")"
+  sed -i -e "
+    s/^file=.*/file=\"$i\"/
+    s/^x0=.*/x0=\"$x0\"/
+  " fit.gp
+  ./fit.gp 2>&1 | tail -n1 >> res
+done
