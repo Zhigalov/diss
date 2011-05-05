@@ -1,0 +1,20 @@
+#!/bin/sh
+
+for i in res_*; do
+  tf=$(sed -n -e 's/# TF:[[:space:]]*//p' "$i")
+  hr=$(sed -n -e 's/# HR:[[:space:]]*//p' "$i")
+  gr=$(sed -n -e 's/# GRAD:[[:space:]]*//p' "$i")
+  H0=$(sed -n -e 's/# H:[[:space:]]*//p' "$i")
+
+  sed -i -e "
+    s/^file=.*/file=\"$i\"/
+    s/^hr=.*/hr=$hr/
+    s/^lf=.*/lf=$lf/
+    s/^tf=.*/tf=$tf/
+    s/^gr=.*/gr=$gr/
+    s/^H0=.*/H0=$H0/
+  " fit.gp
+
+  ./fit.gp 2>&1 | sed -n -e 's/RES: //p' >> res
+done
+

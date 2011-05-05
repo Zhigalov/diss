@@ -1,0 +1,23 @@
+#!/bin/sh -eu
+
+get_x0(){
+  sed -n -e '
+    s/^[[:space:]]*\([0-9\.]\+\) .*/\1/p;T;q
+  ' $1
+}
+
+x=l060tf090
+
+head -n9 f180$x.dat |
+ sed -e 's/^[[:space:]]\+//;s/[[:space:]]\+$//;'> res_$x
+for i in f???$x.dat; do
+  [ -f "$i" ] || continue
+  echo $i
+  x0="$(get_x0 "$i")"
+  sed -i -e "
+    s/^file=.*/file=\"$i\"/
+    s/^x0=.*/x0=\"$x0\"/
+  " fit.gp
+  ./fit.gp 2>&1 | tail -n1 |
+   sed 's/^f/0./;s/l[0-9]\+tf[0-9]\+.dat//' >> res_$x
+done
