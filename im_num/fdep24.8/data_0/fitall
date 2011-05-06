@@ -6,10 +6,10 @@ get_x0(){
   ' $1
 }
 
-x=l060tf090
+x=l055tf090
 
 head -n9 f180$x.dat |
- sed -e 's/^[[:space:]]\+//;s/[[:space:]]\+$//;'> res_$x
+ sed -e 's/^[[:space:]]\+//;s/[[:space:]]\+$//; /AF0:/d; /AA:/d; $a\\'> res_$x
 for i in f???$x.dat; do
   [ -f "$i" ] || continue
   echo $i

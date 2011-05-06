@@ -1,6 +1,7 @@
 #!/bin/sh
 
 for i in res_*; do
+  echo $i
   tf=$(sed -n -e 's/# TF:[[:space:]]*//p' "$i")
   hr=$(sed -n -e 's/# HR:[[:space:]]*//p' "$i")
   gr=$(sed -n -e 's/# GRAD:[[:space:]]*//p' "$i")

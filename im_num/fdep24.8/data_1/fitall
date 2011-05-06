@@ -1,6 +1,11 @@
 #!/bin/sh
 
-for i in res_*f090; do
+TF=070
+
+> res_$TF
+
+for i in res_*tf$TF; do
+  echo $i
   lf=$(sed -n -e 's/# FLEGG:[[:space:]]*//p' "$i")
   tf=$(sed -n -e 's/# TF:[[:space:]]*//p' "$i")
   hr=$(sed -n -e 's/# HR:[[:space:]]*//p' "$i")
@@ -16,6 +21,6 @@ for i in res_*f090; do
     s/^H0=.*/H0=$H0/
   " fit.gp
 
-  ./fit.gp 2>&1 | sed -n -e 's/RES: //p' >> res
+  ./fit.gp 2>&1 | sed -n -e 's/RES: //p' >> res_$TF
 done
 
