@@ -1,5 +1,24 @@
 \begin{thebibliography}{10}
 
+\bibitem{2005_he3b_hpd_osc}
+V.V. Dmitriev, V.V. Zavjalov, and D.Ye. Zmeev.
+\newblock Spatially homogeneous oscillations of homogeneously precessing domain
+  in 3he-b.
+\newblock {\em Journal of Low Temperature Physics}, 138:765--770, 2005.
+\newblock 10.1007/s10909-005-2300-5.
+
+\bibitem{2004_aero_blegg}
+В.~В. Дмитриев, В.~В. Завьялов, Д.~Е. Змеев, and Н.~Малдерс.
+\newblock Измерения леггеттовской частоты в $^3$he-b в аэрогеле.
+\newblock {\em Письма в ЖЭТФ}, 79:612--617, 2004.
+
+\bibitem{2004_aero_btext}
+V.~V. Dmitriev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
+\newblock Nmr studies of texture in the b-like phase of $^3$he in aerogel.
+\newblock In {\em Proceedings of the 24rd International Conference on Low
+  Temperature Physics, LT24, held in Orlando, Florida (USA), 10-17 August
+  2005}, pages 225--228. AIP-Press, 2006.
+
 \bibitem{1972_he3_super}
 D.~D. Osheroff, R.~C. Richardson, and D.~M. Lee.
 \newblock Evidence for a new phase of solid he3.
@@ -64,11 +83,6 @@ P.~J. Hakonen, M.~Krusius, M.~M. Salomaa, R.~H. Salmelin, J.~T. Simola, A.~D.
 \newblock {\em Исследования сверхтекучих фаз 3He в аэрогеле}.
 \newblock Кандидатская диссертация. Институт физических проблем им. П.Л.Капицы,
   2006.
-
-\bibitem{2004_aero_blegg}
-В.~В. Дмитриев, В.~В. Завьялов, Д.~Е. Змеев, and Н.~Малдерс.
-\newblock Измерения леггеттовской частоты в $^3$he-b в аэрогеле.
-\newblock {\em Письма в ЖЭТФ}, 79:612--617, 2004.
 
 \bibitem{1983_thresh_r}
 А.~С. Боровик-Романов, Ю.~М. Буньков, В.~В. Дмитриев, and Ю.~М. Мухарский.
@@ -228,19 +242,5 @@ D.~C. Carless, H.~E. Hall, and J.~R. Hook.
   phase.
 \newblock {\em Journal of Low Temperature Physics}, 50:605--633, 1983.
 \newblock 10.1007/BF00683498.
-
-\bibitem{2005_he3b_hpd_osc}
-V.V. Dmitriev, V.V. Zavjalov, and D.Ye. Zmeev.
-\newblock Spatially homogeneous oscillations of homogeneously precessing domain
-  in 3he-b.
-\newblock {\em Journal of Low Temperature Physics}, 138:765--770, 2005.
-\newblock 10.1007/s10909-005-2300-5.
-
-\bibitem{2004_aero_btext}
-V.~V. Dmitriev, N.~Mulders, V.~V. Zavjalov, and D.~E. Zmeev.
-\newblock Nmr studies of texture in the b-like phase of $^3$he in aerogel.
-\newblock In {\em Proceedings of the 24rd International Conference on Low
-  Temperature Physics, LT24, held in Orlando, Florida (USA), 10-17 August
-  2005}, pages 225--228. AIP-Press, 2006.
 
 \end{thebibliography}
