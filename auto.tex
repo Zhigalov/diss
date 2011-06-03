@@ -11,16 +11,12 @@
 \usepackage[russian]{babel}
 %\usepackage{lscape}
 
-% add dots for chapters in TOC
-\usepackage{tocloft}
-\renewcommand{\cftchapdotsep}{\cftdotsep}
-
 \bibliographystyle{unsrt}
 
-\textheight=24cm \textwidth=16cm
+\textheight=26cm \textwidth=17cm
 \oddsidemargin=-.6cm
 \evensidemargin=-.6cm
-\topmargin=-1.2cm
+\topmargin=-1.5cm
 \tolerance=600
 
 \newcommand{\image}[3]{
@@ -34,18 +30,12 @@
 }
 \newcommand{\het}{$^3$He}
 \newcommand{\hef}{$^4$He}
-\def\auto{0} % diss/auto title
+
+\def\auto{1}
 
 \begin{document}
-\thispagestyle{empty}
 \input{000_tit.tex}
-\tableofcontents
-\input{001_intro.tex}
-\input{01_intro.tex}
-\input{02_theor.tex}
-\input{03_num.tex}
-\input{04_tech.tex}
-\input{05_res.tex}
-\input{06_vyv.tex}
+\input{001_auto.tex}
 \bibliography{index}
 \end{document}
+
