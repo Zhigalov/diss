@@ -38,6 +38,7 @@ H=284
 HR=0.003
 pi=3.1415926
 x0=2113*HR
+x0=3633*HR
 
 plot [0:] [0:]\
   "res_t094a" using (($1-0.09)*0.1*gamma):(1000/$3) with points ps 2 pt 7 lc 1,\

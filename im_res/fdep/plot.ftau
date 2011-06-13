@@ -7,6 +7,13 @@
 # 180504c.hpd  18:35-19:53  U=0.5V  wire=34-40 T=0.48-0.54
 # 180504d.hpd  19:53-??     U=0.5V  wire=40 T=0.54Tc
 
+
+K1(tf,lf,hr,x) = (a1 *  - a2 * (lf/1e6)**2)* 1e-6/tf *(x-a3*hr)
+a1=0.1699
+a2=0.4187
+a3=3633.0
+
+
 # bulk, 24.8 bar, 906.5 Hz
 
 set terminal "x11"
@@ -33,15 +40,25 @@ f2(x)=a2*x
 
 fit [260:] f1(x) "treat1" using (-268*($6-u1)):7 via a1
 fit f2(x) "treat5a" using (-268*($5-u5)):6 via a2
-plot\
+plot [0:][0:]\
   f1(x), f2(x),\
  "treat1" using (-268*($6-u1)):7 ls 1 lc 1,\
  "treat5a" using (-268*($5-u5)):6 ls 1 lc 4,\
- "num_data" using ($1/0.18*580):(1000/$3)
+ "num_data" using ($1/0.18*580):(1000/$3),\
+K1(1/8.0 * 2.84150e-6, 224463, 0.00627/2.0,x), 0
 
 # "treat3" using (-268*($5-u3)):($6) ls 1 lc 2,\
 # "treat4" using (-268*($5-u4)):($6) ls 1 lc 3,\
 
 
+TF(k,lf) = (a1 - a2*(lf/1e6)**2)  *1e-6/k
+a1=0.1699
+a2=0.4187
+
+
+l1=265842
+l2=247437
 print a1,a2
+print  "T_eff = ", TF(a1,l1)*1e6, TF(a2,l2)*1e6, " mks"
+print  "T_r  = ", 1e6/(2*3.14159*l1)**2/TF(a1,l1), 1e6/(2*3.14159*l1)**2/TF(a2,l2), " mks"
 pause -1

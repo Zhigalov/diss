@@ -1,7 +1,7 @@
 parts_diss=000_tit 001_intro 01_intro 02_theor 03_num 04_tech 05_res
 parts_auto=000_tit 001_auto
 
-all: diss.pdf auto.pdf
+all: diss.pdf auto.pdf pres.pdf
 
 bib:
 	latex diss
