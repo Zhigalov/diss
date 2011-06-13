@@ -1,7 +1,7 @@
 pics=he3phd he3aphd flare_out cw_nmr cw_nmr_a hpd nmr_hpd nmr_hpd_s\
      legg_eq f_roots\
      cells coils spectr wire1 wire2\
-     num_hpd num_f_d_h num_hdep num_k_d_t\
+     num_hpd num_f_d_h num_hdep num_k_d_t num_kdt\
      res_hpd res_obr res_fh res_fd res_ft res_ft1 res_td\
      resa_sig resa_legg resa_cwnmr\
      dokl_osc
