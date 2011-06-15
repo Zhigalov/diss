@@ -7,5 +7,8 @@
 *.ilg
 *.ind
 *.blg
+*.nav
+*.out
+*.snm
 *.toc
 images.src

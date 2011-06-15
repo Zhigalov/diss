@@ -1,0 +1,47 @@
+\makeatletter\renewcommand{\@biblabel}[1]{#1.}\makeatother
+\ifx\undefined\BibPrefix\def\BibPrefix{}\else\fi
+\ifx\undefined\BibPostfix\def\BibPostfix{}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{#1}\else\fi
+\ifx\undefined\href\def\href#1#2{#2}\else\fi
+\ifx\undefined\url\def\url#1{\texttt{#1}}\else\fi
+\ifx\undefined\urlprefix\def\urlprefix{URL: }\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\urlprefix\url{#1}}\else\fi
+\ifx\undefined\BibUrlDate\long\def\BibUrlDate#1{({%
+\cyr\cyrd\cyra\cyrt\cyra\ %
+\cyro\cyrb\cyrr\cyra\cyrshch\cyre\cyrn\cyri\cyrya}: #1)}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{#1}\else\fi
+\begin{thebibliography}{\BibPrefix1\BibPostfix}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+
+\bibitem[\BibPrefix1\BibPostfix]{2005_he3b_hpd_osc}
+\selectlanguageifdefined{english}
+\BibEmph{Dmitriev~V., Zavjalov~V., Zmeev~D.} {Spatially homogeneous
+  oscillations of homogeneously precessing domain in $^3$He-B}~//
+  \BibEmph{Journal of Low Temperature Physics}.
+\newblock 2005.
+\newblock Vol. 138.
+\newblock Pp.~765--770.
+\newblock 10.1007/s10909-005-2300-5.
+\newblock \BibUrl{http://dx.doi.org/10.1007/s10909-005-2300-5}.
+
+\bibitem[\BibPrefix2\BibPostfix]{2004_aero_blegg}
+\selectlanguageifdefined{english}
+\BibEmph{Дмитриев~В.~В., Завьялов~В.~В., Змеев~Д.~Е., Малдерс~Н.} {Измерения
+  леггеттовской частоты в $^3$He-B в аэрогеле}~// \BibEmph{Письма в ЖЭТФ}.
+\newblock 2004.
+\newblock Vol.~79.
+\newblock Pp.~612--617.
+
+\bibitem[\BibPrefix3\BibPostfix]{2004_aero_btext}
+\selectlanguageifdefined{english}
+\BibEmph{Dmitriev~V.~V., Mulders~N., Zavjalov~V.~V., Zmeev~D.~E.} {NMR Studies
+  of Texture in the {B-like} Phase of $^3$He in Aerogel}~// {Proceedings of the
+  24rd International Conference on Low Temperature Physics, LT24, held in
+  Orlando, Florida (USA), 10-17 August 2005}.
+\newblock AIP-Press, 2006.
+\newblock Pp.~225--228.
+\newblock \BibUrl{http://www.springer.com/materials/book/978-0-7354-0347-5}.
+
+\end{thebibliography}

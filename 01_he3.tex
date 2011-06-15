@@ -74,12 +74,12 @@ $^3$He впервые наблюдался в 1972 г в эксперименте Ошерова, Ричардсона
 работах~\cite{1995_aero_parpia} и~\cite{1995_aero_halperin}. Было
 обнаружено, что аэрогель достаточно малой плотности не полностью
 подавляет сверхтекучесть, а лишь уменьшает температуру перехода (на
-20-30\% для 98.2\% аэрогеля при давлении 20-30 бар). Фазовая диаграмма
-$^3$He в аэрогеле показана на рис.~\ref{image:he3aphd}. На ней видны
-две сверхтекучие фазы, расположенные примерно так же, как A- и B-фаза
-объемного $^3$He (<<объемным $^3$He>> здесь и далее называется $^3$He
-без аэрогеля). Эти две фазы называют соответственно A-подобной и
-B-подобной.
+20~-- 30\% для 98.2\% аэрогеля при давлении 20~-- 30 бар). Фазовая
+диаграмма $^3$He в аэрогеле показана на рис.~\ref{image:he3aphd}. На
+ней видны две сверхтекучие фазы, расположенные примерно так же, как A-
+и B-фаза объемного $^3$He (<<объемным $^3$He>> здесь и далее
+называется $^3$He без аэрогеля). Эти две фазы называют соответственно
+A-подобной и B-подобной.
 
 \image{!ht}{he3aphd}{Фазовая диаграмма $^3$He в аэрогеле. Линии фазовых
 переходов показаны схематически, так как их положение различается для
@@ -282,19 +282,24 @@ $\beta = \cos^{-1}(1/\sqrt{5})\approx 63.4^\circ$ (по~\cite{1989_he3b_nmr}).}
 \begin{equation}
 \left\{
 \begin{array}{rcl}
-\dot{\bf M} &=& \gamma{\bf M} \times {\bf H} +
-  \frac{4}{15} \frac{\chi\Omega_B^2}{\gamma} \sin\theta (1+4\cos\theta){\bf n}\\
-\dot\theta  &=& \gamma{\bf n}\left(\frac{\bf M}{\chi}-{\bf H}\right)\\
-\dot{\bf n} &=& -\frac{\gamma}{2} \left[
-  {\bf n} \times \left(\frac{\bf M}{\chi}-{\bf H}\right)+
-  \ctg\frac{\theta}{2}\left[
+\dot{\bf M} &=&\displaystyle
+  \gamma{\bf M} \times {\bf H} +
+  \frac{4}{15}\ \frac{\chi\Omega_B^2}{\gamma}
+    \ \sin\theta\ (1+4\cos\theta)\ {\bf n}\\[3ex]
+\dot\theta  &=&\displaystyle
+  \gamma{\bf n}\left(\frac{\bf M}{\chi}-{\bf H}\right)\\[3ex]
+\dot{\bf n} &=&\displaystyle
+  -\frac{\gamma}{2}
+  \ {\bf n} \times \left(\frac{\bf M}{\chi}-{\bf H}\right) -\\[2ex]
+&&\displaystyle
+  -\frac{\gamma}{2}
+  \ \ctg\frac{\theta}{2}\left[
     {\bf n}\left({\bf n}\left(
       \frac{\bf M}{\chi}-{\bf H}
     \right)\right)-\left(
       \frac{\bf M}{\chi}-{\bf H}
     \right)
   \right]
-\right]
 \end{array}\right. \label{eq:leggett}
 \end{equation}
 
@@ -419,21 +424,31 @@ ${\bf n}$ параметра порядка начинает прецессировать вокруг направления
 \begin{equation}
 \left\{
 \begin{array}{rcl}
-\dot{M}_\mu &=& \gamma({\bf M} \times {\bf H})_\mu +
-  \frac{4}{15} \frac{\chi\Omega_B^2}{\gamma} \sin\theta (1+4\cos\theta)n_\mu 
-  - \sum_i \nabla_i J_{i\mu} + \sum_{ij\nu} D_{ij\mu\nu} \nabla_j M_{\nu}\\
-\dot\theta  &=& \gamma{\bf n}\left(\frac{\bf M}{\chi}-{\bf H}\right) +
-  \frac{4}{15} \frac{1}{\tau} \sin\theta (1+4\cos\theta)\\
-\dot{\bf n} &=& -\frac{\gamma}{2} \left[
-  {\bf n} \times \left(\frac{\bf M}{\chi}-{\bf H}\right)+
-  \ctg\frac{\theta}{2}\left[
+\dot{M}_\mu &=&
+  \displaystyle
+  \gamma\ ({\bf M} \times {\bf H})_\mu +
+  \frac{4}{15}\ \frac{\chi\Omega_B^2}{\gamma}
+    \ \sin\theta\ (1+4\cos\theta)\ n_\mu\\[2ex]
+&&\displaystyle
+  - \sum_i \nabla_i J_{i\mu}
+  + \sum_{ij\nu} D_{ij\mu\nu} \nabla_j M_{\nu}\\[3ex]
+\dot\theta  &=&
+  \displaystyle
+  \gamma{\bf n}\left(\frac{\bf M}{\chi}-{\bf H}\right) +
+  \frac{4}{15}\ \frac{1}{\tau}\ \sin\theta\ (1+4\cos\theta)\\[3ex]
+\dot{\bf n} &=&
+  \displaystyle
+  -\frac{\gamma}{2}
+  \ {\bf n} \times \left(\frac{\bf M}{\chi}-{\bf H}\right)-\\[2ex]
+&&\displaystyle
+  -\frac{\gamma}{2}
+  \ \ctg\frac{\theta}{2}\left[
     {\bf n}\left({\bf n}\left(
       \frac{\bf M}{\chi}-{\bf H}
     \right)\right)-\left(
       \frac{\bf M}{\chi}-{\bf H}
     \right)
   \right]
-\right]
 \end{array}\right. \label{eq:leggett_tak}
 \end{equation}
 

@@ -1,27 +1,37 @@
-\documentclass[12pt]{report}
+\documentclass[candidate,subf,href
+,libcat
+%,draft
+%,colorlinks=true
+%,fixint=false
+%,times
+%,facsimile
+%,classified
+]{disser}
 
-\usepackage{amssymb}
-\usepackage{euscript}
-\usepackage{graphicx}
-\graphicspath{{images/}}
+\usepackage[
+  a4paper, mag=1000, includefoot,
+  left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=1cm, footskip=1cm
+]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[koi8-r]{inputenc}
+\usepackage[english,russian]{babel}
+\ifpdf\usepackage{epstopdf}\fi
 \usepackage{color}
-\usepackage{epsfig}
-%\usepackage[T1,T2A]{fontenc}
-\usepackage[koi8-ru]{inputenc}
-\usepackage[russian]{babel}
-%\usepackage{lscape}
 
-% add dots for chapters in TOC
-\usepackage{tocloft}
-\renewcommand{\cftchapdotsep}{\cftdotsep}
 
-\bibliographystyle{unsrt}
+% Номера страниц сверху и по центру
+%\def\headfont{\small}
+%\pagestyle{headcenter}
+%\chapterpagestyle{empty}
 
-\textheight=24cm \textwidth=16cm
-\oddsidemargin=-.6cm
-\evensidemargin=-.6cm
-\topmargin=-1.2cm
-\tolerance=600
+% Ссылки на работы соискателя включаются в общий список литературы
+\let\citemy=\cite
+
+% Использовать полужирное начертание для векторов
+\let\vec=\mathbf
+
+% Путь к файлам с иллюстрациями
+\graphicspath{{images/}}
 
 \newcommand{\image}[3]{
 \begin{figure}[#1]
@@ -32,20 +42,33 @@
 \end{center}
 \end{figure}
 }
-\newcommand{\het}{$^3$He}
-\newcommand{\hef}{$^4$He}
-\def\auto{0} % diss/auto title
 
 \begin{document}
-\thispagestyle{empty}
-\input{000_tit.tex}
+% Включение файла с общим текстом диссертации и автореферата
+% (текст титульного листа и характеристика работы).
+\input{00_common}
+
+% номер копии для грифа секретности
+%\copynum{1}
+% класс доступа
+%\classlabel{Для служебного пользования}
+
+\title{ДИССЕРТАЦИЯ\\
+на соискание ученой степени\\
+кандидата физико-математических наук}
+
+\def\bblsep{}
+
+\maketitle
 \tableofcontents
-\input{001_intro.tex}
-\input{01_intro.tex}
+\input{00_intro.tex}
+\input{01_he3.tex}
 \input{02_theor.tex}
 \input{03_num.tex}
 \input{04_tech.tex}
 \input{05_res.tex}
 \input{06_vyv.tex}
 \bibliography{index}
+\bibliographystyle{gost705}
 \end{document}
+
