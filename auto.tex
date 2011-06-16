@@ -14,6 +14,7 @@
 \usepackage[english,russian]{babel}
 \usepackage{tabularx}
 \ifpdf\usepackage{epstopdf}\fi
+\usepackage{color}
 
 % Поддержка нескольких списков литературы в одном документе
 \usepackage{multibib}
@@ -23,6 +24,16 @@
 
 % Путь к файлам с иллюстрациями
 \graphicspath{{images/}}
+
+\newcommand{\image}[3]{
+\begin{figure}[#1]
+\begin{center}
+\input{images/#2.tex}
+\caption{\small#3}
+\label{image:#2}
+\end{center}
+\end{figure}
+}
 
 \begin{document}
 % Включение файла с общим текстом диссертации и автореферата
