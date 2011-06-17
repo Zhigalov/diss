@@ -61,7 +61,7 @@ $$
 
 \begin{frame}{Текстура  B-фазы в цилиндрическом сосуде}
  \image{t}{flare_out}{}
- $\alpha = 60^\circ$, $\beta = \cos^{-1}(1/\sqrt{5})\approx 63.4^\circ$
+ $\alpha = 60^\circ$, $\varphi = \cos^{-1}(1/\sqrt{5})\approx 63.4^\circ$
 \end{frame}
 
 
@@ -131,7 +131,7 @@ $\varphi$~--- угол между~$\bf n$ и~$\bf H$.
 %\end{frame}
 
 \begin{frame}{Однородно-прецессирующий домен (ОПД)}
- \image{t}{hpd}{}
+ \image{t}{hpd1}{}
 \end{frame}
 
 \begin{frame}{получение ОПД с помощью непрерывного ЯМР}
@@ -139,18 +139,21 @@ $\varphi$~--- угол между~$\bf n$ и~$\bf H$.
 \end{frame}
 
 \begin{frame}{Колебания ОПД}
+ \image{r}{dokl_osc}{}
 $$
-\Omega_1^2 = (\gamma H_0)^2 + \Omega_B^2,
+\Omega_1^2 = \omega_0^2 + \Omega_B^2
 $$
+{\color{red}
 $$
 \Omega_2^2 =  \frac{4}{\sqrt{15}} \  \frac{H_R}{H_0}
- \ \frac{\Omega_B^2}{1 + 8/3 (\Omega_B/\gamma H_0)^2},
+ \ \frac{\Omega_B^2}{1 + 8/3\ \Omega_B^2/\omega_0^2}
 $$
+}
+\medskip
 $$
-\Omega_3^2 = \gamma H_0\, \frac{\sqrt{15}\Delta\omega-\gamma H_R}{\sqrt{15}}
- \ \frac{3/8+(\Omega_B/\gamma H_0)^2}{1+(\Omega_B/\gamma H_0)^2}.
+\Omega_3^2 = \omega_0\, \frac{\sqrt{15}\Delta\omega-\gamma H_R}{\sqrt{15}}
+ \ \frac{3/8+\Omega_B^2/\omega_0^2}{1+\Omega_B^2/\omega_0^2}
 $$
- \image{r}{dokl_osc}{}
 \end{frame}
 
 \begin{frame}{Численный эксперимент}
@@ -179,21 +182,16 @@ $$
 
 \begin{frame}{Эксперимент: частота колебаний в зависимости от сдвига частоты}
 \image{p}{res_fd}{}
-Давление 24.8~бар, температура 0.54~$T_c$ (белые точки) и
-0.45~$T_c$ (темные точки)
+Давление 24.8~бар, температура 0.54~$T_c$ (красные точки) и
+0.45~$T_c$ (синие точки)
 \end{frame}
 
-\begin{frame}{Эксперимент: коэффициента затухания в зависимости от сдвига частоты}
-\image{p}{res_td}{}
-Давление 24.8~бар, температура 0.54~$T_c$ (белые точки) и
-0.45~$T_c$ (темные точки)
-\end{frame}
 
 \begin{frame}{Эксперимент: частота колебаний в зависимости от поля накачки}
 \image{p}{res_fh}{}
-A: $P = 24.8$~бар, $H = 279$~Э, $T = 0.46$~$T_c$;\\
-B: $P = 19.5$~бар, $H = 285$~Э, $T = 0.60$~$T_c$;\\
-C: $P = 19.5$~бар, $H = 285$~Э, $T = 0.82$~$T_c$.
+{\color{blue}A:} $P = 24.8$~бар, $H = 279$~Э, $T = 0.46$~$T_c$;\\
+{\color{red}B:} $P = 19.5$~бар, $H = 285$~Э, $T = 0.60$~$T_c$;\\
+{\color{green}C:} $P = 19.5$~бар, $H = 285$~Э, $T = 0.82$~$T_c$.
 \end{frame}
 
 \begin{frame}{Эксперимент: леггеттовская частота в зависимости от температуры}
@@ -240,4 +238,18 @@ $^3$He, так и в $^3$He в аэрогеле, причем их свойства качественно
 \end{itemize}
 \end{frame}
 
+\begin{frame}{}
+\end{frame}
+
+\begin{frame}{Однородно-прецессирующий домен (ОПД)}
+ \image{t}{hpd}{}
+\end{frame}
+
+\begin{frame}{Эксперимент: коэффициента затухания в зависимости от сдвига частоты}
+\image{p}{res_td}{}
+Давление 24.8~бар, температура 0.54~$T_c$ (белые точки) и
+0.45~$T_c$ (темные точки)
+\end{frame}
+
 \end{document}
+
