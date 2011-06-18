@@ -51,11 +51,15 @@ fit [200:] f1(x) "RES1" using (($1-0.09)*gamma*grad):($2/fosc(0.00098,89803)) vi
 fit [200:] f2(x) "RES3" using (($1-0.09)*gamma*grad):($2/fosc(0.003,89803)) via  A2,B2,k2
 fit [200:] f3(x) "RES6" using (($1-0.09)*gamma*grad):($2/fosc(0.006,89803)) via  A3,B3,k3
 
-plot [0:2000] [0.68:1.03]\
-   "RES1" using (($1-0.09)*gamma*grad):($2/fosc(0.00098,89803)) with points ps 2 pt 7 lc 1,\
-   "RES3" using (($1-0.09)*gamma*grad):($2/fosc(0.003,89803)) with points ps 2 pt 7 lc 2,\
-   "RES6" using (($1-0.09)*gamma*grad):($2/fosc(0.006,89803)) with points ps 2 pt 7 lc 3,\
-   f1(x), f2(x), f3(x),1
+plot [0:2000] [250:300]\
+   "RES3" using (($1-0.09)*gamma*grad):2 with points ps 2 pt 7 lc 2,\
+   f1(x), f2(x)*fosc(0.003,89803), f3(x),fosc(0.003,89803)
+
+#plot [0:2000] [0.68:1.03]\
+#   "RES1" using (($1-0.09)*gamma*grad):($2/fosc(0.00098,89803)) with points ps 2 pt 7 lc 1,\
+#   "RES3" using (($1-0.09)*gamma*grad):($2/fosc(0.003,89803)) with points ps 2 pt 7 lc 2,\
+#   "RES6" using (($1-0.09)*gamma*grad):($2/fosc(0.006,89803)) with points ps 2 pt 7 lc 3,\
+#   f1(x), f2(x), f3(x),1
 pause -1
 
 #   "grad02/RES" using (($1-0.09)*gamma*grad * 2 + 0.5):($2/fosc(0.003,89803)) with points ps 2 pt 3 lc 1,\
@@ -74,12 +78,14 @@ set nokey
 #fit [200:] gg1(x) "RES1" using (($1-0.09)*gamma*grad):(1/$3) via D1,x1
 #fit [200:] gg2(x) "RES3" using (($1-0.09)*gamma*grad):(1/$3) via D2,x2
 #fit [200:] gg3(x) "RES6" using (($1-0.09)*gamma*grad):(1/$3) via D3,x3
+
 plot []\
   "RES1" using (($1-0.09)*gamma*grad):(1/$3) with points ps 2 pt 6 lc 1,\
   "RES3" using (($1-0.09)*gamma*grad):(1/$3) with points ps 2 pt 7 lc 1,\
   "RES6" using (($1-0.09)*gamma*grad):(1/$3) with points ps 2 pt 8 lc 1,\
   "grad02/RES" using (($1-0.09)*gamma*grad * 2 +0.5):(1/$3) with points ps 2 pt 3 lc 1,\
  gg1(x), gg2(x), gg3(x), (x+0.5)*0.159
+
 print x1,D1
 print x2,D2
 print x3,D3

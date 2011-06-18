@@ -35,11 +35,11 @@ f0=580
 f1=1
 k=10000
 
-f1(x)=a1*x
-f2(x)=a2*x
+f1(x)=b1*(x-x1)
+f2(x)=b2*(x-x2)
 
-fit [260:] f1(x) "treat1" using (-268*($6-u1)):7 via a1
-fit f2(x) "treat5a" using (-268*($5-u5)):6 via a2
+fit [260:] f1(x) "treat1" using (-268*($6-u1)):7 via b1,x1
+fit f2(x) "treat5a" using (-268*($5-u5)):6 via b2,x2
 plot [0:][0:]\
   f1(x), f2(x),\
  "treat1" using (-268*($6-u1)):7 ls 1 lc 1,\
@@ -59,6 +59,6 @@ a2=0.4187
 l1=265842
 l2=247437
 print a1,a2
-print  "T_eff = ", TF(a1,l1)*1e6, TF(a2,l2)*1e6, " mks"
-print  "T_r  = ", 1e6/(2*3.14159*l1)**2/TF(a1,l1), 1e6/(2*3.14159*l1)**2/TF(a2,l2), " mks"
+print  "T_eff = ", TF(b1,l1)*1e6, TF(b2,l2)*1e6, " mks"
+print  "T_r  = ", 1e6/(2*3.14159*l1)**2/TF(b1,l1), 1e6/(2*3.14159*l1)**2/TF(b2,l2), " mks"
 pause -1
