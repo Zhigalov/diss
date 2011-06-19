@@ -64,4 +64,15 @@
 \newblock Vol.~84.
 \newblock Pp.~2109--2120.
 
+\bibitem[\BibPrefix7\BibPostfix]{1989_he3b_nmr}
+\selectlanguageifdefined{english}
+\BibEmph{Hakonen~P.~J., Krusius~M., Salomaa~M.~M. et~al.} {NMR and axial
+  magnetic field textures in stationary and rotating superfluid 3Не-B}~//
+  \BibEmph{Journal of Low Temperature Physics}.
+\newblock 1989.
+\newblock Vol.~76.
+\newblock Pp.~225--283.
+\newblock 10.1007/BF00681586.
+\newblock \BibUrl{http://dx.doi.org/10.1007/BF00681586}.
+
 \end{thebibliography}

@@ -15,7 +15,48 @@
 \expandafter\ifx\csname date#1\endcsname\relax
 \else\language\csname l@#1\endcsname\fi}
 
-\bibitem[\BibPrefix1\BibPostfix]{2005_he3b_hpd_osc}
+\bibitem[\BibPrefix1\BibPostfix]{vw}
+\selectlanguageifdefined{english}
+\BibEmph{Vollhardt~D., Wolfle~P.} {The Superfluid Phases of Helium 3}.
+\newblock Taylor\&Francis, 1990.
+
+\bibitem[\BibPrefix2\BibPostfix]{1985_hpd}
+\selectlanguageifdefined{english}
+\BibEmph{Боровик-Романов~А.~С., Буньков~Ю.~М., Дмитриев~В.~В. et~al.}
+  {Разбиение прецессии намагиченности в $^3$He-B на два домена. Эксперимент}~//
+  \BibEmph{ЖЭТФ}.
+\newblock 1985.
+\newblock Vol.~88.
+\newblock Pp.~2025--2038.
+
+\bibitem[\BibPrefix3\BibPostfix]{1985_hpd_f}
+\selectlanguageifdefined{english}
+\BibEmph{Фомин~И.~А.} {Разбиение прецессии намагиченности в $^3$He-B на два
+  домена. Теория}~// \BibEmph{ЖЭТФ}.
+\newblock 1985.
+\newblock Vol.~88.
+\newblock Pp.~2039--2051.
+
+\bibitem[\BibPrefix4\BibPostfix]{1995_aero_parpia}
+\selectlanguageifdefined{english}
+\BibEmph{Porto~J.~V., Parpia~J.~M.} {Superfluid $^3$He in Aerogel}~//
+  \href{http://dx.doi.org/10.1103/PhysRevLett.74.4667}{\BibEmph{Phys. Rev.
+  Lett.}}
+\newblock 1995. "--- Jun.
+\newblock Vol.~74, no.~23.
+\newblock Pp.~4667--4670.
+
+\bibitem[\BibPrefix5\BibPostfix]{1995_aero_halperin}
+\selectlanguageifdefined{english}
+\BibEmph{Sprague~D.~T., Haard~T.~M., Kycia~J.~B. et~al.} {Homogeneous
+  Equal-Spin Pairing Superfluid State of $^3$He in Aerogel}~//
+  \href{http://dx.doi.org/10.1103/PhysRevLett.75.661}{\BibEmph{Phys. Rev.
+  Lett.}}
+\newblock 1995. "--- Jul.
+\newblock Vol.~75, no.~4.
+\newblock Pp.~661--664.
+
+\bibitem[\BibPrefix6\BibPostfix]{2005_he3b_hpd_osc}
 \selectlanguageifdefined{english}
 \BibEmph{Dmitriev~V., Zavjalov~V., Zmeev~D.} {Spatially homogeneous
   oscillations of homogeneously precessing domain in $^3$He-B}~//
@@ -26,7 +67,7 @@
 \newblock 10.1007/s10909-005-2300-5.
 \newblock \BibUrl{http://dx.doi.org/10.1007/s10909-005-2300-5}.
 
-\bibitem[\BibPrefix2\BibPostfix]{2004_aero_blegg}
+\bibitem[\BibPrefix7\BibPostfix]{2004_aero_blegg}
 \selectlanguageifdefined{english}
 \BibEmph{Дмитриев~В.~В., Завьялов~В.~В., Змеев~Д.~Е., Малдерс~Н.} {Измерения
   леггеттовской частоты в $^3$He-B в аэрогеле}~// \BibEmph{Письма в ЖЭТФ}.
@@ -34,7 +75,7 @@
 \newblock Vol.~79.
 \newblock Pp.~612--617.
 
-\bibitem[\BibPrefix3\BibPostfix]{2004_aero_btext}
+\bibitem[\BibPrefix8\BibPostfix]{2004_aero_btext}
 \selectlanguageifdefined{english}
 \BibEmph{Dmitriev~V.~V., Mulders~N., Zavjalov~V.~V., Zmeev~D.~E.} {NMR Studies
   of Texture in the {B-like} Phase of $^3$He in Aerogel}~// {Proceedings of the
@@ -44,7 +85,7 @@
 \newblock Pp.~225--228.
 \newblock \BibUrl{http://www.springer.com/materials/book/978-0-7354-0347-5}.
 
-\bibitem[\BibPrefix4\BibPostfix]{1972_he3_super}
+\bibitem[\BibPrefix9\BibPostfix]{1972_he3_super}
 \selectlanguageifdefined{english}
 \BibEmph{Osheroff~D.~D., Richardson~R.~C., Lee~D.~M.} {Evidence for a New Phase
   of Solid He3}~//
@@ -54,7 +95,7 @@
 \newblock Vol.~28, no.~14.
 \newblock Pp.~885--888.
 
-\bibitem[\BibPrefix5\BibPostfix]{1961_he3_abm}
+\bibitem[\BibPrefix10\BibPostfix]{1961_he3_abm}
 \selectlanguageifdefined{english}
 \BibEmph{Anderson~P.~W., Morel~P.} {Generalized Bardeen-Cooper-Schrieffer
   States and the Proposed Low-Temperature Phase of Liquid He3}~//
@@ -63,7 +104,7 @@
 \newblock Vol. 123, no.~6.
 \newblock Pp.~1911--1934.
 
-\bibitem[\BibPrefix6\BibPostfix]{1963_he3_bw}
+\bibitem[\BibPrefix11\BibPostfix]{1963_he3_bw}
 \selectlanguageifdefined{english}
 \BibEmph{Balian~R., Werthamer~N.~R.} {Superconductivity with Pairs in a
   Relative p Wave}~//
@@ -72,26 +113,7 @@
 \newblock Vol. 131, no.~4.
 \newblock Pp.~1553--1564.
 
-\bibitem[\BibPrefix7\BibPostfix]{1995_aero_parpia}
-\selectlanguageifdefined{english}
-\BibEmph{Porto~J.~V., Parpia~J.~M.} {Superfluid $^3$He in Aerogel}~//
-  \href{http://dx.doi.org/10.1103/PhysRevLett.74.4667}{\BibEmph{Phys. Rev.
-  Lett.}}
-\newblock 1995. "--- Jun.
-\newblock Vol.~74, no.~23.
-\newblock Pp.~4667--4670.
-
-\bibitem[\BibPrefix8\BibPostfix]{1995_aero_halperin}
-\selectlanguageifdefined{english}
-\BibEmph{Sprague~D.~T., Haard~T.~M., Kycia~J.~B. et~al.} {Homogeneous
-  Equal-Spin Pairing Superfluid State of $^3$He in Aerogel}~//
-  \href{http://dx.doi.org/10.1103/PhysRevLett.75.661}{\BibEmph{Phys. Rev.
-  Lett.}}
-\newblock 1995. "--- Jul.
-\newblock Vol.~75, no.~4.
-\newblock Pp.~661--664.
-
-\bibitem[\BibPrefix9\BibPostfix]{2000_aero_ab}
+\bibitem[\BibPrefix12\BibPostfix]{2000_aero_ab}
 \selectlanguageifdefined{english}
 \BibEmph{Barker~B.~I., Lee~Y., Polukhina~L. et~al.} {Observation of a
   Superfluid He-3 $A$- $B$ Phase Transition in Silica Aerogel}~//
@@ -101,7 +123,7 @@
 \newblock Vol.~85, no.~10.
 \newblock Pp.~2148--2151.
 
-\bibitem[\BibPrefix10\BibPostfix]{2003_aero_phase_r}
+\bibitem[\BibPrefix13\BibPostfix]{2003_aero_phase_r}
 \selectlanguageifdefined{english}
 \BibEmph{Дмитриев~В.~В., Завьялов~В.~В., Змеев~Д.~Е. et~al.} {Сврхтекучие фазы
   3Не в аэрогеле}~//
@@ -112,7 +134,7 @@
 \newblock Pp.~452--456.
 \newblock \BibUrl{http://ufn.ru/ru/articles/2003/4/h/}.
 
-\bibitem[\BibPrefix11\BibPostfix]{2010_aero_astates}
+\bibitem[\BibPrefix14\BibPostfix]{2010_aero_astates}
 \selectlanguageifdefined{english}
 \BibEmph{Dmitriev~V.~V., Krasnikhin~D.~A., Mulders~N. et~al.} {Nuclear Spin
   Relaxation in Glass States of $^3$He-A in Stretched Aerogel}~// \BibEmph{JETP
@@ -121,7 +143,7 @@
 \newblock Vol.~91, no.~11.
 \newblock Pp.~599--606.
 
-\bibitem[\BibPrefix12\BibPostfix]{1975_he3_teor_leggett}
+\bibitem[\BibPrefix15\BibPostfix]{1975_he3_teor_leggett}
 \selectlanguageifdefined{english}
 \BibEmph{Leggett~A.~J.} {A theoretical description of the new phases of liquid
   $^3$He}~// \href{http://dx.doi.org/10.1103/RevModPhys.47.331}{\BibEmph{Rev.
@@ -130,7 +152,7 @@
 \newblock Vol.~47, no.~2.
 \newblock Pp.~331--414.
 
-\bibitem[\BibPrefix13\BibPostfix]{1989_he3b_nmr}
+\bibitem[\BibPrefix16\BibPostfix]{1989_he3b_nmr}
 \selectlanguageifdefined{english}
 \BibEmph{Hakonen~P.~J., Krusius~M., Salomaa~M.~M. et~al.} {NMR and axial
   magnetic field textures in stationary and rotating superfluid 3Не-B}~//
@@ -141,13 +163,13 @@
 \newblock 10.1007/BF00681586.
 \newblock \BibUrl{http://dx.doi.org/10.1007/BF00681586}.
 
-\bibitem[\BibPrefix14\BibPostfix]{2006_diss_zmeev}
+\bibitem[\BibPrefix17\BibPostfix]{2006_diss_zmeev}
 \selectlanguageifdefined{english}
 \BibEmph{Змеев~Д.~Е.} {Исследования сверхтекучих фаз $^3$He в аэрогеле}.
 \newblock Кандидатская диссертация. Институт физических проблем им. П.Л.Капицы,
   2006.
 
-\bibitem[\BibPrefix15\BibPostfix]{1983_thresh_r}
+\bibitem[\BibPrefix18\BibPostfix]{1983_thresh_r}
 \selectlanguageifdefined{english}
 \BibEmph{Боровик-Романов~А.~С., Буньков~Ю.~М., Дмитриев~В.~В., Мухарский~Ю.~М.}
   {Пороговые эффекты в импульсном ЯМР в сверхтекучем $^3$He-B}~//
@@ -156,7 +178,7 @@
 \newblock Vol.~37.
 \newblock Pp.~600--602.
 
-\bibitem[\BibPrefix16\BibPostfix]{1983_thresh_f_r}
+\bibitem[\BibPrefix19\BibPostfix]{1983_thresh_f_r}
 \selectlanguageifdefined{english}
 \BibEmph{Голо~В.~Л., Леман~А.~А., Фомин~И.~А.} {Импульсный ЯМР в $^3$Не-В для
   нелеггеттовской конфигурации}~// \BibEmph{Письма в ЖЭТФ}.
@@ -164,7 +186,7 @@
 \newblock Vol.~38.
 \newblock Pp.~123--125.
 
-\bibitem[\BibPrefix17\BibPostfix]{1975_bs_b}
+\bibitem[\BibPrefix20\BibPostfix]{1975_bs_b}
 \selectlanguageifdefined{english}
 \BibEmph{Brinkman~W., Smith~H.} {Large angle tipping frequency shifts in pulsed
   NMR for $^3$He (B)}~// \href{http://dx.doi.org/DOI:
@@ -176,7 +198,7 @@
   \BibUrl{http://www.sciencedirect.com/science/article/B6TVM-46SPM1R-XS/2/eb36%
 83326c7c6cdad6515d6919821bd2}.
 
-\bibitem[\BibPrefix18\BibPostfix]{1978_he3_pulsed}
+\bibitem[\BibPrefix21\BibPostfix]{1978_he3_pulsed}
 \selectlanguageifdefined{english}
 \BibEmph{Corruccini~L.~R., Osheroff~D.~D.} {Pulsed NMR experiments in
   superfluid $^3$He}~//
@@ -185,7 +207,7 @@
 \newblock Vol.~17, no.~1.
 \newblock Pp.~126--140.
 
-\bibitem[\BibPrefix19\BibPostfix]{2002_aero_pulse}
+\bibitem[\BibPrefix22\BibPostfix]{2002_aero_pulse}
 \selectlanguageifdefined{english}
 \BibEmph{Dmitriev~V.~V., Kosarev~I.~V., Mulders~N. et~al.} {Pulsed NMR
   experiments in superfluid $^3$He confined to aerogel}~// {Proceedings of the
@@ -197,7 +219,7 @@
 ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 20-27_August_2002}.
 
-\bibitem[\BibPrefix20\BibPostfix]{1975_he3_relax_legg_tak}
+\bibitem[\BibPrefix23\BibPostfix]{1975_he3_relax_legg_tak}
 \selectlanguageifdefined{english}
 \BibEmph{Leggett~A.~J., Takagi~S.} {NMR in A-$^3$He and B-$^3$He: The Intrinsic
   Relaxation Mechanism}~//
@@ -207,7 +229,7 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 \newblock Vol.~34, no.~23.
 \newblock Pp.~1424--1427.
 
-\bibitem[\BibPrefix21\BibPostfix]{1977_he3_legget_takagi}
+\bibitem[\BibPrefix24\BibPostfix]{1977_he3_legget_takagi}
 \selectlanguageifdefined{english}
 \BibEmph{Leggett~A.~J., Takagi~S.} {Orientational dynamics of superfluid
   $^3$He: A "two-fluid" model. I. Spin dynamics with relaxation}~//
@@ -220,15 +242,7 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
   \BibUrl{http://www.sciencedirect.com/science/article/B6WB1-4DDR9DW-2B3/2/205%
 a69ac5b6575e303b39c0dda081fd3}.
 
-\bibitem[\BibPrefix22\BibPostfix]{1985_hpd_f}
-\selectlanguageifdefined{english}
-\BibEmph{Фомин~И.~А.} {Разбиение прецессии намагиченности в $^3$He-B на два
-  домена. Теория}~// \BibEmph{ЖЭТФ}.
-\newblock 1985.
-\newblock Vol.~88.
-\newblock Pp.~2039--2051.
-
-\bibitem[\BibPrefix23\BibPostfix]{1980_f}
+\bibitem[\BibPrefix25\BibPostfix]{1980_f}
 \selectlanguageifdefined{english}
 \BibEmph{Фомин~И.~А.} {Спиновые волны большой амплитуды и магнитная релаксация
   в сверхтекучих фазах $^3$He}~// \BibEmph{ЖЭТФ}.
@@ -236,7 +250,7 @@ a69ac5b6575e303b39c0dda081fd3}.
 \newblock Vol.~78.
 \newblock Pp.~2392--2410.
 
-\bibitem[\BibPrefix24\BibPostfix]{1992_hpd_osc}
+\bibitem[\BibPrefix26\BibPostfix]{1992_hpd_osc}
 \selectlanguageifdefined{english}
 \BibEmph{Bunkov~Y., Dmitriev~V., Mukharskii~Y.} {Low frequency oscillations of
   the homogeneously precessing domain in $^3$He-B}~//
@@ -251,16 +265,7 @@ a69ac5b6575e303b39c0dda081fd3}.
   \BibUrl{http://www.sciencedirect.com/science/article/B6TVH-46G8H8B-70/2/283a%
 4507baf82a375ab33320de110b1f}.
 
-\bibitem[\BibPrefix25\BibPostfix]{1985_hpd}
-\selectlanguageifdefined{english}
-\BibEmph{Боровик-Романов~А.~С., Буньков~Ю.~М., Дмитриев~В.~В. et~al.}
-  {Разбиение прецессии намагиченности в $^3$He-B на два домена. Эксперимент}~//
-  \BibEmph{ЖЭТФ}.
-\newblock 1985.
-\newblock Vol.~88.
-\newblock Pp.~2025--2038.
-
-\bibitem[\BibPrefix26\BibPostfix]{1989_cwhpd}
+\bibitem[\BibPrefix27\BibPostfix]{1989_cwhpd}
 \selectlanguageifdefined{english}
 \BibEmph{Боровик-Романов~А.~С., Буньков~Ю.~М., Дмитриев~В.~В. et~al.}
   {Особенности непрерывного ЯМР в $^3$He-B, обусловленные спиновым
@@ -269,7 +274,7 @@ a69ac5b6575e303b39c0dda081fd3}.
 \newblock Vol.~96.
 \newblock Pp.~956--972.
 
-\bibitem[\BibPrefix27\BibPostfix]{2002_aero_hpd}
+\bibitem[\BibPrefix28\BibPostfix]{2002_aero_hpd}
 \selectlanguageifdefined{english}
 \BibEmph{Dmitriev~V.~V., Kosarev~I.~V., Mulders~N. et~al.} {Homogeneous spin
   precession in superfluid $^3$He confined to aerogel}~// {Proceedings of the
@@ -281,7 +286,7 @@ a69ac5b6575e303b39c0dda081fd3}.
 ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 20-27_August_2002}.
 
-\bibitem[\BibPrefix28\BibPostfix]{1986_hpd_tosc_f_r}
+\bibitem[\BibPrefix29\BibPostfix]{1986_hpd_tosc_f_r}
 \selectlanguageifdefined{english}
 \BibEmph{Фомин~И.~А.} {Низкочастотные колебания прецессирующего магнитного
   домена в $^3$He-B}~// \BibEmph{Письма в ЖЭТФ}.
@@ -289,7 +294,7 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 \newblock Vol.~43.
 \newblock Pp.~134--136.
 
-\bibitem[\BibPrefix29\BibPostfix]{1986_hpd_tosc_r}
+\bibitem[\BibPrefix30\BibPostfix]{1986_hpd_tosc_r}
 \selectlanguageifdefined{english}
 \BibEmph{Буньков~Ю.~М., Дмитриев~В.~В., Мухарский~Ю.~М.} {Крутильные колебания
   домена с однородной прецессией намагниченности в $^3$He-B}~// \BibEmph{Письма
@@ -298,7 +303,7 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 \newblock Vol.~43.
 \newblock Pp.~131--134.
 
-\bibitem[\BibPrefix30\BibPostfix]{2003_he3b_hpd_osc}
+\bibitem[\BibPrefix31\BibPostfix]{2003_he3b_hpd_osc}
 \selectlanguageifdefined{english}
 \BibEmph{Ga\v{z}o~E., Kupka~M., Medeov\'{a}~M., Skyba~P.} {Spin Precession
   Waves in Superfluid $^3$He-B}~//
@@ -308,7 +313,7 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 \newblock Vol.~91, no.~5.
 \newblock P.~055301.
 
-\bibitem[\BibPrefix31\BibPostfix]{1983_f}
+\bibitem[\BibPrefix32\BibPostfix]{1983_f}
 \selectlanguageifdefined{english}
 \BibEmph{Фомин~И.~А.} {Периодические движения намагниченности в B-фазе
   гелия-3}~// \BibEmph{ЖЭТФ}.
@@ -316,7 +321,7 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 \newblock Vol.~84.
 \newblock Pp.~2109--2120.
 
-\bibitem[\BibPrefix32\BibPostfix]{1979_pdecol}
+\bibitem[\BibPrefix33\BibPostfix]{1979_pdecol}
 \selectlanguageifdefined{english}
 \BibEmph{Madsen~N.~K., Sincovec~R.~F.} {Algorithm 540: PDECOL, General
   Collocation Software for Partial Differential Equations [D3]}~// \BibEmph{ACM
@@ -327,7 +332,7 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 \newblock See also Hopkins:1992:RPG.
 \newblock \BibUrl{http://doi.acm.org/10.1145/355841.355849}.
 
-\bibitem[\BibPrefix33\BibPostfix]{1992_pdecol}
+\bibitem[\BibPrefix34\BibPostfix]{1992_pdecol}
 \selectlanguageifdefined{english}
 \BibEmph{Hopkins~T.} {Remark on <<Algorithm 540: PDECOL, General Collocation
   Software for Partial Differential Equations [D3]>>}~// \BibEmph{ACM
@@ -338,7 +343,7 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 \newblock See Madsen:1979:APG.
 \newblock \BibUrl{http://doi.acm.org/10.1145/131766.131773}.
 
-\bibitem[\BibPrefix34\BibPostfix]{1987_hpd}
+\bibitem[\BibPrefix35\BibPostfix]{1987_hpd}
 \selectlanguageifdefined{english}
 \BibEmph{Borovik-Romanov~A., Bunkov~Y., Dmitriev~V. et~al.} {Study of the
   two-domain processing structure in the superfluid $^3$He-B}~//
@@ -348,11 +353,6 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 \newblock Pp.~590--590.
 \newblock 10.1007/BF03026697.
 \newblock \BibUrl{http://dx.doi.org/10.1007/BF03026697}.
-
-\bibitem[\BibPrefix35\BibPostfix]{vw}
-\selectlanguageifdefined{english}
-\BibEmph{Vollhardt~D., Wolfle~P.} {The Superfluid Phases of Helium 3}.
-\newblock Taylor\&Francis, 1990.
 
 \bibitem[\BibPrefix36\BibPostfix]{1985_cryo}
 \selectlanguageifdefined{english}
