@@ -22,10 +22,12 @@
 
 \usetheme{Singapore}
 \begin{document}
+\DeclareGraphicsExtensions{.pdf,.png,.gif,.jpg}
 
 \title[Измерение леггеттовской частоты $^3$He-B в аэрогеле]
-{Измерение леггеттовской частоты $^3$He-B в аэрогеле
-с помощью колебаний однородно прецессирующего домена}
+{Измерение леггеттовской частоты \\
+$^3$He-B в аэрогеле}
+%с помощью колебаний однородно прецессирующего домена
 \author{Завьялов Владислав Витальевич}
 \institute[ИФП]{Институт физических проблем имени П.~Л.~Капицы}
 \date{2011}
@@ -33,6 +35,13 @@
 \frame{\titlepage}
 
 %\frame{\frametitle{Содержание}\tableofcontents}
+
+\begin{frame}{Аэрогель}
+ \begin{center}
+  \includegraphics[width=10cm]{aero.eps}
+ \end{center}
+\end{frame}
+
 
 \begin{frame}{Фазовая диаграмма $^3$He}
  \image{t}{he3phd}{}
@@ -98,29 +107,26 @@ $$
 \omega_2 = \Omega_B \cos\varphi;
 $$
 
-$\omega_0 = \gamma H_0$~--- ларморовская частота,
+$\omega_0 = \gamma H$~--- ларморовская частота,
 $\varphi$~--- угол между~$\bf n$ и~$\bf H$.
 \end{frame}
 
 % спиновая динамика, уравнения Леггетта
-% ЯМР - постоянное поле H_0, равновесие: текстура, theta=104, M=\chi H
+% ЯМР - постоянное поле H, равновесие: текстура, theta=104, M=\chi H
 % сдвиг частоты в поперечном ЯМР, продольный ЯМР
 
-\begin{frame}{Непрерывный ЯМР в He3-B}
+\begin{frame}{Непрерывный ЯМР в $^3$He-B}
  \image{t}{cw_nmr}{}
 \end{frame}
 
-\begin{frame}{Непрерывный ЯМР в He3-B в аэрогеле}
+\begin{frame}{Непрерывный ЯМР в $^3$He-B в аэрогеле}
  \image{t}{cw_nmr_a}{}
 \end{frame}
 
-\begin{frame}{Импульсный ЯМР в He3-B}
+\begin{frame}{Импульсный ЯМР в $^3$He-B}
  \image{t}{dokl_pulse}{}
 \end{frame}
 
-\begin{frame}{Импульсный ЯМР в He3-B в аэрогеле}
- \image{t}{dokl_pulsea}{}
-\end{frame}
 
 %\begin{frame}{Спиновые токи и эффекты релаксации}
 %\begin{itemize}
@@ -145,13 +151,13 @@ $$
 $$
 {\color{red}
 $$
-\Omega_2^2 =  \frac{4}{\sqrt{15}} \  \frac{H_R}{H_0}
+\Omega_2^2 =  \frac{4}{\sqrt{15}} \  \frac{h}{H}
  \ \frac{\Omega_B^2}{1 + 8/3\ \Omega_B^2/\omega_0^2}
 $$
 }
 \medskip
 $$
-\Omega_3^2 = \omega_0\, \frac{\sqrt{15}\Delta\omega-\gamma H_R}{\sqrt{15}}
+\Omega_3^2 = \omega_0\, \frac{\sqrt{15}\Delta\omega-\gamma h}{\sqrt{15}}
  \ \frac{3/8+\Omega_B^2/\omega_0^2}{1+\Omega_B^2/\omega_0^2}
 $$
 \end{frame}
@@ -176,13 +182,13 @@ $$
 \end{frame}
 
 \begin{frame}{Эксперимент: колебания ОПД}
- \image{t}{dokl_res_osc}{}
+ \image{t}{dokl_res_osc1}{}
 Давление 24.8~бар, температура 0.46~$T_c$, магнитное поле 279~Э.
 \end{frame}
 
 \begin{frame}{Эксперимент: частота колебаний в зависимости от сдвига частоты} 
 $$
-\Omega_2^2 =  \frac{4}{\sqrt{15}} \  \frac{H_R}{H_0}
+\Omega_2^2 =  \frac{4}{\sqrt{15}} \  \frac{h}{H}
  \ \frac{\Omega_B^2}{1 + 8/3\ \Omega_B^2/\omega_0^2}
 $$
 \image{p}{res_fd}{}
@@ -211,8 +217,13 @@ $$
 Давление 24.8~бар, температура 0.76~$T_{ca}$ (0.61~$T_c$)
 \end{frame}
 
+%\begin{frame}{Эксперимент: леггеттовская частота в аэрогеле}
+%\image{p}{resa_legg}{}
+%Давление 24.8~бар, $T_{ca}$ = 0.805~$T_c$
+%\end{frame}
+
 \begin{frame}{Эксперимент: леггеттовская частота в аэрогеле}
-\image{p}{resa_legg}{}
+\image{p}{resa_legg_all}{}
 Давление 24.8~бар, $T_{ca}$ = 0.805~$T_c$
 \end{frame}
 
@@ -243,8 +254,30 @@ $^3$He, так и в $^3$He в аэрогеле, причем их свойства качественно
 \begin{frame}{}
 \end{frame}
 
+\begin{frame}{Импульсный ЯМР в $^3$He-B в аэрогеле}
+ \image{t}{dokl_pulsea}{}
+\end{frame}
+
 \begin{frame}{Однородно-прецессирующий домен (ОПД)}
  \image{t}{hpd}{}
+\end{frame}
+
+
+\begin{frame}{Численный эксперимент: зависимость частоты от сдвига частоты}
+ \image{t}{num_f_d}{}
+\end{frame}
+
+\begin{frame}{Численный эксперимент: зависимость частоты от амплитуды накачки}
+ \image{t}{num_hdep}{}
+\end{frame}
+
+\begin{frame}{Численный эксперимент: коэффициент затухания }
+\begin{equation}
+k =
+  \left(0.1699 - 0.4187 \left(\frac{\Omega_B}{2\pi}\cdot 10^{-6}\right)^2 \right)
+  \frac{10^{-6}}{\tau}\ \Delta f
+\end{equation}
+ \image{t}{num_kdt}{}
 \end{frame}
 
 \begin{frame}{Эксперимент: коэффициента затухания в зависимости от сдвига частоты}

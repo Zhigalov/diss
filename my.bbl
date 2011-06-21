@@ -37,10 +37,10 @@
 \bibitem[\BibPrefix3\BibPostfix]{2004_aero_btext}
 \selectlanguageifdefined{english}
 \BibEmph{Dmitriev~V.~V., Mulders~N., Zavjalov~V.~V., Zmeev~D.~E.} {NMR Studies
-  of Texture in the {B-like} Phase of $^3$He in Aerogel}~// {Proceedings of the
-  24rd International Conference on Low Temperature Physics, LT24, held in
-  Orlando, Florida (USA), 10-17 August 2005}.
-\newblock AIP-Press, 2006.
+  of Texture in the {B-like} Phase of $^3$He in Aerogel}~// \BibEmph{AIP
+  Conference Proceedings}.
+\newblock 2006.
+\newblock Vol. 850.
 \newblock Pp.~225--228.
 \newblock \BibUrl{http://www.springer.com/materials/book/978-0-7354-0347-5}.
 

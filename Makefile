@@ -1,4 +1,4 @@
-parts_diss=00_common 00_intro 01_he3 02_theor 03_num 04_tech 05_res
+parts_diss=00_common 00_intro 01_he3 02_theor 03_num 04_tech 05_res 06_vyv
 parts_auto=00_common
 
 all: diss.pdf auto.pdf pres.pdf

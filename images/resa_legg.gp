@@ -24,10 +24,16 @@ fit f2(x) "lf248.dat" using ($1/2.35536):($2**2) via a2
 
 
 
+#plot [:1] [0:]\
+# "resa_legg25.dat" using ($1/.805):2 with points pt 7 ps 2,\
+# "resa_legg25cw.dat" using 1:($2**2) with points pt 7 ps 2,\
+# "lf248.dat" using ($1/2.35536):(0.314*$2**2) with lines
+
 plot [:1] [0:]\
- "resa_legg25.dat" using ($1/.805):2 with points pt 7 ps 2,\
- "resa_legg25cw.dat" using 1:($2**2) with points pt 7 ps 2,\
- "lf248.dat" using ($1/2.35536):(0.314*$2**2) with lines
+ "resa_legg25.dat" using 1:(sqrt($2)) with points pt 7 ps 2,\
+ "resa_legg25cw.dat" using ($1*0.805):2 with points pt 7 ps 2,\
+  "lf248.dat" using ($1/2.35536):2 with lines,\
+  "lf248.dat" using ($1/2.35536*0.805):($2*sqrt(0.315)) with lines
 
 print a1/a2
 
