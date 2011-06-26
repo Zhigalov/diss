@@ -3,7 +3,7 @@ pics=he3phd he3aphd flare_out cw_nmr cw_nmr_a hpd nmr_hpd\
      cells coils spectr wire1 wire2\
      num_hpd num_f_d num_hdep num_kdt\
      res_hpd res_obr res_fh res_fd res_ft res_ft1 res_td\
-     resa_sig resa_legg resa_cwnmr\
+     resa_sig resa_legg resa_legg1 resa_cwnmr\
 
 
 #all: ${pics:=.png} ${pics:=.tex} ${pics:=.eps}

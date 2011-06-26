@@ -35,7 +35,7 @@ plot [:1] [0:]\
   "lf248.dat" using ($1/2.35536):2 with lines,\
   "lf248.dat" using ($1/2.35536*0.805):($2*sqrt(0.315)) with lines
 
-print a1/a2
+print 1/sqrt(a1/a2)
 
 # "resa_legg19.dat" using ($1):(ll($2)),\
 # "fl2",\
