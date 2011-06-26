@@ -415,4 +415,22 @@ ernational_Conference_on_Low_Temperature_Physics_LT23_held_in_Hiroshima_Japan_%
 \newblock Vol.~65, no.~7.
 \newblock Pp.~867--870.
 
+\bibitem[\BibPrefix42\BibPostfix]{2008_volovik_osc}
+\selectlanguageifdefined{english}
+\BibEmph{Volovik~G.~E.} {Phonons in magnon superfluid and symmetry breaking
+  field}~// \BibEmph{ðÉÓØÍÁ × öüôæ}.
+\newblock 2008.
+\newblock Vol.~87.
+\newblock Pp.~736--737.
+
+\bibitem[\BibPrefix43\BibPostfix]{2008_skyba_osc}
+\selectlanguageifdefined{english}
+\BibEmph{\v{C}love\v{c}ko~M., Ga\v{z}o~E., Kupka~M., Skyba~P.} {New
+  Non-Goldstone Collective Mode of BEC of Magnons in Superfluid $^3$He-B}~//
+  \href{http://dx.doi.org/10.1103/PhysRevLett.100.155301}{\BibEmph{Phys. Rev.
+  Lett.}}
+\newblock 2008. "--- Apr.
+\newblock Vol. 100, no.~15.
+\newblock P.~155301.
+
 \end{thebibliography}
