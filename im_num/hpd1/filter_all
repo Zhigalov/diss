@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[ -f mj_all.dat ] || exit 1
+awk '($2 ne '') && ($2%50==5){print; n=1};
+     /^ *$/{if (n==1){print;n=0}}'\
+  mj_all.dat > mj_flt.dat
