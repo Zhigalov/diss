@@ -14,6 +14,13 @@ bib:
 	bibtex my
 	latex auto
 	latex auto
+
+	latex mypub
+	bibtex mypub
+	bibtex mypub
+	latex mypub
+	latex mypub
+
 %.pdf: %.ps
 	ps2pdf $<
 %.ps: %.dvi
