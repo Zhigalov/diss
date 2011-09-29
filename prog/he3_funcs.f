@@ -328,9 +328,9 @@ C     Residual: 0.000
       end
 
 
-      include 'E02AEE.FOR'
-      include 'E02CBE.FOR'
-      include 'M01AGE.FOR'
-      include 'P01AAE.FOR'
-      include 'X02AAE.FOR'
-      include 'X04AAE.FOR'
+      include 'libs/E02AEE.FOR'
+      include 'libs/E02CBE.FOR'
+      include 'libs/M01AGE.FOR'
+      include 'libs/P01AAE.FOR'
+      include 'libs/X02AAE.FOR'
+      include 'libs/X04AAE.FOR'
