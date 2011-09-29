@@ -6,25 +6,20 @@
 parts_diss=00_common 00_intro 01_he3 02_theor 03_num 04_tech 05_res 06_vyv
 parts_auto=00_common
 
-all: diss.pdf auto.pdf otz_ved.pdf auto_b.pdf
+all: diss.pdf auto.pdf auto_b.pdf
 
-bib:
+diss.bbl:
 	latex diss
 	bibtex diss
 	latex diss
 	latex diss
 
+auto.bbl my.bbl:
 	latex auto
 	bibtex auto
 	bibtex my
 	latex auto
 	latex auto
-
-	latex mypub
-	bibtex mypub
-	bibtex mypub
-	latex mypub
-	latex mypub
 
 %.pdf: %.ps
 	ps2pdf $<
@@ -40,15 +35,15 @@ auto_b.ps: auto.ps
 	dvips $<
 %.dvi: %.tex
 	latex $<
-diss.dvi: diss.tex ${parts_diss:=.tex}
+diss.dvi: diss.tex diss.bbl ${parts_diss:=.tex}
 	make -C images
-	latex $<
-auto.dvi: auto.tex ${parts_auto:=.tex}
+	TEXINPUTS=".:disser:" latex $<
+auto.dvi: auto.tex auto.bbl my.bbl ${parts_auto:=.tex}
 	make -C images
-	latex $<
+	TEXINPUTS=".:disser:" latex $<
 
 clean:
-	rm -f *.aux *.log
+	rm -f *.aux *.log *.bbl *.blg *.dvi *.ps *.pdf *.toc *.ind *.ilg
 
 spell:
 	ispell -d russian-lebedev ${parts_diss:=.tex} ${parts_auto:=.tex} otz_ved.tex auto.tex
