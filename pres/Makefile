@@ -14,6 +14,9 @@ pres.dvi: pres.tex aero.eps
 clean:
 	rm -f *.aux *.log *.nav *.out *.snm *.toc *.dvi *.eps
 
+distclean: clean
+	rm -f *.pdf
+
 spell:
 	ispell -d russian-lebedev pres.tex
 

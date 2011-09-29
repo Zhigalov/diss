@@ -44,6 +44,8 @@ auto.dvi: auto.tex auto.bbl my.bbl ${parts_auto:=.tex}
 
 clean:
 	rm -f *.aux *.log *.bbl *.blg *.dvi *.ps *.pdf *.toc *.ind *.ilg
+distclean: clean
+	rm -f *.pdf
 
 spell:
 	ispell -d russian-lebedev ${parts_diss:=.tex} ${parts_auto:=.tex} otz_ved.tex auto.tex
