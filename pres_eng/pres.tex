@@ -1,0 +1,290 @@
+\documentclass[10pt]{beamer}
+
+\usepackage{amssymb}
+\usepackage{euscript}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{color}
+\usepackage{epsfig}
+%\usepackage[T1,T2A]{fontenc}
+\usepackage[koi8-ru]{inputenc}
+\usepackage[russian]{babel}
+
+\newcommand{\image}[3]{
+\begin{figure}[#1]
+\begin{center}
+\input{images/#2.tex}
+%\caption{\small#3}
+\label{image:#2}
+\end{center}
+\end{figure}
+}
+
+\usetheme{Singapore}
+\begin{document}
+\DeclareGraphicsExtensions{.pdf,.png,.gif,.jpg}
+
+\title[Measuring of Leggett frequency in $^3$He-B in aerogel]
+{Measuring of Leggett frequency\\
+in $^3$He-B in aerogel}
+%с помощью колебаний однородно прецессирующего домена
+\author{Vladislav V. Zavjalov}
+\institute[IPP]{P.L.Kapitza Institute for Physical Problems}
+\date{2012}
+
+\frame{\titlepage}
+
+%\frame{\frametitle{Содержание}\tableofcontents}
+
+\begin{frame}{Aerogel}
+ \begin{center}
+  \includegraphics[width=10cm]{aero.eps}
+ \end{center}
+\end{frame}
+
+
+\begin{frame}{Phase diagram of $^3$He}
+ \image{t}{he3phd}{}
+\end{frame}
+
+\begin{frame}{Phase diagram of $^3$He in aerogel}
+ \image{t}{he3aphd}{}
+\end{frame}
+
+
+\begin{frame}{Order parameter in the B-phase of $^3$He}
+Order parameter:
+$$
+A_{jk} = \Delta(P,T)\ e^{i\phi}\ R_{jk}({\bf n}, \theta).
+$$
+
+Energy of spin-orbit interaction:
+$$
+F_D = \frac{8 \chi \Omega_B^2}{15\gamma^2}
+\left(\cos\theta+\frac14\right)^2.
+$$
+
+minimum at $\theta = \arccos(-1/4) \approx 104.5^\circ$.
+\end{frame}
+
+
+\begin{frame}{B-phase texture in the cylindrical cell}
+ \image{t}{flare_out}{}
+ $\alpha = 60^\circ$, $\varphi = \cos^{-1}(1/\sqrt{5})\approx 63.4^\circ$
+\end{frame}
+
+
+\begin{frame}{Legget equations}
+$$
+\left\{
+\begin{array}{rcl}
+\dot{\bf M} &=&
+  \displaystyle
+  \gamma\ {\bf M} \times {\bf H} +
+  \frac{4}{15}\ \frac{\chi\Omega_B^2}{\gamma}\ \sin\theta\ (1+4\cos\theta)\ {\bf n}\\[2ex]
+\dot\theta  &=&
+  \displaystyle
+  \gamma\ {\bf n}\left(\frac{\bf M}{\chi}-{\bf H}\right)\\[2ex]
+\dot{\bf n} &=&
+  \displaystyle
+  -\frac{\gamma}{2}
+  \ {\bf n} \times \left(\frac{\bf M}{\chi}-{\bf H}\right)-\\[2ex]
+&&\displaystyle
+  -\frac{\gamma}{2}
+    \ \ctg\frac{\theta}{2}\left[
+    {\bf n}\left({\bf n}\left(
+      \frac{\bf M}{\chi}-{\bf H}
+    \right)\right)-\left(
+      \frac{\bf M}{\chi}-{\bf H}
+    \right)
+  \right]
+\end{array}\right.
+$$
+
+Friquencies of small oscillations in linear NMR:
+$$
+\omega_1 = \omega_0 + \frac{\Omega_B^2}{2\omega_0}\sin^2\varphi, \qquad
+\omega_2 = \Omega_B \cos\varphi;
+$$
+
+$\omega_0 = \gamma H$~--- larmor frequency,
+$\varphi$~--- angle between ~$\bf n$ and~$\bf H$.
+\end{frame}
+
+% спиновая динамика, уравнения Леггетта
+% ЯМР - постоянное поле H, равновесие: текстура, theta=104, M=\chi H
+% сдвиг частоты в поперечном ЯМР, продольный ЯМР
+
+\begin{frame}{CW NMR in $^3$He-B}
+ \image{t}{cw_nmr}{}
+\end{frame}
+
+\begin{frame}{CW NMR in $^3$He-B in aerogel}
+ \image{t}{cw_nmr_a}{}
+\end{frame}
+
+\begin{frame}{Pulse NMR in $^3$He-B}
+ \image{t}{dokl_pulse}{}
+\end{frame}
+
+
+%\begin{frame}{Спиновые токи и эффекты релаксации}
+%\begin{itemize}
+%\item Сверхтекучий спиновый ток
+%\item Спиновая диффузия
+%\item Релаксация Леггетта-Такаги
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Однородно-прецессирующий домен (HPD)}
+ \image{t}{hpd1}{}
+\end{frame}
+
+\begin{frame}{HPD in CW NMR experiments}
+ \image{t}{nmr_hpd}{}
+\end{frame}
+
+\begin{frame}{HPD oscillations}
+ \image{r}{dokl_osc}{}
+$$
+\Omega_1^2 = \omega_0^2 + \Omega_B^2
+$$
+{\color{red}
+$$
+\Omega_2^2 =  \frac{4}{\sqrt{15}} \  \frac{h}{H}
+ \ \frac{\Omega_B^2}{1 + 8/3\ \Omega_B^2/\omega_0^2}
+$$
+}
+\medskip
+$$
+\Omega_3^2 = \omega_0\, \frac{\sqrt{15}\Delta\omega-\gamma h}{\sqrt{15}}
+ \ \frac{3/8+\Omega_B^2/\omega_0^2}{1+\Omega_B^2/\omega_0^2}
+$$
+\end{frame}
+
+\begin{frame}{Numerical experiments}
+\begin{itemize}
+\item обнаружение колебаний ОПД, проверка формулы для их частоты;
+\item нахождение оптимального способа возбуждения и наблюдения колебаний;
+\item изучение влияния спиновой релаксации и пространственной неоднородности на частоту колебаний;
+\item изучение коэффициента затухания колебаний;
+\item изучение влияния объемного $^3$He, находящегося в зазорах между аэрогелем и стенками ячейки.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Experimental cells}
+ \image{t}{cells}{}
+\end{frame}
+
+\begin{frame}{NMR spectroscopy}
+ \image{t}{spectr}{}
+\end{frame}
+
+\begin{frame}{Experiment: HPD oscillations}
+ \image{t}{dokl_res_osc1}{}
+Pressure 24.8~bar, temperature 0.46~$T_c$, magnetic field 279~Oe.
+\end{frame}
+
+\begin{frame}{Experiment: oscillation frequency vs. frequency shift}
+$$
+\Omega_2^2 =  \frac{4}{\sqrt{15}} \  \frac{h}{H}
+ \ \frac{\Omega_B^2}{1 + 8/3\ \Omega_B^2/\omega_0^2}
+$$
+\image{p}{res_fd}{}
+\end{frame}
+
+
+\begin{frame}{Experiment: oscillation frequency vs. RF-field}
+\image{p}{res_fh}{}
+{\color{blue}A:} $P = 24.8$~bar, $H = 279$~Oe, $T = 0.46$~$T_c$;\\
+{\color{red}B:} $P = 19.5$~bar, $H = 285$~Oe, $T = 0.60$~$T_c$;\\
+{\color{green}C:} $P = 19.5$~bar, $H = 285$~Oe, $T = 0.82$~$T_c$.
+\end{frame}
+
+\begin{frame}{Experiment: Leggett frequency vs. temperature}
+\image{p}{res_ft1}{}
+Pressure 19.5~bar
+\end{frame}
+
+\begin{frame}{Experiment: HPD oscillations in aerogel}
+\image{p}{resa_sig}{}
+Pressure 24.8~bar, temperature 0.60~$T_{ca}$ (0.48~$T_c$).
+\end{frame}
+
+\begin{frame}{Experiment: CW NMR linein aerogel}
+\image{p}{resa_cwnmr}{}
+Pressure 24.8~bar, temperature 0.76~$T_{ca}$ (0.61~$T_c$)
+\end{frame}
+
+%\begin{frame}{Эксперимент: леггеттовская частота в аэрогеле}
+%\image{p}{resa_legg}{}
+%Давление 24.8~бар, $T_{ca}$ = 0.805~$T_c$
+%\end{frame}
+
+\begin{frame}{Experiment: Leggett frequency in aerogel}
+\image{p}{resa_legg_all}{}
+Pressure 24.8~бар, $T_{ca}$ = 0.805~$T_c$
+\end{frame}
+
+\begin{frame}{Results}
+\begin{itemize}
+
+\item впервые получена формула для низкочастотной моды
+пространственно-однородных колебаний ОПД;
+
+\item показано, что измерение частоты этих колебаний может быть
+использовано для измерения леггеттовской частоты в B-фазе $^3$He;
+
+\item с помощью численных экспериментов было исследовано влияние
+пространственной неоднородности и магнитной релаксации на частоту
+и коэффициент затухания этих колебаний;
+
+\item колебания были обнаружены экспериментально как в объемном
+$^3$He, так и в $^3$He в аэрогеле, причем их свойства качественно
+совпали с теорией. Для объемного $^3$He, параметры которого известны,
+наблюдается и хорошее количественное совпадение с теорией.
+
+\item полученные результаты позволили провести измерения Леггеттовской
+частоты B-фазы $^3$He в аэрогеле.
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\end{frame}
+
+\begin{frame}{Импульсный ЯМР в $^3$He-B в аэрогеле}
+ \image{t}{dokl_pulsea}{}
+\end{frame}
+
+\begin{frame}{Однородно-прецессирующий домен (ОПД)}
+ \image{t}{hpd}{}
+\end{frame}
+
+
+\begin{frame}{Численный эксперимент: зависимость частоты от сдвига частоты}
+ \image{t}{num_f_d}{}
+\end{frame}
+
+\begin{frame}{Численный эксперимент: зависимость частоты от амплитуды накачки}
+ \image{t}{num_hdep}{}
+\end{frame}
+
+\begin{frame}{Численный эксперимент: коэффициент затухания }
+\begin{equation}
+k =
+  \left(0.1699 - 0.4187 \left(\frac{\Omega_B}{2\pi}\cdot 10^{-6}\right)^2 \right)
+  \frac{10^{-6}}{\tau}\ \Delta f
+\end{equation}
+ \image{t}{num_kdt}{}
+\end{frame}
+
+\begin{frame}{Эксперимент: коэффициента затухания в зависимости от сдвига частоты}
+\image{p}{res_td}{}
+Давление 24.8~бар, температура 0.54~$T_c$ (белые точки) и
+0.45~$T_c$ (темные точки)
+\end{frame}
+
+\end{document}
+
