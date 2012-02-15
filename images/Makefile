@@ -19,3 +19,6 @@ all: ${pics:=.tex} ${pics:=.eps}
 
 clean:
 	rm -f *.tex *.png *.eps
+
+proz.eps: proz.png
+	convert $< $@
