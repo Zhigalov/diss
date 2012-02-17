@@ -1,4 +1,7 @@
-all:  pres.pdf
+all:  img pres.pdf
+
+img:
+	make -C images
 
 %.pdf: %.ps
 	ps2pdf $<
@@ -8,8 +11,7 @@ all:  pres.pdf
 %.dvi: %.tex
 	latex $<
 
-pres.dvi: pres.tex aero.eps
-	make -C images
+pres.dvi: pres.tex aero.eps images/st.txt
 	latex $<
 clean:
 	rm -f *.aux *.log *.nav *.out *.snm *.toc *.dvi *.eps

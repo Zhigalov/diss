@@ -5,7 +5,10 @@ pics= cells dokl_pulsea he3aphd resa_cwnmr res_fh\
       num_f_d num_hdep num_kdt
 
 #all: ${pics:=.png} ${pics:=.tex} ${pics:=.eps}
-all: ${pics:=.tex} ${pics:=.eps}
+all: ${pics:=.tex} ${pics:=.eps} st.txt
+
+st.txt: ${pics:=.tex} ${pics:=.eps}
+	date > st.txt
 
 %.png: %.fig
 	fig2dev -Lpng -j -m3.75 $< $@
