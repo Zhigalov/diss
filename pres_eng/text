@@ -176,5 +176,90 @@ oscillations. And then we proceed to the real experiment.
 
 ======================================================================
 
-This is experimental cell made of Stycast epoxy. There are two same
-cameras, one filled with an aerogel sample.
+This is experimental cell made of Stycast epoxy. There are two
+cameras, one filled with an aerogel sample. We can ran the same
+experiments both in bulk 3He and in 3He in aerogel. There is some
+volume with heater and thermometers. The cell is cooled down by nuclear
+demagnetization cryostat.
+
+We have two coils around each experimental camera: transverse saddle
+coils which acts as a reciever and transmitter of NMR signal, and
+longitudinal coils used to excite HPD oscillations making step
+changes of magnetic field.
+
+===
+
+This is our NMR spectroscopy system. Here is experimental camera with
+two coils around it. It is placed into magnetic field with gradient.
+Transverse coil is a part of resonant circuit. The circuit is supplied
+with a generator, then signal is amplified, compensated and detected at a
+NMR frequency by Lock-In generator.
+
+Sweeping the magnetic field we can grow HPD, fill the whole cell by it
+and than excite oscillations by a current pulse on a longitudinal coil.
+Signal of these oscillations is saved into oscilloscope memory.
+
+===
+
+Here is an example of HPD oscillation signal in bulk 3He. From this
+signal we can easily determine frequency of oscillations.
+
+===
+
+Now we can check the correctness of our formula for the frequency.
+Frequency should not depend on frequency shift. Here is the ratio of
+the measured frequency to the theoretical value for different
+frequency shifts. Theoretical values are calculated using known values
+of Leggett frequency in bulk 3He. You can see the large region of
+shifts there experiment agree with theory.
+
+===
+
+Dependence on RF-field. Here is experimental data, and theoretical
+lines without any fitting parameters.
+
+===
+
+Now we can measure temperature dependence of Leggett frequency by our
+method and compare it with known values. Our method works well and
+we can use it in aerogel.
+
+===
+
+It is an example of oscillation signal in aerogel. We can find its
+frequency and calculate Leggett frequency. There is a problem that HPD
+in aerogel exists only in a small temperature range. But we can avoid
+this problem.
+
+===
+
+As I have told form of linear NMR line depends on texture in the
+sample. We don't know this texture, but we know, than horizontal scale
+of this line depends on Leggett frequency.  If we found Leggett
+frequency at some temperature we can calculate what angles between n
+and H corresponds to these peaks. And after that we can determine
+Leggett frequency from positions of these peaks at any temperature.
+
+Here is line for our sample. It appears that right peak corresponds to
+n perpendicular to H, it is the most possible frequency shift.
+This information about texture is sufficient to find Leggett frequency
+from this line.
+
+===
+
+Here is results for aerogel. Blue points are found from HPD oscillations,
+red points are found from linear NMR using information about texture.
+Green line is Leggett frequency for bulk 3He.
+
+So we found new property of 3He, oscillation mode of HPD which can be
+used for measuring Leggett frequency. We check this method on bulk 3He
+and then apply it to 3He in aerogel where other methods doesn't works
+well.
+
+
+
+
+
+
+
+
